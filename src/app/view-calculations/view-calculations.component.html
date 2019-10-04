@@ -1,6 +1,6 @@
 <p>view-calculations works!</p>
-<div *ngFor="let result of results" [class.selected]="result === selectedResult" (click)="onSelect(result)"> 
+<div *ngFor="let result of results">
     <p>{{result.name}}</p>
 </div>
-<app-results [result]="selectResult"></app-results>
+
 
