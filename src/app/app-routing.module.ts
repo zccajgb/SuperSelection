@@ -7,10 +7,11 @@ import { CreateCalculationComponent } from './create-calculation/create-calculat
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/view-calculations', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
-  { path: 'viewCalculations', component: ViewCalculationsComponent },
+  { path: 'view-calculations', component: ViewCalculationsComponent },
   { path: 'results', component: ResultsComponent },
-  { path: 'createCalculation', component: CreateCalculationComponent }
+  { path: 'create-calculation', component: CreateCalculationComponent }
 ];
 
 @NgModule({

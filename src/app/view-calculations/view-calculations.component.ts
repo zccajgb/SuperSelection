@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Result } from '../../models/result';
+import { ResultsComponent } from '../results/results.component';
 
 @Component({
   selector: 'app-view-calculations',
@@ -8,12 +9,10 @@ import { Result } from '../../models/result';
 })
 export class ViewCalculationsComponent implements OnInit {
 
-  results: Result[];
+  public results: Result[] = [ { name: "one", userID: "123", text: "text"}, { name: "two", userID: "123", text: "text"} ];
+  public result1: Result = { name: "one", userID: "123", text: "text"};
 
   constructor() {
-    let result1 : Result = { name: "one", userID: "123", text: "text"}
-    let result2 : Result = { name: "two", userID: "123", text: "text"}
-    this.results = [result1, result2];
    }
 
   ngOnInit() {

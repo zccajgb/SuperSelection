@@ -8,7 +8,10 @@ import { Result } from '../../models/result';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  @Input() result : Result;
+
+  constructor() { 
+  }
 
   ngOnInit() {
   }
