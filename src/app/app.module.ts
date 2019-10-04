@@ -10,7 +10,15 @@ import { LoginComponent } from './login/login.component';
 import { ViewCalculationsComponent } from './view-calculations/view-calculations.component';
 import { ResultsComponent } from './results/results.component';
 import { FormsModule } from '@angular/forms';
-import { Result } from 'src/models/result';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -19,13 +27,21 @@ import { Result } from 'src/models/result';
     LoginComponent,
     ViewCalculationsComponent,
     ResultsComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
-
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
