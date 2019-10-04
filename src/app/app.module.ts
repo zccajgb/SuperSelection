@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ViewCalculationsComponent } from './view-calculations/view-calculations.component';
 import { ResultsComponent } from './results/results.component';
 import { FormsModule } from '@angular/forms';
+import { Result } from 'src/models/result';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { FormsModule } from '@angular/forms';
     CreateCalculationComponent,
     LoginComponent,
     ViewCalculationsComponent,
-    ResultsComponent
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
