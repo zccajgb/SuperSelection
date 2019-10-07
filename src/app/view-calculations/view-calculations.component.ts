@@ -9,8 +9,8 @@ import { ResultsComponent } from '../results/results.component';
 })
 export class ViewCalculationsComponent implements OnInit {
 
-  public results: Result[] = [ { name: "one", userID: "123", text: "text"}, { name: "two", userID: "123", text: "text"} ];
-  public result1: Result = { name: "one", userID: "123", text: "text"};
+  public results: Result[] = [ { name: 'one', userID: '123', text: 'text'}, { name: 'two', userID: '123', text: 'text'} ];
+  public result1: Result = { name: 'one', userID: '123', text: 'text'};
 
   constructor() {
    }
