@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Result } from '../../models/result';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-results',
@@ -8,9 +9,10 @@ import { Result } from '../../models/result';
 })
 export class ResultsComponent implements OnInit {
 
-  @Input() result : Result;
+  @Input() result: Result;
 
-  constructor() { 
+  constructor(private title: Title) {
+    this.title.setTitle('Results');
   }
 
   ngOnInit() {

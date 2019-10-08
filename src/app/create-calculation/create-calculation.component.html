@@ -1,11 +1,75 @@
-<p>create-calculation works!</p>
+<div class='container pt-5'>
+  <form [formGroup]="form" (ngSubmit)="sumbit(form)">
+    <div class="row">
+     <div class='col mr-5'>
+        <h1>{{form.controls.name.value}}</h1>
+        <div class="form-group row">
+          <label class='col-sm-2 col-form-label'>Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="name">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Please give your calculation a distinct name to aid with searching.
+            </small>
+          </div>
+        </div>
 
-<div>
-    <label>name:
-      <input [(ngModel)]="calculation.name" placeholder="name"/>
-    </label>
+        <div class="form-group row">
+          <label class='col-sm-2 col-form-label'>Text</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="text">
+          </div>
+        </div>
 
-    <label>text:
-        <input [(ngModel)]="calculation.text" placeholder="text"/>
-      </label>
-  </div>
+        <div class="form-group row">
+          <label class='col-sm-2 col-form-label'>Dropdown</label>
+          <div class="col-sm-10">
+            <select class="form-control" formControlName="dropdown">
+              <option *ngFor="let option of dropdownList">{{option}}</option>
+            </select>
+          </div>
+        </div>
+
+        
+        <div class="form-group row">
+          <label class='col-sm-2'>Use Something?</label>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="useSomething">
+              <!-- <label class="form-check-label">Use Something?</label> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row" *ngIf="form.controls.useSomething.value">
+          <label class='col-sm-2 col-form-label'>Something Details</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="soemthingDetails">
+          </div>
+        </div>
+      </div>
+
+      <div class='col ml-auto'>
+        <div formArrayName="receptors">
+          <div *ngFor="let receptor of form.controls.receptors.controls; let i=index"> 
+              <div class="row">
+                <h5>Receptor {{i + 1}}</h5>
+                <div class = "ml-auto pr-3" *ngIf="form.controls.receptors.controls.length > 1" (click)="removeReceptor(i)">
+                  <i class="fa fa-trash text-danger"></i>
+                </div>
+              </div>
+              <div [formGroupName]="i">
+                <app-receptor [receptorForm]="form.controls.receptors.controls[i]"></app-receptor>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-sm-2 col-form-label"></label>
+          <button type="button" class="btn btn-secondary ml-3 mt-3"  (click)="addReceptor()">Add Receptor</button>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+

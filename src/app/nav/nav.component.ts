@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AuthenticationService } from '../_services/authentication.service';
 import { User } from 'src/models/user';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-nav',
@@ -23,17 +24,22 @@ export class NavComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private titleService: Title
     ) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
 
-    logout() {
+  logout() {
       this.authenticationService.logout();
       this.router.navigate(['/login']);
     }
 
-    isAuthenticated(): boolean {
+  isAuthenticated(): boolean {
       return this.currentUser != null;
     }
+
+  showSideNav(): boolean {
+    return !this.isHandset$ || this.isAuthenticated();
+  }
 }

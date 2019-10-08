@@ -1,16 +1,17 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav #drawer class="sidenav bg-dark" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'push' : 'push'"
-      [opened]="false">
-  <mat-toolbar>Menu</mat-toolbar>
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(showSideNav()) ? true : false"      
+      >
+  <mat-toolbar class="text-white bg-dark">superselection</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="view-calculations">View Caluclations</a>
-      <a mat-list-item href="create-calculation">New Calculation</a>
+      <a mat-list-item href="view-calculations" class="text-light bg-dark">View Calculations</a>
+      <a mat-list-item href="create-calculation" class="text-light bg-dark">New Calculation</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="shadow bg-white rounded">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,12 +21,12 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div>superselection</div>
+
       <!-- <button mat-icon-button class="right-align">
         <mat-icon></mat-icon>
       </button>
       <button class="nav-item nav-link right-align" (click)="logout()">Logout</button> -->
-
+      <h2>{{titleService.getTitle()}}</h2>
       <button mat-icon-button [matMenuTriggerFor]="auth" class="right-align" *ngIf="isAuthenticated()">
         <mat-icon>settings</mat-icon>
       </button>
