@@ -21,10 +21,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { ReceptorComponent } from './create-calculation/receptor/receptor.component';
+import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     ViewCalculationsComponent,
     ResultsComponent,
     NavComponent,
+    ReceptorComponent,
+    CreateNewAccountComponent
   ],
   imports: [
     HttpClientModule,
@@ -51,7 +56,8 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     MatListModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSlideToggleModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -31,10 +31,6 @@ export class AuthenticationService {
             }));
     }
 
-    hash(password: string) {
-        hashedPassword = hash(password + getSalt());
-    }
-
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');

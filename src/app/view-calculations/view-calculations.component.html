@@ -1,10 +1,14 @@
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Search" value="Search">
-      <mat-icon aria-label="seach icon">search</mat-icon>
-    </mat-form-field>
-
-  </form>
+<form class="mx-auto py-2">
+  <div class="input-group input-focus mx-auto">
+    <div class="input-group-prepend">
+      <span class="input-group-text bg-white"><i class="fa fa-search"></i></span>
+    </div>
+    <input type="search" placeholder="Search" class="form-control border-left-0 border-right-0">
+    <div class="input-group-prepend">
+        <span class="input-group-text bg-white"><i class="mat-expansion-indicator"></i></span>
+      </div>
+  </div>
+</form>
 
 <div *ngFor="let res of results">
   <mat-accordion>
