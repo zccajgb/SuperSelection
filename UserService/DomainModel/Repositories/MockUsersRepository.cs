@@ -1,4 +1,5 @@
-﻿using DomainModel.Models;
+﻿using AutoMapper;
+using DomainModel.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,13 @@ namespace DomainModel.Repositories
 {
     public class MockUsersRepository : IUsersRepository
     {
+        private readonly Mapper mapper;
+
         public IEnumerable<User> users { get; private set; }
 
-        public MockUsersRepository()
+        public MockUsersRepository(Mapper mapper)
         {
+            this.mapper = mapper;
             this.users = new List<User>
             {
                 new User("test", "test@test.com", "hJg8YPfarcHLhphiH4AsDZ+aPDwpXIEHSPsEgRXBhuw=", "first", "last", new Guid(), UserRoles.SuperAdmin, DateTime.UtcNow, DateTime.UtcNow, ""),
@@ -43,9 +47,9 @@ namespace DomainModel.Repositories
             return this.users.Any(u => u.Username == username || u.UserId == userId || u.Email == emailAddress);
         }
 
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<UserView> GetUsers()
         {
-            return users.Select(u => new User(u.Username, u.Email, "******", u.FirstName, u.LastName, u.UserId, u.UserRole, u.CreatedDate, u.ModifiedDate, "****"));
+            return mapper.Map<IEnumerable<User>, IEnumerable<UserView>>(this.users);
         }
     }
 }

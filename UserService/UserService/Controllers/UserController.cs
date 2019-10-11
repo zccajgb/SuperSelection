@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DomainModel;
 using DomainModel.Models;
 using DomainModel.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UserService.Controllers
@@ -28,7 +25,7 @@ namespace UserService.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<User>> Get()
+        public ActionResult<IEnumerable<UserView>> Get()
         {
             return Ok(this.userRepository.GetUsers());
         }
@@ -42,15 +39,14 @@ namespace UserService.Controllers
 
         [HttpPost]
         [Route("/CreateNewUser")]
-        public ActionResult CreateNewUser([FromBody] User user)
+        public ActionResult<UserView> CreateNewUser([FromBody] User user)
         {
-            this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName);
-            return Ok();
+            return Ok(this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName););
         }
 
         [HttpPost]
         [Route("/Login")]
-        public ActionResult<string> Login([FromBody] User user)
+        public ActionResult<UserView> Login([FromBody] User user)
         {
             return this.loginService.Login(user.Username, user.Password);
         }

@@ -1,5 +1,7 @@
 import { Observable, of } from 'rxjs';
+import { Injectable } from '@angular/core';
 
+@Injectable({ providedIn: 'root' })
 export abstract class BaseRepository {
 
     protected handleError<T>(operation = 'operation', result?: T) {

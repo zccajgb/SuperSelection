@@ -1,17 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using ApiGateway.Controllers;
-using ApiGateway.Documents.Commands;
-using ApiGateway.Documents.Queries;
 using ApiGateway.Infrastructure;
-using ApiGateway.Models;
-using Microsoft.AspNetCore.Mvc;
+using ApiGateway.Models.DomainModels;
+using ApiGateway.Models.ViewModels;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
 
 namespace ApiGateway.Repos
 {
@@ -34,23 +27,23 @@ namespace ApiGateway.Repos
             return userId;
         }
 
-        internal async Task<IEnumerable<User>> GetAllUsers()
+        internal async Task<IEnumerable<UserView>> GetAllUsers()
         {
-            var users = (IEnumerable<User>) await httpHelper.GetAsync(this.uri);
-            return users;
+            var userViews = (IEnumerable<UserView>) await httpHelper.GetAsync(this.uri);
+            return userViews;
         }
 
-        internal async Task<User> CreateNewUser(User user)
+        internal async Task<UserView> CreateNewUser(User user)
         {
             var createNewUserUri = this.uri + "/CreateNewUser";
-            user = await httpHelper.PostAsync<User>(createNewUserUri, user);
-            return user;
+            var userView = await httpHelper.PostAsync<UserView>(createNewUserUri, user);
+            return userView;
         }
 
-        internal async Task<string> Login(User user)
+        internal async Task<UserView> Login(User user)
         {
             var loginUri = this.uri + "/Login";
-            var token = await this.httpHelper.PostAsync<string>(loginUri, user);
+            var token = await this.httpHelper.PostAsync<UserView>(loginUri, user);
             return token;
         }
     }

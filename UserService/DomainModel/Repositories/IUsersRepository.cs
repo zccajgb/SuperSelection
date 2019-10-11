@@ -9,6 +9,6 @@ namespace DomainModel.Repositories
         void AddUser(User user);
         User GetUser(Guid userId);
         User GetUser(string username);
-        IEnumerable<User> GetUsers();
+        IEnumerable<UserView> GetUsers();
     }
 }

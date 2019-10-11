@@ -1,4 +1,5 @@
-﻿using DomainModel.Infrastructure;
+﻿using AutoMapper;
+using DomainModel.Infrastructure;
 using DomainModel.Models;
 using DomainModel.Repositories;
 using System;
@@ -11,13 +12,15 @@ namespace DomainModel
     public class CreateNewUserService
     {
         private readonly IUsersRepository userRepository;
+        private readonly Mapper mapper;
 
-        public CreateNewUserService(IUsersRepository userRepository)
+        public CreateNewUserService(IUsersRepository userRepository, Mapper mapper)
         {
             this.userRepository = userRepository;
+            this.mapper = mapper;
         }
 
-        public void CreateNewUser(string username, string password, string firstName, string lastName)
+        public UserView CreateNewUser(string username, string password, string firstName, string lastName)
         {
             var salt = GenerateSalt();
             var hashedPassword = PasswordHasher.HashPassword(password, salt);
@@ -30,6 +33,8 @@ namespace DomainModel
             var user = new User(username, email, hashedPassword, firstName, lastName, userId, userRole, now, now, salt);
 
             this.userRepository.AddUser(user);
+
+            return mapper.Map<UserView>(user);
         }
 
         private string GenerateSalt()

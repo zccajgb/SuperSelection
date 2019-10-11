@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using ApiGateway.Documents.Commands;
 using ApiGateway.Documents.Queries;
 using ApiGateway.Models;
+using ApiGateway.Models.DomainModels;
+using ApiGateway.Models.ViewModels;
 using ApiGateway.Repos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +24,7 @@ namespace ApiGateway.Controllers
 
         [HttpPost]
         [Route("Users/Login")]
-        public async Task<ActionResult<string>> Login([FromBody] User user)
+        public async Task<ActionResult<UserView>> Login([FromBody] User user)
         {
             if (!ModelState.IsValid)
             {
@@ -35,7 +37,7 @@ namespace ApiGateway.Controllers
 
         [HttpGet]
         [Route("Users")]
-        public async Task<ActionResult<string>> Get()
+        public async Task<ActionResult<UserView>> Get()
         {
             if (!ModelState.IsValid)
             {
@@ -48,7 +50,7 @@ namespace ApiGateway.Controllers
 
         [HttpPost]
         [Route("Users/CreateNewUser")]
-        public async Task<ActionResult<string>> CreateNewUser([FromBody] User user)
+        public async Task<ActionResult<UserView>> CreateNewUser([FromBody] User user)
         {
             if (!ModelState.IsValid)
             {

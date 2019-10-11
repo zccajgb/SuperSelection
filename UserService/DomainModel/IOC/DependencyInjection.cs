@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AutoMapper;
+using DomainModel.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace DomainModel.IOC
 
         public static void RegisterDependencies(this IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(MapperProfile));
             RegisterRepos(services);
             RegisterServices(services);
         }

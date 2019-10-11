@@ -1,4 +1,5 @@
-﻿using DomainModel.Infrastructure;
+﻿using AutoMapper;
+using DomainModel.Infrastructure;
 using DomainModel.Models;
 using DomainModel.Repositories;
 using System;
@@ -11,22 +12,25 @@ namespace DomainModel
     public class LoginService
     {
         private readonly IUsersRepository userRepository;
+        private readonly Mapper mapper;
 
-        public LoginService(IUsersRepository userRepository)
+        public LoginService(IUsersRepository userRepository, Mapper mapper)
         {
             this.userRepository = userRepository;
+            this.mapper = mapper;
         }
 
-        public string Login(string username, string password)
+        public UserView Login(string username, string password)
         {
             var user = userRepository.GetUser(username);
-            if (user == null) return "Username could not be found";
 
             var hashedPassword = PasswordHasher.HashPassword(password, user.Salt);
 
-            if (hashedPassword != user.Password) return "Password is incorrect";
+            if (hashedPassword != user.Password) return null;
 
-            return TokenManager.GenerateToken(user);
+            var token = TokenManager.GenerateToken(user);
+
+            return mapper.Map<User, UserView>(user, opts => opts.Items["Token"] = token);
         }
 
     }
