@@ -55,7 +55,13 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.router.navigate([this.returnUrl]);
+                    // tslint:disable-next-line: triple-equals
+                    if (data == null) {
+                        this.error = 'Error: incorrect Username or Password';
+                        this.loading = false;
+                    } else {
+                        this.router.navigate([this.returnUrl]);
+                    }
                 },
                 error => {
                     this.error = error;
