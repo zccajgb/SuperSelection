@@ -12,7 +12,6 @@ namespace ApiGateway.IOC
 {
     public static class DependencyInjection
     {
-
         public static void RegisterDependencies(this IServiceCollection services)
         {
             services.AddHttpClient();

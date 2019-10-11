@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using ApiGateway.Documents.Commands;
 using ApiGateway.Models;
+using ApiGateway.Models.DomainModels;
 using ApiGateway.Repos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,7 +28,7 @@ namespace ApiGateway.Controllers
             }
 
             var command = new CreateCalculationCommand(calculation, new Guid(), DateTime.UtcNow);
-            var response = this.calculationsRepository.PostCommand(command);
+            var response = await this.calculationsRepository.PostCommand(command);
             return Ok(response);
         }
 

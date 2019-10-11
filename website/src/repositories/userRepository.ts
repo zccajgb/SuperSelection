@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from 'src/models/user';
 import { catchError } from 'rxjs/operators';
@@ -10,7 +10,7 @@ export class UserRepository extends BaseRepository {
 
     url = 'https://localhost:44369/users';
 
-    constructor(private http: HttpClient, private httpHeaders: HttpHeaders) {
+    constructor(private http: HttpClient) {
         super();
     }
 
@@ -25,7 +25,7 @@ export class UserRepository extends BaseRepository {
     }
 
     createNewUser(user: User): Observable<any> {
-        return this.http.post<any>(this.url, user).pipe(
+        return this.http.post<any>(this.url + '/CreateNewAccount', user).pipe(
             catchError(this.handleError<any>('createNewUser'))
         );
     }

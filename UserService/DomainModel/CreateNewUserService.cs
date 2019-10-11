@@ -12,9 +12,9 @@ namespace DomainModel
     public class CreateNewUserService
     {
         private readonly IUsersRepository userRepository;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
 
-        public CreateNewUserService(IUsersRepository userRepository, Mapper mapper)
+        public CreateNewUserService(IUsersRepository userRepository, IMapper mapper)
         {
             this.userRepository = userRepository;
             this.mapper = mapper;
@@ -34,7 +34,7 @@ namespace DomainModel
 
             this.userRepository.AddUser(user);
 
-            return mapper.Map<UserView>(user);
+            return mapper.Map<UserView>(user, opts => opts.Items["Token"] = string.Empty);
         }
 
         private string GenerateSalt()

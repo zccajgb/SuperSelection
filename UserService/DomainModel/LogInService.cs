@@ -12,12 +12,14 @@ namespace DomainModel
     public class LoginService
     {
         private readonly IUsersRepository userRepository;
-        private readonly Mapper mapper;
+        private readonly IMapper mapper;
+        private readonly TokenManager tokenManager;
 
-        public LoginService(IUsersRepository userRepository, Mapper mapper)
+        public LoginService(IUsersRepository userRepository, IMapper mapper, TokenManager tokenManager)
         {
             this.userRepository = userRepository;
             this.mapper = mapper;
+            this.tokenManager = tokenManager;
         }
 
         public UserView Login(string username, string password)
@@ -28,9 +30,9 @@ namespace DomainModel
 
             if (hashedPassword != user.Password) return null;
 
-            var token = TokenManager.GenerateToken(user);
+            var token = tokenManager.GenerateToken(user);
 
-            return mapper.Map<User, UserView>(user, opts => opts.Items["Token"] = token);
+            return mapper.Map<UserView>(user, opts => opts.Items["Token"] = token);
         }
 
     }

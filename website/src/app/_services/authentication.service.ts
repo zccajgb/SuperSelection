@@ -26,8 +26,11 @@ export class AuthenticationService {
         return this.repo.login(username, password)
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', JSON.stringify(user));
-                this.currentUserSubject.next(user);
+                // tslint:disable-next-line: triple-equals
+                if (user != null) {
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.currentUserSubject.next(user);
+                }
                 return user;
             }));
     }

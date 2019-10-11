@@ -48,7 +48,8 @@ namespace UserService
                 });
             });
 
-            services.RegisterDependencies();
+            services.RegisterDependencies(Configuration);
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

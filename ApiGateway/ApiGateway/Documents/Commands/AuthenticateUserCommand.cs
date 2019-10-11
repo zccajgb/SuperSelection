@@ -1,4 +1,5 @@
 ﻿using ApiGateway.Models;
+using ApiGateway.Models.DomainModels;
 using System;
 
 namespace ApiGateway.Documents.Commands

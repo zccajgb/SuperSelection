@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 using ApiGateway.Documents.Commands;
 using ApiGateway.Documents.Queries;
 using ApiGateway.Models;
@@ -49,8 +50,8 @@ namespace ApiGateway.Controllers
         }
 
         [HttpPost]
-        [Route("Users/CreateNewUser")]
-        public async Task<ActionResult<UserView>> CreateNewUser([FromBody] User user)
+        [Route("Users/CreateNewAccount")]
+        public async Task<ActionResult<UserView>> CreateNewAccount([FromBody] User user)
         {
             if (!ModelState.IsValid)
             {

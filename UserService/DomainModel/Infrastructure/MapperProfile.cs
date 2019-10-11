@@ -10,12 +10,13 @@ namespace DomainModel.Infrastructure
     {
         public MapperProfile()
         {
+            Register();
         }
 
         public void Register()
         {
             this.CreateMap<User, UserView>()
-                .ForMember(x => x.Token,opts => opts.MapFrom((s, d, dm, ctx) => ctx.Items["Token"]));
+                .ForCtorParam("token", opts => opts.MapFrom((_, ctx) => ctx.Items["Token"]));
         }
     }
 }

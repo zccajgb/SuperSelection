@@ -31,21 +31,21 @@ namespace UserService.Controllers
         }
 
         [HttpPost]
-        [Route("/GetUserID")]
+        [Route("GetUserID")]
         public ActionResult<Guid> GetUserID([FromBody] string token)
         {
             return this.validateService.Validate(token);
         }
 
         [HttpPost]
-        [Route("/CreateNewUser")]
+        [Route("CreateNewUser")]
         public ActionResult<UserView> CreateNewUser([FromBody] User user)
         {
-            return Ok(this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName););
+            return Ok(this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName));
         }
 
         [HttpPost]
-        [Route("/Login")]
+        [Route("Login")]
         public ActionResult<UserView> Login([FromBody] User user)
         {
             return this.loginService.Login(user.Username, user.Password);

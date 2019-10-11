@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DomainModel.Infrastructure;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,24 @@ namespace DomainModel.IOC
 {
     public static class DependencyInjection
     {
-
-        public static void RegisterDependencies(this IServiceCollection services)
+        public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddAutoMapper(typeof(MapperProfile));
+            services.AddTransient<TokenManager>(_ => new TokenManager(configuration["tokenSecret"], Int32.Parse(configuration["tokenExpiry"])));
+            RegisterAutomapper(services);
             RegisterRepos(services);
             RegisterServices(services);
+        }
+
+        private static void RegisterAutomapper(IServiceCollection services)
+        {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MapperProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
         }
 
         private static void RegisterServices(IServiceCollection services)

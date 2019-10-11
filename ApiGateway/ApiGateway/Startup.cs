@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ApiGateway.IOC;
+using FluentValidation.AspNetCore;
+using ApiGateway.Models.Validation;
 
 namespace ApiGateway
 {
@@ -49,8 +51,11 @@ namespace ApiGateway
             });
 
             services.AddSingleton(Configuration);
+
             services.RegisterDependencies();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +71,7 @@ namespace ApiGateway
                 app.UseHsts();
             }
 
-            app.UseCors();
+            app.UseCors("allowSpecificOrgins");
             
             app.UseSwagger().UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
 

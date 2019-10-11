@@ -10,15 +10,17 @@ namespace DomainModel
     public class ValidateService
     {
         private readonly IUsersRepository usersRepository;
+        private readonly TokenManager tokenManager;
 
-        public ValidateService(IUsersRepository usersRepository)
+        public ValidateService(IUsersRepository usersRepository, TokenManager tokenManager)
         {
             this.usersRepository = usersRepository;
+            this.tokenManager = tokenManager;
         }
 
         public Guid Validate(string token)
         {
-            var (_, id, _) = TokenManager.ValidateToken(token);
+            var (_, id, _) = tokenManager.ValidateToken(token);
 
             var user = this.usersRepository.GetUser(new Guid(id));
 
@@ -30,7 +32,7 @@ namespace DomainModel
 
         public Guid Validate(string token, string username)
         {
-            var tup = TokenManager.ValidateToken(token);
+            var tup = tokenManager.ValidateToken(token);
 
             var user = this.usersRepository.GetUser(username);
 
@@ -42,7 +44,7 @@ namespace DomainModel
 
         public int GetUserRole(string token)
         {
-            var (_, _, role) = TokenManager.ValidateToken(token);
+            var (_, _, role) = tokenManager.ValidateToken(token);
             return Convert.ToInt32(role);
         }
     }

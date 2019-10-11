@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Microsoft.Extensions.Configuration;
 
 namespace DomainModel.Infrastructure
 {
@@ -10,9 +11,15 @@ namespace DomainModel.Infrastructure
     {
         // https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
 
-        private static readonly string secret = "bNgqblE+ZUjUyBxBreVPBGeXFJRFbsxfY76lW0zHilrvq+tNOYFAir5ZxlEVb6YSmOspHfWBEV7MbwJAkFSXYQ==";
-        private static readonly int expiry = 30;
-        public static string GenerateToken(User user)
+        private readonly string secret = "bNgqblE+ZUjUyBxBreVPBGeXFJRFbsxfY76lW0zHilrvq+tNOYFAir5ZxlEVb6YSmOspHfWBEV7MbwJAkFSXYQ==";
+        private readonly int expiry = 30;
+
+        public TokenManager(string secret, int expiry)
+        {
+            this.secret = secret;
+            this.expiry = expiry;
+        }
+        public string GenerateToken(User user)
         {
             byte[] key = Convert.FromBase64String(secret);
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(key);
@@ -35,7 +42,7 @@ namespace DomainModel.Infrastructure
             return handler.WriteToken(token);
         }
 
-        public static ClaimsPrincipal GetPrincipal(string token)
+        public ClaimsPrincipal GetPrincipal(string token)
         {
             try
             {
@@ -62,7 +69,7 @@ namespace DomainModel.Infrastructure
             }
         }
 
-        public static (string username, string id, string role) ValidateToken(string token)
+        public (string username, string id, string role) ValidateToken(string token)
         {
             ClaimsPrincipal principal = GetPrincipal(token);
             if (principal == null) throw new NullReferenceException("Principal Not Found");
