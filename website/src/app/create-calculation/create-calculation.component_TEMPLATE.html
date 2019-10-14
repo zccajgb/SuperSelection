@@ -14,58 +14,20 @@
         </div>
 
         <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Number of Ligand Types</label>
+          <label class='col-sm-2 col-form-label'>Text</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Insertion Parameter</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="insertionParameter">
+            <input type="text" class="form-control" formControlName="text">
           </div>
         </div>
 
         <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Number of Receptors</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Temperature / K</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="310.15" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-        
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Nanoparticle Radius / nm</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="50" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-        
-                
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Nanoparticle Bulk Concentration / M</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="50" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-        
-        <!-- <div class="form-group row">
           <label class='col-sm-2 col-form-label'>Dropdown</label>
           <div class="col-sm-10">
             <select class="form-control" formControlName="dropdown">
               <option *ngFor="let option of dropdownList">{{option}}</option>
             </select>
           </div>
-        </div> -->
+        </div>
 
         
         <div class="form-group row">
@@ -83,6 +45,26 @@
           <div class="col-sm-10">
             <input type="text" class="form-control" formControlName="soemthingDetails">
           </div>
+        </div>
+      </div>
+
+      <div class='col ml-auto'>
+        <div formArrayName="receptors">
+          <div *ngFor="let receptor of form.controls.receptors.controls; let i=index"> 
+              <div class="row">
+                <h5>Receptor {{i + 1}}</h5>
+                <div class = "ml-auto pr-3" *ngIf="form.controls.receptors.controls.length > 1" (click)="removeReceptor(i)">
+                  <i class="fa fa-trash text-danger"></i>
+                </div>
+              </div>
+              <div [formGroupName]="i">
+                <app-receptor [receptorForm]="form.controls.receptors.controls[i]"></app-receptor>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-sm-2 col-form-label"></label>
+          <button type="button" class="btn btn-secondary ml-3 mt-3"  (click)="addReceptor()">Add Receptor</button>
         </div>
       </div>
     </div>
