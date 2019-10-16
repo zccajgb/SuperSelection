@@ -1,5 +1,7 @@
 ﻿using ApiGateway.Infrastructure;
 using ApiGateway.Repos;
+using AutoMapper;
+using DomainModel.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ namespace ApiGateway.IOC
         {
             services.AddHttpClient();
             services.AddScoped<HttpHelper>();
+            RegisterAutomapper(services);
             //services.AddScoped(typeof(UsersRepository));
             RegisterRepos(services);
         }
@@ -26,6 +29,18 @@ namespace ApiGateway.IOC
             var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && !x.IsSealed && x.IsClass);
             
             repos.Select(r => services.AddTransient(r)).ToList();
+        }
+
+        private static void RegisterAutomapper(IServiceCollection services)
+        {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MapperProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
         }
 
         private static IEnumerable<Type> GetTypes()

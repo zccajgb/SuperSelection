@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
 using DomainModel.Infrastructure;
+using DomainModel.Models;
+using DomainModel.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +18,18 @@ namespace DomainModel.IOC
         {
             services.AddTransient<TokenManager>(_ => new TokenManager(configuration["tokenSecret"], Int32.Parse(configuration["tokenExpiry"])));
             RegisterAutomapper(services);
+            RegisterMongoDb(services, configuration);
             RegisterRepos(services);
             RegisterServices(services);
+        }
+
+        private static void RegisterMongoDb(IServiceCollection services, IConfiguration configuration)
+        {
+
+            services.Configure<UsersDatabaseSettings>(configuration.GetSection(nameof(UsersDatabaseSettings)));
+
+            services.AddSingleton<UsersDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<UsersDatabaseSettings>>().Value);
         }
 
         private static void RegisterAutomapper(IServiceCollection services)
@@ -42,15 +55,16 @@ namespace DomainModel.IOC
 
         private static void RegisterRepos(IServiceCollection services)
         {
-            var repoNamespace = "DomainModel.Repositories";
+            //var repoNamespace = "DomainModel.Repositories";
+            //var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && x.IsClass && !x.IsInterface);
+            //var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
 
-            var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && x.IsClass && !x.IsInterface);
-            var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
+            //foreach (var item in repos.Zip(interfaces, (r,i) => new { repo = r, inter = i }))
+            //{
+            //    services.AddTransient(item.inter, item.repo);
+            //}
 
-            foreach (var item in repos.Zip(interfaces, (r,i) => new { repo = r, inter = i }))
-            {
-                services.AddTransient(item.inter, item.repo);
-            }
+            services.AddTransient<IUsersRepository, UsersRepository>();
         }
 
         private static IEnumerable<Type> GetTypes()

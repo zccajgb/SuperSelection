@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DomainModel.Documents.Commands;
+using DomainModel.Repos;
+using System;
 
 namespace DomainModel
 {
@@ -11,8 +13,15 @@ namespace DomainModel
             this.calculationsRepository = calculationsRepository;
         }
         
-        public void ProcessCalculation()
+        public string ProcessCalculation(object cmd)
         {
+            switch (cmd)
+            {
+                case CreateSelectivityAndActivityCalculationCommand c:
+                    return this.calculationsRepository.CreateSelectivityAndActivityCalculation(c);
+                default:
+                    throw new ArgumentException("Command is not a recognied type");
+            }
 
         }
     }

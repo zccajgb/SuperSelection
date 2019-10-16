@@ -5,6 +5,7 @@ import { stringify } from 'querystring';
 import { Title } from '@angular/platform-browser';
 import { ValidatorsService } from '../_services/validators.service';
 import { Router } from '@angular/router';
+import { CalculationsRepository } from 'src/repositories/calculationsRepository';
 
 @Component({
   selector: 'app-create-calculation',
@@ -19,10 +20,12 @@ export class CreateCalculationComponent implements OnInit {
     private fb: FormBuilder,
     private titleService: Title,
     private validatorService: ValidatorsService,
-    private router: Router) {
-    this.titleService.setTitle('New Calculation');
-    this.validatorService = validatorService;
-    this.router = router;
+    private router: Router,
+    private calculationsRepo: CalculationsRepository) {
+      this.titleService.setTitle('New Calculation');
+      this.validatorService = validatorService;
+      this.router = router;
+      this.calculationsRepo = calculationsRepo;
    }
 
   ngOnInit() {
@@ -45,7 +48,7 @@ export class CreateCalculationComponent implements OnInit {
       // tslint:disable-next-line: no-string-literal
       calc.userID = localStorage.getItem['currentUser'].userID;
 
-      this.calculationsRepo.SubmitCalculation(calc)
+      this.calculationsRepo.submitCalculation(calc)
         .subscribe(
           data => {
             this.router.navigate(['view-calculations']);

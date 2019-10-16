@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
@@ -26,10 +27,10 @@ namespace DomainModel.Models
         public string Password { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public Guid UserId { get; }
+        public Guid UserId { get; private set; }
         public int UserRole { get; private set; }
-        public DateTime CreatedDate { get; }
+        public DateTime CreatedDate { get; private set; }
         public DateTime ModifiedDate { get; private set; }
-        public string Salt { get; }
+        public string Salt { get; private set; }
     }
 }
