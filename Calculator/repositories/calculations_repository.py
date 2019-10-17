@@ -15,7 +15,12 @@ def get_db(configString):
 def add_to_db(calcs_db, calc):
     calcs_db.insert_one(vars(calc))
 
-calcs_db = get_db('calcs_db')
+def getall_from_db(calcs_db):
+    return calcs_db.find()
 
+calcs_db = get_db('calculationsdb')
 
 add = partial(add_to_db, calcs_db) 
+getall = partial(getall_from_db, calcs_db)
+
+    
