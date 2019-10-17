@@ -1,7 +1,6 @@
 import pika
-import SelectivityAndActivity
+import SelectivityAndActivity, Test
 from functools import partial
-import Test
 
 controls = [
     ("test", Test.test_callback),
