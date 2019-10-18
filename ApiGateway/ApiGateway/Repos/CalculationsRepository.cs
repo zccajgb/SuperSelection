@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ApiGateway.Repos
 {
-    public class CalculationsRepository
+    public class CalculationsRepository : ICalculationsRepository
     {
         private readonly string uri;
         private readonly HttpHelper httpHelper;
@@ -21,13 +21,13 @@ namespace ApiGateway.Repos
             this.httpHelper = httpHelper;
         }
 
-        internal async Task<string> PostCommand(BaseCommand cmd)
+        public async Task<string> PostCommand(BaseCommand cmd)
         {
             var str = await httpHelper.PostAsync<string>(this.uri, cmd);
             return str;
         }
 
-        internal async Task<string> PostQuery(BaseQuery qry)
+        public async Task<string> PostQuery(BaseQuery qry)
         {
             var str = await httpHelper.PostAsync<string>(this.uri, qry);
             return str;

@@ -15,9 +15,9 @@ namespace ApiGateway.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        private readonly UsersRepository usersRepository;
+        private readonly IUsersRepository usersRepository;
 
-        public TestController(UsersRepository usersRepository)
+        public TestController(IUsersRepository usersRepository)
         {
             this.usersRepository = usersRepository;
         }

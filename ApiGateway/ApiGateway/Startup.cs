@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using ApiGateway.IOC;
 using FluentValidation.AspNetCore;
 using ApiGateway.Models.Validation;
+using Serilog;
 
 namespace ApiGateway
 {
@@ -52,10 +53,13 @@ namespace ApiGateway
 
             services.AddSingleton(Configuration);
 
+            Log.Logger = DependencyInjection.GetLogger();
+
             services.RegisterDependencies();
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

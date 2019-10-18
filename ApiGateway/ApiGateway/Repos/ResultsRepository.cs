@@ -13,7 +13,7 @@ using static System.Net.WebRequestMethods;
 
 namespace ApiGateway.Repos
 {
-    public class ResultsRepository
+    public class ResultsRepository : IResultsRepository
     {
         private readonly HttpHelper httpHelper;
         private readonly string uri;
@@ -23,7 +23,7 @@ namespace ApiGateway.Repos
             this.httpHelper = httpHelper;
         }
 
-        internal async Task<string> PostResultsQuery(BaseQuery query)
+        public async Task<string> PostResultsQuery(BaseQuery query)
         {
             var str = await httpHelper.PostAsync<string>(this.uri, query);
             return str;

@@ -3,7 +3,7 @@ using System;
 
 namespace ApiGateway.Documents.Queries
 {
-    internal class BaseQuery
+    public class BaseQuery
     {
         private DateTime actionDateTime;
         private Guid actionUserId;

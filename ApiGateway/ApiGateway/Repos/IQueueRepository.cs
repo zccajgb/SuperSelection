@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ApiGateway.Repos
 {
-    public class QueueRepository : IQueueRepository
+    public interface IQueueRepository
     {
     }
 }

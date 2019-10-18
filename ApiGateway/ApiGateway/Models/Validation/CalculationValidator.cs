@@ -11,6 +11,7 @@ namespace ApiGateway.Models.Validation
     {
         public CalculationValidator()
         {
+            RuleFor(x => x.Name).NotEmpty();
         }
     }
 }

@@ -13,9 +13,9 @@ namespace ApiGateway.Controllers
     [ApiController]
     public class ResultsController : ControllerBase
     {
-        private readonly ResultsRepository resultsRepository;
+        private readonly IResultsRepository resultsRepository;
 
-        public ResultsController(ResultsRepository resultsRepository)
+        public ResultsController(IResultsRepository resultsRepository)
         {
             this.resultsRepository = resultsRepository;
         }

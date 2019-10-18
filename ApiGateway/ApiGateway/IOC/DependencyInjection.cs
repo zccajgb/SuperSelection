@@ -9,6 +9,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
+using Serilog;
+using Serilog.Core;
 
 namespace ApiGateway.IOC
 {
@@ -27,8 +29,13 @@ namespace ApiGateway.IOC
         {
             var repoNamespace = "ApiGateway.Repos";
             var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && !x.IsSealed && x.IsClass);
-            
-            repos.Select(r => services.AddTransient(r)).ToList();
+            var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
+
+            foreach (var item in repos.Zip(interfaces, (r, i) => new { repo = r, inter = i }))
+            {
+                services.AddTransient(item.inter, item.repo);
+            }
+
         }
 
         private static void RegisterAutomapper(IServiceCollection services)
@@ -49,5 +56,11 @@ namespace ApiGateway.IOC
             return assembly.GetTypes();
         }
 
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
+        }
     }
 }

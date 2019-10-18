@@ -6,6 +6,8 @@ using ApiGateway.Models.DomainModels;
 using ApiGateway.Repos;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace ApiGateway.Controllers
 {
@@ -13,10 +15,10 @@ namespace ApiGateway.Controllers
     [Route("Calculations")]
     public class CalculationsController : ControllerBase
     {
-        private readonly CalculationsRepository calculationsRepository;
-        private readonly Mapper mapper;
+        private readonly ICalculationsRepository calculationsRepository;
+        private readonly IMapper mapper;
 
-        public CalculationsController(CalculationsRepository calculationsRepository, Mapper mapper)
+        public CalculationsController(ICalculationsRepository calculationsRepository, IMapper mapper)
         {
             this.calculationsRepository = calculationsRepository;
             this.mapper = mapper;
@@ -28,6 +30,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("Calculation model is invalid: {@calc}", calculation);
                 return BadRequest(ModelState);
             }
 
