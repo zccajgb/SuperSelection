@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace DomainModel.Infrastructure
             var payload = JsonConvert.SerializeObject(obj);
             var cmdObj = new CommandObject(type, payload);
             var json = JsonConvert.SerializeObject(cmdObj);
+            Log.Logger.Information("Command Serialised: {@command}", json);
             return json;
         }
 
@@ -27,6 +29,7 @@ namespace DomainModel.Infrastructure
 
 
             var payload = JsonConvert.DeserializeObject(cmdObj.Payload, type);
+            Log.Logger.Information("Command Deserialised: {@command}", payload);
             return payload;
         }
     }

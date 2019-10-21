@@ -19,10 +19,11 @@ namespace CalculationService.Controllers
         }
 
         [Route("Command")]
-        public ActionResult<string> Command([FromBody] CommandObject jsonCommand)
+        public ActionResult Command([FromBody] CommandObject jsonCommand)
         {
             var cmd = CommandBuilder.BuildCommand(jsonCommand);
-            return Ok(this.calculationsOrchestrator.ProcessCalculation(cmd));
+            this.calculationsOrchestrator.ProcessCalculation(cmd);
+            return Ok();
         }
     }
 }

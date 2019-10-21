@@ -1,5 +1,6 @@
 ﻿using DomainModel.Documents.Commands;
 using DomainModel.Repos;
+using Serilog;
 using System;
 
 namespace DomainModel
@@ -13,13 +14,16 @@ namespace DomainModel
             this.calculationsRepository = calculationsRepository;
         }
         
-        public string ProcessCalculation(object cmd)
+        public void ProcessCalculation(object cmd)
         {
             switch (cmd)
             {
                 case CreateSelectivityAndActivityCalculationCommand c:
-                    return this.calculationsRepository.CreateSelectivityAndActivityCalculation(c);
+                    Log.Logger.Information("Calculation of type CreateSelectivityAndActivityCommand");
+                    this.calculationsRepository.CreateSelectivityAndActivityCalculation(c);
+                    break;
                 default:
+                    Log.Logger.Information("Command is not recognised type: {@cmd}", cmd);
                     throw new ArgumentException("Command is not a recognied type");
             }
 
