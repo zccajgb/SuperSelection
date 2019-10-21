@@ -7,6 +7,7 @@ using ApiGateway.Models;
 using ApiGateway.Repos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace ApiGateway.Controllers
 {
@@ -26,6 +27,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("userID model is invalid: {@userID}", userID);
                 return BadRequest(ModelState);
             }
 
@@ -40,6 +42,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("resultID model is invalid: {@resultID}", resultID);
                 return BadRequest(ModelState);
             }
 

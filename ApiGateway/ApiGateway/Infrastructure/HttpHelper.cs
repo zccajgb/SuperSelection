@@ -1,5 +1,6 @@
 ﻿using ApiGateway.Models;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,12 @@ namespace ApiGateway.Infrastructure
             var jsonContent = string.Empty;
             using (var response = await httpClient.PostAsync(uri, content))
             {
-                if (!response.IsSuccessStatusCode) throw new HttpRequestException(response.StatusCode.ToString());
+                if (!response.IsSuccessStatusCode)
+                {
+                    Log.Logger.Error("request failed with error {@error}", response);
+                    throw new HttpRequestException(response.StatusCode.ToString());
+                }
+
                 jsonContent = await response.Content.ReadAsStringAsync();
             }
 
@@ -39,7 +45,12 @@ namespace ApiGateway.Infrastructure
             var jsonContent = String.Empty;
             using (var response = await httpClient.GetAsync(uri))
             {
-                if (!response.IsSuccessStatusCode) throw new HttpRequestException(response.StatusCode.ToString());
+                if (!response.IsSuccessStatusCode)
+                {
+                    Log.Logger.Error("request failed with error {@error}", response);
+                    throw new HttpRequestException(response.StatusCode.ToString());
+                }
+
                 jsonContent = await response.Content.ReadAsStringAsync();
             }
             var result = JsonConvert.DeserializeObject(jsonContent);

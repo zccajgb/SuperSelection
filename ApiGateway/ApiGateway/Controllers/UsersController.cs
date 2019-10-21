@@ -10,6 +10,7 @@ using ApiGateway.Models.DomainModels;
 using ApiGateway.Models.ViewModels;
 using ApiGateway.Repos;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace ApiGateway.Controllers
 {
@@ -29,6 +30,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("User model is invalid: {@user}", user);
                 return BadRequest(ModelState);
             }
 
@@ -42,6 +44,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("modelstate is invalid: {@userID}");
                 return BadRequest(ModelState);
             }
 
@@ -55,6 +58,7 @@ namespace ApiGateway.Controllers
         {
             if (!ModelState.IsValid)
             {
+                Log.Logger.Error("User model is invalid: {@user}", user);
                 return BadRequest(ModelState);
             }
 
