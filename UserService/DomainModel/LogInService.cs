@@ -2,6 +2,7 @@
 using DomainModel.Infrastructure;
 using DomainModel.Models;
 using DomainModel.Repositories;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Security.Authentication;
@@ -28,10 +29,14 @@ namespace DomainModel
 
             var hashedPassword = PasswordHasher.HashPassword(password, user.Salt);
 
-            if (hashedPassword != user.Password) return null;
+            if (hashedPassword != user.Password)
+            {
+                Log.Logger.Error("Password is incorrect");
+                return null;
+            }
 
             var token = tokenManager.GenerateToken(user);
-
+            Log.Logger.Information("Token generated for user: {@username}", username);
             return mapper.Map<UserView>(user, opts => opts.Items["Token"] = token);
         }
 

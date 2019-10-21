@@ -6,6 +6,7 @@ using AutoMapper;
 using DomainModel.Models;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using Serilog;
 
 namespace DomainModel.Repositories
 {
@@ -25,7 +26,11 @@ namespace DomainModel.Repositories
 
         public void AddUser(User user)
         {
-            if (DoesUserExist(user.Username, user.UserId, user.Email)) throw new ArgumentException("User already exists");
+            if (DoesUserExist(user.Username, user.UserId, user.Email))
+            {
+                Log.Logger.Error("User already exists: @{user}", user);
+                throw new ArgumentException("User already exists");
+            }
             this.users.InsertOne(user);
         }
 
@@ -38,18 +43,33 @@ namespace DomainModel.Repositories
 
         public User GetUser(Guid userId)
         {
-            return this.users.Find(x => x.UserId == userId).FirstOrDefault();
+            var user = this.users.Find(x => x.UserId == userId).FirstOrDefault();
+            if (user == null)
+            {
+                Log.Logger.Error("User with userId: {@userId} could not be found", userId);
+            }
+            return user;
+
         }
 
         public User GetUser(string username)
         {
-            var users = this.users.Find(x => true).ToList();
-            return this.users.Find(x => x.Username == username).FirstOrDefault();
+            var user = this.users.Find(x => x.Username == username).FirstOrDefault();
+            if (user == null)
+            {
+                Log.Logger.Error("User with username: {@username} could not be found", username);
+            }
+            return user;
         }
 
         public IEnumerable<UserView> GetUsers()
         {
             var users = this.users.Find(user => true).ToList();
+            if (users.Count() == 0)
+            {
+                Log.Logger.Error("No users exist");
+            }
+
             return mapper.Map<IEnumerable<UserView>>(users);
         }
     }

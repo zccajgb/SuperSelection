@@ -1,5 +1,6 @@
 ﻿using DomainModel.Infrastructure;
 using DomainModel.Repositories;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Security.Authentication;
@@ -24,8 +25,16 @@ namespace DomainModel
 
             var user = this.usersRepository.GetUser(new Guid(id));
 
-            if (user == null) throw new KeyNotFoundException($"Could not find user");
-            if (user.UserId.ToString() != id) throw new AuthenticationException("Token is not valid");
+            if (user == null)
+            {
+                Log.Logger.Error("could not find user with id: {@id}", @id);
+                throw new KeyNotFoundException($"Could not find user");
+            }
+            if (user.UserId.ToString() != id)
+            {
+                Log.Logger.Error("Token is not valid: {@token}", token);
+                throw new AuthenticationException("Token is not valid");
+            }
 
             return user.UserId;
         }

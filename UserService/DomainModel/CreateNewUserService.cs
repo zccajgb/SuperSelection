@@ -2,6 +2,7 @@
 using DomainModel.Infrastructure;
 using DomainModel.Models;
 using DomainModel.Repositories;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -31,8 +32,9 @@ namespace DomainModel
             var userRole = UserRoles.User;
 
             var user = new User(username, email, hashedPassword, firstName, lastName, userId, userRole, now, now, salt);
-
             this.userRepository.AddUser(user);
+
+            Log.Logger.Information("User created with username: {@username}", username);
 
             return mapper.Map<UserView>(user, opts => opts.Items["Token"] = string.Empty);
         }
