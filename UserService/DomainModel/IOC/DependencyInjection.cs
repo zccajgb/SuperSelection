@@ -52,7 +52,7 @@ namespace DomainModel.IOC
             var servs = GetTypes().Where(x => x.Namespace.EndsWith(namesp) && x.Name.EndsWith("Service")
                 && !x.IsAbstract && !x.IsSealed && x.IsClass && !x.IsInterface);
 
-            servs.Select(x => services.AddScoped(x)).ToList();
+            servs.Select(x => services.AddScoped(x)).ToList();  
         }
 
         private static void RegisterRepos(IServiceCollection services)

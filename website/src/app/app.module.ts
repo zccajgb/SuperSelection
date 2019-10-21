@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -38,7 +39,7 @@ import { CreateNewAccountComponent } from './create-new-account/create-new-accou
     ResultsComponent,
     NavComponent,
     ReceptorComponent,
-    CreateNewAccountComponent
+    CreateNewAccountComponent,
   ],
   imports: [
     HttpClientModule,
@@ -57,7 +58,13 @@ import { CreateNewAccountComponent } from './create-new-account/create-new-accou
     MatMenuModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: environment.apiUrl + '/api/log',
+      level: NgxLoggerLevel.TRACE,
+      serverLogLevel: NgxLoggerLevel.ERROR,
+      disableConsoleLogging: environment.production
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -17,16 +17,17 @@ namespace ApiGateway.IOC
         {
             services.AddHttpClient();
             services.AddScoped<HttpHelper>();
+            RegisterFrontEndLogger(services);
             RegisterAutomapper(services);
             //services.AddScoped(typeof(UsersRepository));
             RegisterRepos(services);
         }
-
         private static void RegisterRepos(IServiceCollection services)
         {
             var repoNamespace = "ApiGateway.Repos";
-            var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && !x.IsSealed && x.IsClass);
-            var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
+
+            var repos = GetClassesByNameSpace(repoNamespace);
+            var interfaces = GetInterfacesByNameSpace(repoNamespace);
 
             foreach (var item in repos.Zip(interfaces, (r, i) => new { repo = r, inter = i }))
             {
@@ -47,17 +48,33 @@ namespace ApiGateway.IOC
             services.AddSingleton(mapper);
         }
 
-        private static IEnumerable<Type> GetTypes()
+        private static IEnumerable<Type> GetClassesByNameSpace(string namesp)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetTypes();
+            var classes = assembly.GetTypes().Where(x => !x.IsAbstract && !x.IsInterface && !x.IsSealed && x.IsClass);
+            return classes.Where(x => x.Namespace.Contains(namesp));
+        }
+
+        private static IEnumerable<Type> GetInterfacesByNameSpace(string namesp)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var classes = assembly.GetTypes().Where(x => x.IsInterface);
+            return classes.Where(x => x.Namespace.Contains(namesp));
         }
 
         public static Logger GetLogger()
         {
             return new LoggerConfiguration()
-                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
+                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Month)
                 .CreateLogger();
+        }
+
+        private static void RegisterFrontEndLogger(IServiceCollection services)
+        {
+            var feLogger = new LoggerConfiguration()
+                .WriteTo.File("../../website/log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
+            services.AddSingleton<ILogger>(feLogger);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace DomainModel.Models
 {
+    [BsonIgnoreExtraElements]
     public class User
     {
         public User(string username, string email, string password, string firstName, string lastName, Guid userId, int userRole, DateTime createdDate, DateTime modifiedDate, string salt)

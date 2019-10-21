@@ -6,6 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { ValidatorsService } from '../_services/validators.service';
 import { Router } from '@angular/router';
 import { CalculationsRepository } from 'src/repositories/calculationsRepository';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-create-calculation',
@@ -21,7 +22,8 @@ export class CreateCalculationComponent implements OnInit {
     private titleService: Title,
     private validatorService: ValidatorsService,
     private router: Router,
-    private calculationsRepo: CalculationsRepository) {
+    private calculationsRepo: CalculationsRepository,
+    private logger: NGXLogger) {
       this.titleService.setTitle('New Calculation');
       this.validatorService = validatorService;
       this.router = router;
@@ -51,7 +53,11 @@ export class CreateCalculationComponent implements OnInit {
       this.calculationsRepo.submitCalculation(calc)
         .subscribe(
           data => {
+            this.logger.info('Calculation successfully submitted');
             this.router.navigate(['view-calculations']);
+          },
+          error => {
+            this.logger.error(error);
           }
         );
   }

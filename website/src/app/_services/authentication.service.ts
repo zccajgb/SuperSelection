@@ -7,13 +7,14 @@ import { environment } from 'src/environments/environment';
 import { User } from 'src/models/user';
 import { getInterpolationArgsLength } from '@angular/compiler/src/render3/view/util';
 import { UserRepository } from 'src/repositories/userRepository';
+import { NGXLogger } from 'ngx-logger';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
-    constructor(private http: HttpClient, private repo: UserRepository) {
+    constructor(private http: HttpClient, private repo: UserRepository, private logger: NGXLogger) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
@@ -29,6 +30,7 @@ export class AuthenticationService {
                 // tslint:disable-next-line: triple-equals
                 if (user != null) {
                     localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.logger.info('user saved to local storage');
                     this.currentUserSubject.next(user);
                 }
                 return user;
@@ -38,6 +40,7 @@ export class AuthenticationService {
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
+        this.logger.info('user removed from local storage');
         this.currentUserSubject.next(null);
     }
 }

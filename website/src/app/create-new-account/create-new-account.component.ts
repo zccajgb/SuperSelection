@@ -3,6 +3,7 @@ import { User } from 'src/models/user';
 import { UserRepository } from 'src/repositories/userRepository';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-create-new-account',
@@ -17,7 +18,7 @@ export class CreateNewAccountComponent implements OnInit {
   error = '';
   returnUrl = '/';
 
-  constructor(private userRepo: UserRepository, private router: Router) {
+  constructor(private userRepo: UserRepository, private router: Router, private logger: NGXLogger) {
     this.user = new User();
    }
 
@@ -32,14 +33,17 @@ export class CreateNewAccountComponent implements OnInit {
         .subscribe(
           data => {
             if (data == null) {
-                this.error = 'Error: account already exists';
+                this.error = 'Error: account already exists or invalid details';
+                this.logger.error(this.error);
                 this.loading = false;
             } else {
+                this.logger.info('create new account sucessful');
                 this.router.navigate([this.returnUrl]);
             }
         },
         error => {
             this.error = error;
+            this.logger.error(this.error);
             this.loading = false;
         });
   }
