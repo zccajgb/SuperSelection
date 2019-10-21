@@ -1,13 +1,12 @@
-﻿using AutoMapper;
-using DomainModel;
-using DomainModel.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Serilog.Core;
+using Serilog;
 
 namespace DomainModel.Infrastructure
 {
@@ -54,6 +53,13 @@ namespace DomainModel.Infrastructure
         {
             var assembly = Assembly.GetExecutingAssembly();
             return assembly.GetTypes();
+        }
+
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
         }
 
     }

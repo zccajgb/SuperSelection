@@ -1,14 +1,11 @@
 ﻿using ApiGateway.Infrastructure;
-using ApiGateway.Repos;
 using AutoMapper;
 using DomainModel.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Reflection;
-using System.Threading.Tasks;
 using Serilog;
 using Serilog.Core;
 

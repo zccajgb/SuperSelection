@@ -5,6 +5,8 @@ using DomainModel.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Serilog;
+using Serilog.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +73,13 @@ namespace DomainModel.IOC
         {
             var assembly = Assembly.GetExecutingAssembly();
             return assembly.GetTypes().Where(x => !x.IsSealed);
+        }
+
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
         }
     }
 }
