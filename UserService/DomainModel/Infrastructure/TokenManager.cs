@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace DomainModel.Infrastructure
 {
-    public class TokenManager
+    public class TokenManager : ITokenManager
     {
         // https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
 
@@ -19,22 +19,28 @@ namespace DomainModel.Infrastructure
             this.secret = secret;
             this.expiry = expiry;
         }
+
         public string GenerateToken(User user)
         {
-            byte[] key = Convert.FromBase64String(secret);
+            if (user == null)
+            {
+                var message = "User is null";
+                throw new ArgumentNullException(message);
+            }
+
+            byte[] key = Convert.FromBase64String(this.secret);
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(key);
             SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] 
+                Subject = new ClaimsIdentity(new[]
                 {
                       new Claim(ClaimTypes.Name, user.Username),
                       new Claim(ClaimTypes.Role, user.UserRole.ToString()),
-                      new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
+                      new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                 }),
-                
-                Expires = DateTime.UtcNow.AddMinutes(expiry),
-                SigningCredentials = new SigningCredentials(securityKey,
-                SecurityAlgorithms.HmacSha256Signature)
+
+                Expires = DateTime.UtcNow.AddMinutes(this.expiry),
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature),
             };
 
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
@@ -49,18 +55,20 @@ namespace DomainModel.Infrastructure
                 JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
                 JwtSecurityToken jwtToken = (JwtSecurityToken)tokenHandler.ReadToken(token);
 
-                if (jwtToken == null) return null;
+                if (jwtToken == null)
+                {
+                    return null;
+                }
 
-                byte[] key = Convert.FromBase64String(secret);
+                byte[] key = Convert.FromBase64String(this.secret);
                 TokenValidationParameters parameters = new TokenValidationParameters()
                 {
                     RequireExpirationTime = true,
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
                 };
-                ClaimsPrincipal principal = tokenHandler.ValidateToken(token,
-                      parameters, out SecurityToken securityToken);
+                ClaimsPrincipal principal = tokenHandler.ValidateToken(token, parameters, out SecurityToken securityToken);
                 return principal;
             }
             catch
@@ -71,8 +79,12 @@ namespace DomainModel.Infrastructure
 
         public (string username, string id, string role) ValidateToken(string token)
         {
-            ClaimsPrincipal principal = GetPrincipal(token);
-            if (principal == null) throw new NullReferenceException("Principal Not Found");
+            ClaimsPrincipal principal = this.GetPrincipal(token);
+            if (principal == null)
+            {
+                throw new NullReferenceException("Principal Not Found");
+            }
+
             ClaimsIdentity identity = (ClaimsIdentity)principal.Identity;
 
             var username = identity.FindFirst(ClaimTypes.Name).Value;

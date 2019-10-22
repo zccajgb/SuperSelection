@@ -1,28 +1,35 @@
-﻿using AutoMapper;
-using DomainModel.Infrastructure;
-using DomainModel.Models;
-using DomainModel.Repositories;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Serilog;
-using Serilog.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
-namespace DomainModel.IOC
+﻿namespace DomainModel.IOC
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using AutoMapper;
+    using DomainModel.Infrastructure;
+    using DomainModel.Models;
+    using DomainModel.Repositories;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Options;
+    using Serilog;
+    using Serilog.Core;
+
     public static class DependencyInjection
     {
         public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<TokenManager>(_ => new TokenManager(configuration["tokenSecret"], Int32.Parse(configuration["tokenExpiry"])));
+            services.AddTransient<ITokenManager, TokenManager>(_ => new TokenManager(configuration["tokenSecret"], int.Parse(configuration["tokenExpiry"])));
             RegisterAutomapper(services);
             RegisterMongoDb(services, configuration);
             RegisterRepos(services);
             RegisterServices(services);
+        }
+
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
         }
 
         private static void RegisterMongoDb(IServiceCollection services, IConfiguration configuration)
@@ -51,15 +58,20 @@ namespace DomainModel.IOC
             var namesp = "DomainModel";
             var servs = GetTypes().Where(x => x.Namespace.EndsWith(namesp) && x.Name.EndsWith("Service")
                 && !x.IsAbstract && !x.IsSealed && x.IsClass && !x.IsInterface);
+            var inters = GetTypes().Where(x => x.Namespace.EndsWith(namesp) && x.Name.EndsWith("Service")
+                && x.IsInterface);
 
-            servs.Select(x => services.AddScoped(x)).ToList();  
+            foreach (var (serv, inter) in servs.Zip(inters, (s, i) => (serv: s, inter: i)))
+            {
+                services.AddScoped(inter, serv);
+            }
         }
 
         private static void RegisterRepos(IServiceCollection services)
         {
-            //var repoNamespace = "DomainModel.Repositories";
-            //var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && x.IsClass && !x.IsInterface);
-            //var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
+            // var repoNamespace = "DomainModel.Repositories";
+            // var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && x.IsClass && !x.IsInterface);
+            // var interfaces = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && x.IsInterface);
 
             //foreach (var item in repos.Zip(interfaces, (r,i) => new { repo = r, inter = i }))
             //{
@@ -73,13 +85,6 @@ namespace DomainModel.IOC
         {
             var assembly = Assembly.GetExecutingAssembly();
             return assembly.GetTypes().Where(x => !x.IsSealed);
-        }
-
-        public static Logger GetLogger()
-        {
-            return new LoggerConfiguration()
-                .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
-                .CreateLogger();
         }
     }
 }

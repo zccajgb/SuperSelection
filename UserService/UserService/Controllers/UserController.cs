@@ -12,11 +12,11 @@ namespace UserService.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUsersRepository userRepository;
-        private readonly ValidateService validateService;
-        private readonly CreateNewUserService createNewUserService;
-        private readonly LoginService loginService;
+        private readonly IValidateService validateService;
+        private readonly ICreateNewUserService createNewUserService;
+        private readonly ILoginService loginService;
 
-        public UserController(IUsersRepository userRepository, ValidateService validateService, CreateNewUserService createNewUserService, LoginService loginService)
+        public UserController(IUsersRepository userRepository, IValidateService validateService, ICreateNewUserService createNewUserService, ILoginService loginService)
         {
             this.userRepository = userRepository;
             this.validateService = validateService;
@@ -27,28 +27,30 @@ namespace UserService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<UserView>> Get()
         {
-            return Ok(this.userRepository.GetUsers());
+            var users = this.userRepository.GetUsers();
+            return Ok(users);
         }
 
         [HttpPost]
         [Route("GetUserID")]
         public ActionResult<Guid> GetUserID([FromBody] string token)
         {
-            return this.validateService.Validate(token);
+            return Ok(this.validateService.Validate(token));
         }
 
         [HttpPost]
         [Route("CreateNewUser")]
         public ActionResult<UserView> CreateNewUser([FromBody] User user)
         {
-            return Ok(this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName));
+            var userView = this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName);
+            return Ok(userView);
         }
 
         [HttpPost]
         [Route("Login")]
         public ActionResult<UserView> Login([FromBody] User user)
         {
-            return this.loginService.Login(user.Username, user.Password);
+            return Ok(this.loginService.Login(user.Username, user.Password));
         }
     }
 }
