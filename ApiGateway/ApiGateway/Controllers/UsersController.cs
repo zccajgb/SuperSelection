@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web.Http.Cors;
-using ApiGateway.Documents.Commands;
-using ApiGateway.Documents.Queries;
-using ApiGateway.Models;
-using ApiGateway.Models.DomainModels;
-using ApiGateway.Models.ViewModels;
-using ApiGateway.Repos;
-using Microsoft.AspNetCore.Mvc;
-
-namespace ApiGateway.Controllers
+﻿namespace ApiGateway.Controllers
 {
+    using System.Threading.Tasks;
+    using ApiGateway.Models.DomainModels;
+    using ApiGateway.Models.ViewModels;
+    using ApiGateway.Repos;
+    using Microsoft.AspNetCore.Mvc;
+    using Serilog;
+
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly UsersRepository usersRepository;
+        private readonly IUsersRepository usersRepository;
 
-        public UsersController(UsersRepository usersRepository)
+        public UsersController(IUsersRepository usersRepository)
         {
             this.usersRepository = usersRepository;
         }
@@ -27,39 +21,42 @@ namespace ApiGateway.Controllers
         [Route("Users/Login")]
         public async Task<ActionResult<UserView>> Login([FromBody] User user)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                Log.Logger.Error("User model is invalid: {@user}", user);
+                return this.BadRequest(this.ModelState);
             }
 
             var result = await this.usersRepository.Login(user);
-            return Ok(result);
+            return this.Ok(result);
         }
 
         [HttpGet]
         [Route("Users")]
         public async Task<ActionResult<UserView>> Get()
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                Log.Logger.Error("modelstate is invalid: {@userID}");
+                return this.BadRequest(this.ModelState);
             }
 
             var users = await this.usersRepository.GetAllUsers();
-            return Ok(users);
+            return this.Ok(users);
         }
 
         [HttpPost]
         [Route("Users/CreateNewAccount")]
         public async Task<ActionResult<UserView>> CreateNewAccount([FromBody] User user)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                Log.Logger.Error("User model is invalid: {@user}", user);
+                return this.BadRequest(this.ModelState);
             }
 
             var result = await this.usersRepository.CreateNewUser(user);
-            return Ok(result);
+            return this.Ok(result);
         }
     }
 }

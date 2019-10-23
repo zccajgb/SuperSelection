@@ -10,7 +10,7 @@ export class ValidatorsService {
         // you are supposed to return null for the validation to pass.
 
         // tslint:disable-next-line: triple-equals
-        return ((parseFloat(control.value) == parseInt(control.value)) && !isNaN(control.value)) ? null : {
+        return ((parseFloat(control.value) == parseInt(control.value, 10)) && !isNaN(control.value)) ? null : {
            notNumeric: true
         };
    }

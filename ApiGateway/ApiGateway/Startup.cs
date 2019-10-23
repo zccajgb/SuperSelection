@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using ApiGateway.IOC;
-using FluentValidation.AspNetCore;
-using ApiGateway.Models.Validation;
-
-namespace ApiGateway
+﻿namespace ApiGateway
 {
+    using ApiGateway.IOC;
+    using ApiGateway.Models.Validation;
+    using FluentValidation.AspNetCore;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -30,12 +24,13 @@ namespace ApiGateway
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("allowSpecificOrgins",
-                builder =>
-                {
-                    //TODO specify origin
-                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                });
+                options.AddPolicy(
+                    "allowSpecificOrgins",
+                    builder =>
+                    {
+                        // TODO specify origin
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
             });
 
             services.AddSwaggerGen(options =>
@@ -46,11 +41,13 @@ namespace ApiGateway
                     Title = "superselection - ApiGateway",
                     Version = "v1",
                     Description = "The API Gateway for superselection app. ",
-                    TermsOfService = "Terms Of Service"
+                    TermsOfService = "Terms Of Service",
                 });
             });
 
-            services.AddSingleton(Configuration);
+            services.AddSingleton(this.Configuration);
+
+            Log.Logger = DependencyInjection.GetLogger();
 
             services.RegisterDependencies();
             services.AddMvc()
@@ -72,7 +69,7 @@ namespace ApiGateway
             }
 
             app.UseCors("allowSpecificOrgins");
-            
+
             app.UseSwagger().UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
 
             app.UseHttpsRedirection();

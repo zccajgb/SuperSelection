@@ -1,9 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-
-namespace ApiGateway.Documents.Queries
+﻿namespace ApiGateway.Documents.Queries
 {
-    internal class BaseQuery
+    using System;
+
+    public class BaseQuery
     {
         private DateTime actionDateTime;
         private Guid actionUserId;

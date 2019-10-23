@@ -1,10 +1,7 @@
-﻿using RabbitMQ.Client;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using RabbitMQ.Client;
+
     public class RabbitMQConnectionHelper
     {
         public RabbitMQConnectionHelper(ConnectionFactory connectionFactory, string hostName, string userName, string password)

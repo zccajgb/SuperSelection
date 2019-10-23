@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ApiGateway.Repos
+﻿namespace ApiGateway.Repos
 {
-    public class QueueRepository
+    public class QueueRepository : IQueueRepository
     {
     }
 }

@@ -854,3 +854,6 @@ dmypy.json
 .pyre/
 /Calculator/calculator
 /Calculator/.vscode
+/UserService/UserService/-log201910.txt
+/ApiGateway/ApiGateway/log201910.txt
+/website/log201910.txt

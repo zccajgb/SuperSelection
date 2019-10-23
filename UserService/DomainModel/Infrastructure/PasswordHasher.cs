@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using System;
+    using System.Security.Cryptography;
+    using System.Text;
+
     public static class PasswordHasher
     {
         public static string HashPassword(string password, string salt)

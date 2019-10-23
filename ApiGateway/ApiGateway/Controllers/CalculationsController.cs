@@ -1,22 +1,22 @@
-﻿using System;
-using System.Threading.Tasks;
-using ApiGateway.Documents.Commands;
-using ApiGateway.Models;
-using ApiGateway.Models.DomainModels;
-using ApiGateway.Repos;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-
-namespace ApiGateway.Controllers
+﻿namespace ApiGateway.Controllers
 {
+    using System;
+    using System.Threading.Tasks;
+    using ApiGateway.Documents.Commands;
+    using ApiGateway.Models.DomainModels;
+    using ApiGateway.Repos;
+    using AutoMapper;
+    using Microsoft.AspNetCore.Mvc;
+    using Serilog;
+
     [ApiController]
     [Route("Calculations")]
     public class CalculationsController : ControllerBase
     {
-        private readonly CalculationsRepository calculationsRepository;
-        private readonly Mapper mapper;
+        private readonly ICalculationsRepository calculationsRepository;
+        private readonly IMapper mapper;
 
-        public CalculationsController(CalculationsRepository calculationsRepository, Mapper mapper)
+        public CalculationsController(ICalculationsRepository calculationsRepository, IMapper mapper)
         {
             this.calculationsRepository = calculationsRepository;
             this.mapper = mapper;
@@ -26,19 +26,19 @@ namespace ApiGateway.Controllers
         [Route("CreateCalcuation")]
         public async Task<ActionResult<string>> CreateCalculation([FromBody] Calculation calculation)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                Log.Logger.Error("Calculation model is invalid: {@calc}", calculation);
+                return this.BadRequest(this.ModelState);
             }
 
-            var command = mapper.Map<CreateSelectivityAndActivityCalculationCommand>(calculation, opts =>
+            var command = this.mapper.Map<CreateSelectivityAndActivityCalculationCommand>(calculation, opts =>
             {
                 opts.Items["Datetime"] = DateTime.UtcNow;
             });
 
             var response = await this.calculationsRepository.PostCommand(command);
-            return Ok(response);
+            return this.Ok(response);
         }
-
     }
 }

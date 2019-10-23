@@ -1,45 +1,54 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading.Tasks;
+    using Newtonsoft.Json;
+    using Serilog;
+
     public static class CommandBuilder
     {
         public static string BuildJson(object obj)
         {
+            CommandObject cmdObj = BuildCommandObject(obj);
+            var json = JsonConvert.SerializeObject(cmdObj);
+            Log.Logger.Information("Command Serialised: {@command}", json);
+            return json;
+        }
+
+        public static CommandObject BuildCommandObject(object obj)
+        {
             var type = obj.GetType().Name;
             var payload = JsonConvert.SerializeObject(obj);
             var cmdObj = new CommandObject(type, payload);
-            var json = JsonConvert.SerializeObject(cmdObj);
-            return json;
+            return cmdObj;
         }
 
         public static object BuildCommand(CommandObject cmdObj)
         {
-            //var cmdObj = JsonConvert.DeserializeObject<CommandObject>(json);
             var assembly = typeof(CommandObject).Assembly;
 
             var type = assembly.GetTypes().FirstOrDefault(t => t.IsClass && t.Name == cmdObj.Type);
 
-
             var payload = JsonConvert.DeserializeObject(cmdObj.Payload, type);
+            Log.Logger.Information("Command Deserialised: {@command}", payload);
             return payload;
         }
     }
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1402:File may only contain a single type", Justification = "Makes sense")]
     public class CommandObject
     {
-        public string Type { get; }
-        public string Payload { get; }
-
         public CommandObject(string type, string payload)
         {
-            Type = type;
-            Payload = payload;
+            this.Type = type;
+            this.Payload = payload;
         }
+
+        public string Type { get; }
+
+        public string Payload { get; }
     }
 }

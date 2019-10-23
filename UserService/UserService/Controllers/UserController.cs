@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using DomainModel;
-using DomainModel.Models;
-using DomainModel.Repositories;
-using Microsoft.AspNetCore.Mvc;
-
-namespace UserService.Controllers
+﻿namespace UserService.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using DomainModel;
+    using DomainModel.Models;
+    using DomainModel.Repositories;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUsersRepository userRepository;
-        private readonly ValidateService validateService;
-        private readonly CreateNewUserService createNewUserService;
-        private readonly LoginService loginService;
+        private readonly IValidateService validateService;
+        private readonly ICreateNewUserService createNewUserService;
+        private readonly ILoginService loginService;
 
-        public UserController(IUsersRepository userRepository, ValidateService validateService, CreateNewUserService createNewUserService, LoginService loginService)
+        public UserController(IUsersRepository userRepository, IValidateService validateService, ICreateNewUserService createNewUserService, ILoginService loginService)
         {
             this.userRepository = userRepository;
             this.validateService = validateService;
@@ -27,28 +27,30 @@ namespace UserService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<UserView>> Get()
         {
-            return Ok(this.userRepository.GetUsers());
+            var users = this.userRepository.GetAllUsers();
+            return this.Ok(users);
         }
 
         [HttpPost]
         [Route("GetUserID")]
         public ActionResult<Guid> GetUserID([FromBody] string token)
         {
-            return this.validateService.Validate(token);
+            return this.Ok(this.validateService.Validate(token));
         }
 
         [HttpPost]
         [Route("CreateNewUser")]
         public ActionResult<UserView> CreateNewUser([FromBody] User user)
         {
-            return Ok(this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName));
+            var userView = this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName);
+            return this.Ok(userView);
         }
 
         [HttpPost]
         [Route("Login")]
         public ActionResult<UserView> Login([FromBody] User user)
         {
-            return this.loginService.Login(user.Username, user.Password);
+            return this.Ok(this.loginService.Login(user.Username, user.Password));
         }
     }
 }

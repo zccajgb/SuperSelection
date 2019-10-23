@@ -1,9 +1,8 @@
-﻿using System;
-using ApiGateway.Models;
-using ApiGateway.Models.DomainModels;
-
-namespace ApiGateway.Documents.Commands
+﻿namespace ApiGateway.Documents.Commands
 {
+    using System;
+    using ApiGateway.Models.DomainModels;
+
     internal class CreateNewUserCommand : BaseCommand
     {
         private readonly User user;

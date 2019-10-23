@@ -1,28 +1,25 @@
-﻿using DomainModel;
-using DomainModel.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CalculationService.Controllers
+﻿namespace CalculationService.Controllers
 {
+    using DomainModel;
+    using DomainModel.Infrastructure;
+    using Microsoft.AspNetCore.Mvc;
+
     [ApiController]
     public class CalculationsController : ControllerBase
     {
-        private readonly CalculationsOrchestrator calculationsOrchestrator;
+        private readonly ICalculationsOrchestrator calculationsOrchestrator;
 
-        public CalculationsController(CalculationsOrchestrator calculationsOrchestrator)
+        public CalculationsController(ICalculationsOrchestrator calculationsOrchestrator)
         {
             this.calculationsOrchestrator = calculationsOrchestrator;
         }
 
         [Route("Command")]
-        public ActionResult<string> Command([FromBody] CommandObject jsonCommand)
+        public ActionResult Command([FromBody] CommandObject jsonCommand)
         {
             var cmd = CommandBuilder.BuildCommand(jsonCommand);
-            return Ok(this.calculationsOrchestrator.ProcessCalculation(cmd));
+            this.calculationsOrchestrator.ProcessCalculation(cmd);
+            return this.Ok();
         }
     }
 }

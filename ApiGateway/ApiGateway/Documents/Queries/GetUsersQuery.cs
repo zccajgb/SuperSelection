@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace ApiGateway.Documents.Queries
+﻿namespace ApiGateway.Documents.Queries
 {
+    using System;
+
     internal class GetUsersQuery : BaseQuery
     {
         public GetUsersQuery(Guid actionUserId, DateTime actionDateTime)

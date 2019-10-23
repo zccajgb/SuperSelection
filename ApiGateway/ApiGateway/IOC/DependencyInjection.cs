@@ -1,34 +1,45 @@
-﻿using ApiGateway.Infrastructure;
-using ApiGateway.Repos;
-using AutoMapper;
-using DomainModel.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Reflection;
-using System.Threading.Tasks;
-
-namespace ApiGateway.IOC
+﻿namespace ApiGateway.IOC
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using ApiGateway.Infrastructure;
+    using AutoMapper;
+    using DomainModel.Infrastructure;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+    using Serilog.Core;
+
     public static class DependencyInjection
     {
         public static void RegisterDependencies(this IServiceCollection services)
         {
             services.AddHttpClient();
             services.AddScoped<HttpHelper>();
+            RegisterFrontEndLogger(services);
             RegisterAutomapper(services);
-            //services.AddScoped(typeof(UsersRepository));
             RegisterRepos(services);
+        }
+
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
         }
 
         private static void RegisterRepos(IServiceCollection services)
         {
             var repoNamespace = "ApiGateway.Repos";
-            var repos = GetTypes().Where(x => x.Namespace.Contains(repoNamespace) && !x.IsAbstract && !x.IsSealed && x.IsClass);
-            
-            repos.Select(r => services.AddTransient(r)).ToList();
+
+            var repos = GetClassesByNameSpace(repoNamespace);
+            var interfaces = GetInterfacesByNameSpace(repoNamespace);
+
+            foreach (var item in repos.Zip(interfaces, (r, i) => new { repo = r, inter = i }))
+            {
+                services.AddTransient(item.inter, item.repo);
+            }
         }
 
         private static void RegisterAutomapper(IServiceCollection services)
@@ -43,11 +54,26 @@ namespace ApiGateway.IOC
             services.AddSingleton(mapper);
         }
 
-        private static IEnumerable<Type> GetTypes()
+        private static IEnumerable<Type> GetClassesByNameSpace(string namesp)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetTypes();
+            var classes = assembly.GetTypes().Where(x => !x.IsAbstract && !x.IsInterface && !x.IsSealed && x.IsClass);
+            return classes.Where(x => x.Namespace.Contains(namesp));
         }
 
+        private static IEnumerable<Type> GetInterfacesByNameSpace(string namesp)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var classes = assembly.GetTypes().Where(x => x.IsInterface);
+            return classes.Where(x => x.Namespace.Contains(namesp));
+        }
+
+        private static void RegisterFrontEndLogger(IServiceCollection services)
+        {
+            var feLogger = new LoggerConfiguration()
+                .WriteTo.File("../../website/log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
+            services.AddSingleton<ILogger>(feLogger);
+        }
     }
 }

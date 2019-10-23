@@ -5,6 +5,7 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../_services/authentication.service';
 import { Title } from '@angular/platform-browser';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private title: Title
+        private title: Title,
+        private logger: NGXLogger
     ) {
         this.title.setTitle('superselection');
         // redirect to home if already logged in
@@ -58,13 +60,16 @@ export class LoginComponent implements OnInit {
                     // tslint:disable-next-line: triple-equals
                     if (data == null) {
                         this.error = 'Error: incorrect Username or Password';
+                        this.logger.log(this.error);
                         this.loading = false;
                     } else {
+                        this.logger.info('login successful');
                         this.router.navigate([this.returnUrl]);
                     }
                 },
                 error => {
                     this.error = error;
+                    this.logger.error(error);
                     this.loading = false;
                 });
     }
