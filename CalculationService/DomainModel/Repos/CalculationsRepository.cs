@@ -1,14 +1,12 @@
-﻿using System;
-using System.Text;
-using DomainModel.Documents.Commands;
-using DomainModel.Infrastructure;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using Serilog;
-
-namespace DomainModel.Repos
+﻿namespace DomainModel.Repos
 {
-    public class CalculationsRepository
+    using System.Text;
+    using DomainModel.Documents.Commands;
+    using DomainModel.Infrastructure;
+    using RabbitMQ.Client;
+    using Serilog;
+
+    public class CalculationsRepository : ICalculationsRepository
     {
         private readonly ConnectionFactory connectionFactory;
 
@@ -16,9 +14,10 @@ namespace DomainModel.Repos
         {
             this.connectionFactory = connectionHelper.ConnectionFactory;
         }
+
         public void CreateSelectivityAndActivityCalculation(CreateSelectivityAndActivityCalculationCommand cmd)
         {
-            using(var connection = connectionFactory.CreateConnection())
+            using (var connection = this.connectionFactory.CreateConnection())
             {
                 Log.Logger.Information("Connectiong to RabbitMQ established");
                 using (var channel = connection.CreateModel())
@@ -28,7 +27,7 @@ namespace DomainModel.Repos
                     var json = CommandBuilder.BuildJson(cmd);
                     var body = Encoding.UTF8.GetBytes(json);
 
-                    channel.BasicPublish(exchange: "", routingKey: "SelectivityAndActivityCalculations", basicProperties: null, body: body);
+                    channel.BasicPublish(exchange: string.Empty, routingKey: "SelectivityAndActivityCalculations", basicProperties: null, body: body);
                     Log.Logger.Information("Command published to RabbitMQ: {@cmd}", cmd);
                 }
             }

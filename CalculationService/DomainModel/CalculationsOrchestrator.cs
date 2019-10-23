@@ -1,19 +1,19 @@
-﻿using DomainModel.Documents.Commands;
-using DomainModel.Repos;
-using Serilog;
-using System;
-
-namespace DomainModel
+﻿namespace DomainModel
 {
-    public class CalculationsOrchestrator
-    {
-        private readonly CalculationsRepository calculationsRepository;
+    using System;
+    using DomainModel.Documents.Commands;
+    using DomainModel.Repos;
+    using Serilog;
 
-        public CalculationsOrchestrator(CalculationsRepository calculationsRepository)
+    public class CalculationsOrchestrator : ICalculationsOrchestrator
+    {
+        private readonly ICalculationsRepository calculationsRepository;
+
+        public CalculationsOrchestrator(ICalculationsRepository calculationsRepository)
         {
             this.calculationsRepository = calculationsRepository;
         }
-        
+
         public void ProcessCalculation(object cmd)
         {
             switch (cmd)
@@ -23,10 +23,9 @@ namespace DomainModel
                     this.calculationsRepository.CreateSelectivityAndActivityCalculation(c);
                     break;
                 default:
-                    Log.Logger.Information("Command is not recognised type: {@cmd}", cmd);
-                    throw new ArgumentException("Command is not a recognied type");
+                    Log.Logger.Error("Command is not recognised: {@cmd}", cmd);
+                    throw new ArgumentException("Command is not recognised");
             }
-
         }
     }
 }

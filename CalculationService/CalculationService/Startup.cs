@@ -1,18 +1,18 @@
-﻿using DomainModel.Infrastructure;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Serilog;
-
-namespace CalculationService
+﻿namespace CalculationService
 {
+    using DomainModel.Infrastructure;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -21,7 +21,7 @@ namespace CalculationService
         public void ConfigureServices(IServiceCollection services)
         {
             Log.Logger = DependencyInjection.GetLogger();
-            services.RegisterDependencies(Configuration);
+            services.RegisterDependencies(this.Configuration);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Serilog;
-
-namespace CalculationService
+﻿namespace CalculationService
 {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+    using Serilog;
+
     public class Program
     {
         public static void Main(string[] args)
