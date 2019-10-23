@@ -10,7 +10,7 @@
     {
         // https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
 
-        private readonly string secret = "bNgqblE+ZUjUyBxBreVPBGeXFJRFbsxfY76lW0zHilrvq+tNOYFAir5ZxlEVb6YSmOspHfWBEV7MbwJAkFSXYQ==";
+        private readonly string secret;
         private readonly int expiry = 30;
 
         public TokenManager(string secret, int expiry)
