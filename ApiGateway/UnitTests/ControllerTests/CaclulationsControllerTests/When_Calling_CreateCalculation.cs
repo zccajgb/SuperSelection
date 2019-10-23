@@ -19,8 +19,8 @@ namespace UnitTests.ControllerTests.CaclulationsControllerTests
     [TestClass]
     public class When_Calling_CreateCalculation : BaseTest
     {
-        private Mock<ICalculationsRepository> mockCalculationsRepository;
-        private CalculationsController sut;
+        private readonly Mock<ICalculationsRepository> mockCalculationsRepository;
+        private readonly CalculationsController sut;
 
         public When_Calling_CreateCalculation() : base()
         {

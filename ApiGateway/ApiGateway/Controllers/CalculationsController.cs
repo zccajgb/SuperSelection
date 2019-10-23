@@ -1,16 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
-using ApiGateway.Documents.Commands;
-using ApiGateway.Models;
-using ApiGateway.Models.DomainModels;
-using ApiGateway.Repos;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Serilog;
-
-namespace ApiGateway.Controllers
+﻿namespace ApiGateway.Controllers
 {
+    using System;
+    using System.Threading.Tasks;
+    using ApiGateway.Documents.Commands;
+    using ApiGateway.Models.DomainModels;
+    using ApiGateway.Repos;
+    using AutoMapper;
+    using Microsoft.AspNetCore.Mvc;
+    using Serilog;
+
     [ApiController]
     [Route("Calculations")]
     public class CalculationsController : ControllerBase
@@ -28,20 +26,19 @@ namespace ApiGateway.Controllers
         [Route("CreateCalcuation")]
         public async Task<ActionResult<string>> CreateCalculation([FromBody] Calculation calculation)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
                 Log.Logger.Error("Calculation model is invalid: {@calc}", calculation);
-                return BadRequest(ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
-            var command = mapper.Map<CreateSelectivityAndActivityCalculationCommand>(calculation, opts =>
+            var command = this.mapper.Map<CreateSelectivityAndActivityCalculationCommand>(calculation, opts =>
             {
                 opts.Items["Datetime"] = DateTime.UtcNow;
             });
 
             var response = await this.calculationsRepository.PostCommand(command);
-            return Ok(response);
+            return this.Ok(response);
         }
-
     }
 }

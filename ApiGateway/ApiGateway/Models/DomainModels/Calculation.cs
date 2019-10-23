@@ -1,19 +1,20 @@
-﻿using ApiGateway.Models.Validation;
-using FluentValidation.Attributes;
-using System;
-
-namespace ApiGateway.Models.DomainModels
+﻿namespace ApiGateway.Models.DomainModels
 {
+    using System;
+    using ApiGateway.Models.Validation;
+    using FluentValidation.Attributes;
+
     [Validator(typeof(CalculationValidator))]
     public class Calculation
     {
         public Calculation(string name, Guid userId)
         {
-            Name = name;
-            ActionUserID = userId;
+            this.Name = name;
+            this.ActionUserID = userId;
         }
 
         public string Name { get; private set; }
+
         public Guid ActionUserID { get; }
     }
 }

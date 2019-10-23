@@ -1,17 +1,14 @@
-﻿using ApiGateway.Documents.Commands;
-using ApiGateway.Models.DomainModels;
-using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using ApiGateway.Documents.Commands;
+    using ApiGateway.Models.DomainModels;
+    using AutoMapper;
+
     public class MapperProfile : Profile
     {
         public MapperProfile()
         {
-            Register();
+            this.Register();
         }
 
         public void Register()

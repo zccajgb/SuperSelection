@@ -1,16 +1,16 @@
-﻿using ApiGateway.Infrastructure;
-using AutoMapper;
-using DomainModel.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Serilog;
-using Serilog.Core;
-
-namespace ApiGateway.IOC
+﻿namespace ApiGateway.IOC
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using ApiGateway.Infrastructure;
+    using AutoMapper;
+    using DomainModel.Infrastructure;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+    using Serilog.Core;
+
     public static class DependencyInjection
     {
         public static void RegisterDependencies(this IServiceCollection services)
@@ -19,9 +19,16 @@ namespace ApiGateway.IOC
             services.AddScoped<HttpHelper>();
             RegisterFrontEndLogger(services);
             RegisterAutomapper(services);
-            //services.AddScoped(typeof(UsersRepository));
             RegisterRepos(services);
         }
+
+        public static Logger GetLogger()
+        {
+            return new LoggerConfiguration()
+                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Month)
+                .CreateLogger();
+        }
+
         private static void RegisterRepos(IServiceCollection services)
         {
             var repoNamespace = "ApiGateway.Repos";
@@ -33,7 +40,6 @@ namespace ApiGateway.IOC
             {
                 services.AddTransient(item.inter, item.repo);
             }
-
         }
 
         private static void RegisterAutomapper(IServiceCollection services)
@@ -60,13 +66,6 @@ namespace ApiGateway.IOC
             var assembly = Assembly.GetExecutingAssembly();
             var classes = assembly.GetTypes().Where(x => x.IsInterface);
             return classes.Where(x => x.Namespace.Contains(namesp));
-        }
-
-        public static Logger GetLogger()
-        {
-            return new LoggerConfiguration()
-                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Month)
-                .CreateLogger();
         }
 
         private static void RegisterFrontEndLogger(IServiceCollection services)

@@ -1,20 +1,20 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ApiGateway.IOC;
-using FluentValidation.AspNetCore;
-using ApiGateway.Models.Validation;
-using Serilog;
-
-namespace ApiGateway
+﻿namespace ApiGateway
 {
+    using ApiGateway.IOC;
+    using ApiGateway.Models.Validation;
+    using FluentValidation.AspNetCore;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -24,12 +24,13 @@ namespace ApiGateway
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("allowSpecificOrgins",
-                builder =>
-                {
-                    //TODO specify origin
-                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                });
+                options.AddPolicy(
+                    "allowSpecificOrgins",
+                    builder =>
+                    {
+                        // TODO specify origin
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
             });
 
             services.AddSwaggerGen(options =>
@@ -40,11 +41,11 @@ namespace ApiGateway
                     Title = "superselection - ApiGateway",
                     Version = "v1",
                     Description = "The API Gateway for superselection app. ",
-                    TermsOfService = "Terms Of Service"
+                    TermsOfService = "Terms Of Service",
                 });
             });
 
-            services.AddSingleton(Configuration);
+            services.AddSingleton(this.Configuration);
 
             Log.Logger = DependencyInjection.GetLogger();
 
@@ -52,7 +53,6 @@ namespace ApiGateway
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +69,7 @@ namespace ApiGateway
             }
 
             app.UseCors("allowSpecificOrgins");
-            
+
             app.UseSwagger().UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
 
             app.UseHttpsRedirection();

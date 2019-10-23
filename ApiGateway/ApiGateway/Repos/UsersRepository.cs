@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using ApiGateway.Infrastructure;
-using ApiGateway.Models.DomainModels;
-using ApiGateway.Models.ViewModels;
-using Microsoft.Extensions.Configuration;
-
-namespace ApiGateway.Repos
+﻿namespace ApiGateway.Repos
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using ApiGateway.Infrastructure;
+    using ApiGateway.Models.DomainModels;
+    using ApiGateway.Models.ViewModels;
+    using Microsoft.Extensions.Configuration;
+
     public class UsersRepository : IUsersRepository
     {
-        
         private readonly HttpHelper httpHelper;
         private readonly string uri;
 
@@ -19,24 +18,24 @@ namespace ApiGateway.Repos
             this.httpHelper = httpHelper;
             this.uri = configuration.GetConnectionString("UserService");
         }
-        
+
         public async Task<Guid> GetUserID(string token)
         {
             var getUserIDUri = this.uri + "/GetUserID";
-            var userId = (Guid) await this.httpHelper.PostAsync<Guid>(getUserIDUri, token);
+            var userId = await this.httpHelper.PostAsync<Guid>(getUserIDUri, token);
             return userId;
         }
 
         public async Task<IEnumerable<UserView>> GetAllUsers()
         {
-            var userViews = (IEnumerable<UserView>) await httpHelper.GetAsync(this.uri);
+            var userViews = (IEnumerable<UserView>)await this.httpHelper.GetAsync(this.uri);
             return userViews;
         }
 
         public async Task<UserView> CreateNewUser(User user)
         {
             var createNewUserUri = this.uri + "/CreateNewUser";
-            var userView = await httpHelper.PostAsync<UserView>(createNewUserUri, user);
+            var userView = await this.httpHelper.PostAsync<UserView>(createNewUserUri, user);
             return userView;
         }
 

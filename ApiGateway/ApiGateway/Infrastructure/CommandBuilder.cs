@@ -1,12 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-
-namespace ApiGateway.Infrastructure
+﻿namespace ApiGateway.Infrastructure
 {
+    using System.Linq;
+    using Newtonsoft.Json;
+
     public static class CommandBuilder
     {
         public static string BuildJson(object obj)
@@ -25,21 +21,23 @@ namespace ApiGateway.Infrastructure
 
             var type = assembly.GetTypes().FirstOrDefault(t => t.IsClass && t.Name == cmdObj.Type);
 
-
             var payload = JsonConvert.DeserializeObject(cmdObj.Payload, type);
             return payload;
         }
     }
 
+#pragma warning disable SA1402 // File may only contain a single type
     internal class CommandObject
+#pragma warning restore SA1402 // File may only contain a single type
     {
-        public string Type { get; }
-        public string Payload { get; }
-
         public CommandObject(string type, string payload)
         {
-            Type = type;
-            Payload = payload;
+            this.Type = type;
+            this.Payload = payload;
         }
+
+        public string Type { get; }
+
+        public string Payload { get; }
     }
 }

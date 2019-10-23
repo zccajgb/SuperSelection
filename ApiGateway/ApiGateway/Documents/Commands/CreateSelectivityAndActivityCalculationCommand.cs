@@ -1,13 +1,15 @@
-﻿using System;
-
-namespace ApiGateway.Documents.Commands
+﻿namespace ApiGateway.Documents.Commands
 {
+    using System;
+
     public class CreateSelectivityAndActivityCalculationCommand : BaseCommand
     {
-        public string Name { get; private set; }
-        public CreateSelectivityAndActivityCalculationCommand(string name, Guid actionUserID, DateTime actionDateTime) : base(actionUserID, actionDateTime)
+        public CreateSelectivityAndActivityCalculationCommand(string name, Guid actionUserID, DateTime actionDateTime)
+            : base(actionUserID, actionDateTime)
         {
             this.Name = name;
         }
+
+        public string Name { get; private set; }
     }
 }

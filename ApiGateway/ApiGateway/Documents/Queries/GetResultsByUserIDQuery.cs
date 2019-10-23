@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace ApiGateway.Documents.Queries
+﻿namespace ApiGateway.Documents.Queries
 {
+    using System;
+
     internal class GetResultsByUserIDQuery : BaseQuery
     {
         private Guid userID;

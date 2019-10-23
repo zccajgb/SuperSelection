@@ -1,15 +1,12 @@
-﻿using ApiGateway.Models;
-using Newtonsoft.Json;
-using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ApiGateway.Infrastructure
+﻿namespace ApiGateway.Infrastructure
 {
+    using System;
+    using System.Net.Http;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Newtonsoft.Json;
+    using Serilog;
+
     public class HttpHelper
     {
         private readonly HttpClient httpClient;
@@ -25,7 +22,7 @@ namespace ApiGateway.Infrastructure
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var jsonContent = string.Empty;
-            using (var response = await httpClient.PostAsync(uri, content))
+            using (var response = await this.httpClient.PostAsync(uri, content))
             {
                 if (!response.IsSuccessStatusCode)
                 {
@@ -42,8 +39,8 @@ namespace ApiGateway.Infrastructure
 
         public async Task<object> GetAsync(string uri)
         {
-            var jsonContent = String.Empty;
-            using (var response = await httpClient.GetAsync(uri))
+            var jsonContent = string.Empty;
+            using (var response = await this.httpClient.GetAsync(uri))
             {
                 if (!response.IsSuccessStatusCode)
                 {
@@ -53,6 +50,7 @@ namespace ApiGateway.Infrastructure
 
                 jsonContent = await response.Content.ReadAsStringAsync();
             }
+
             var result = JsonConvert.DeserializeObject(jsonContent);
             return result;
         }

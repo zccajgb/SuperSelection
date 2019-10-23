@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ApiGateway.Documents.Commands
+﻿namespace ApiGateway.Documents.Commands
 {
+    using System;
+
     public class BaseCommand
     {
         private DateTime actionDateTime;
