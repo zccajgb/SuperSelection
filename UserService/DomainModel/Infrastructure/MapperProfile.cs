@@ -1,16 +1,13 @@
-﻿using AutoMapper;
-using DomainModel.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using AutoMapper;
+    using DomainModel.Models;
+
     public class MapperProfile : Profile
     {
         public MapperProfile()
         {
-            Register();
+            this.Register();
         }
 
         public void Register()

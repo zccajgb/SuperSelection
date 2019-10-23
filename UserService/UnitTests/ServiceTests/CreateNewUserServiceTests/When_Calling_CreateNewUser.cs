@@ -16,9 +16,9 @@ namespace UnitTests.ServiceTests.CreateNewUserServiceTests
     [TestClass]
     public class When_Calling_CreateNewUser : BaseTest
     {
-        private CreateNewUserService sut;
-        private User user;
-        private Mock<IUsersRepository> usersRepo;
+        private readonly CreateNewUserService sut;
+        private readonly User user;
+        private readonly Mock<IUsersRepository> usersRepo;
 
         public When_Calling_CreateNewUser()
         {

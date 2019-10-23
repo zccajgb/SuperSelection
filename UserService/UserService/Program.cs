@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging;
-using Serilog;
-
-namespace UserService
+﻿namespace UserService
 {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+    using Serilog;
+
     public class Program
     {
         public static void Main(string[] args)

@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using DomainModel.IOC;
-using Serilog;
-
-namespace UserService
+﻿namespace UserService
 {
+    using DomainModel.IOC;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Serilog;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -22,12 +22,13 @@ namespace UserService
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("allowSpecificOrgins",
-                builder =>
-                {
-                    //TODO specify origin
-                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                });
+                options.AddPolicy(
+                    "allowSpecificOrgins",
+                    builder =>
+                    {
+                        // TODO specify origin
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
             });
 
             services.AddSwaggerGen(options =>
@@ -38,13 +39,13 @@ namespace UserService
                     Title = "superselection - ApiGateway",
                     Version = "v1",
                     Description = "The API Gateway for superselection app. ",
-                    TermsOfService = "Terms Of Service"
+                    TermsOfService = "Terms Of Service",
                 });
             });
 
-            Log.Logger = DependencyInjection.GetLogger();
+            Log.Logger = DependencyInjector.GetLogger();
 
-            services.RegisterDependencies(Configuration);
+            services.RegisterDependencies(this.Configuration);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

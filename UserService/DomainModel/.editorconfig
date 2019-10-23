@@ -17,3 +17,6 @@ dotnet_diagnostic.SA1512.severity = none
 
 # CA1307: Specify StringComparison
 dotnet_diagnostic.CA1307.severity = none
+
+# SA1633: File should have header
+dotnet_diagnostic.SA1633.severity = none

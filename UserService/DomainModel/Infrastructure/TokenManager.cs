@@ -1,12 +1,11 @@
-﻿using DomainModel.Models;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Microsoft.Extensions.Configuration;
-
-namespace DomainModel.Infrastructure
+﻿namespace DomainModel.Infrastructure
 {
+    using System;
+    using System.IdentityModel.Tokens.Jwt;
+    using System.Security.Claims;
+    using DomainModel.Models;
+    using Microsoft.IdentityModel.Tokens;
+
     public class TokenManager : ITokenManager
     {
         // https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
@@ -48,6 +47,7 @@ namespace DomainModel.Infrastructure
             return handler.WriteToken(token);
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "borrowed code")]
         public ClaimsPrincipal GetPrincipal(string token)
         {
             try

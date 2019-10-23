@@ -16,7 +16,7 @@ namespace UnitTests.ControllerTests.UsersControllerTests
         public void Then_GetUsers_Is_Called_On_Repository()
         {
             _ = this.sut.Get();
-            this.usersRepository.Verify(x => x.GetUsers(), Times.Once);
+            this.usersRepository.Verify(x => x.GetAllUsers(), Times.Once);
         }        
         
         [TestMethod]

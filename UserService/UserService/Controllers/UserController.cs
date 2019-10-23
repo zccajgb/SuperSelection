@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using DomainModel;
-using DomainModel.Models;
-using DomainModel.Repositories;
-using Microsoft.AspNetCore.Mvc;
-
-namespace UserService.Controllers
+﻿namespace UserService.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using DomainModel;
+    using DomainModel.Models;
+    using DomainModel.Repositories;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -27,15 +27,15 @@ namespace UserService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<UserView>> Get()
         {
-            var users = this.userRepository.GetUsers();
-            return Ok(users);
+            var users = this.userRepository.GetAllUsers();
+            return this.Ok(users);
         }
 
         [HttpPost]
         [Route("GetUserID")]
         public ActionResult<Guid> GetUserID([FromBody] string token)
         {
-            return Ok(this.validateService.Validate(token));
+            return this.Ok(this.validateService.Validate(token));
         }
 
         [HttpPost]
@@ -43,14 +43,14 @@ namespace UserService.Controllers
         public ActionResult<UserView> CreateNewUser([FromBody] User user)
         {
             var userView = this.createNewUserService.CreateNewUser(user.Username, user.Password, user.FirstName, user.LastName);
-            return Ok(userView);
+            return this.Ok(userView);
         }
 
         [HttpPost]
         [Route("Login")]
         public ActionResult<UserView> Login([FromBody] User user)
         {
-            return Ok(this.loginService.Login(user.Username, user.Password));
+            return this.Ok(this.loginService.Login(user.Username, user.Password));
         }
     }
 }

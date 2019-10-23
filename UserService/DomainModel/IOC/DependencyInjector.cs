@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Reflection;
     using AutoMapper;
@@ -14,10 +15,12 @@
     using Serilog;
     using Serilog.Core;
 
-    public static class DependencyInjection
+    public static class DependencyInjector
     {
         public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
         {
+            Contract.Requires(configuration != null);
+
             services.AddTransient<ITokenManager, TokenManager>(_ => new TokenManager(configuration["tokenSecret"], int.Parse(configuration["tokenExpiry"])));
             RegisterAutomapper(services);
             RegisterMongoDb(services, configuration);
@@ -34,7 +37,6 @@
 
         private static void RegisterMongoDb(IServiceCollection services, IConfiguration configuration)
         {
-
             services.Configure<UsersDatabaseSettings>(configuration.GetSection(nameof(UsersDatabaseSettings)));
 
             services.AddSingleton<UsersDatabaseSettings>(sp =>

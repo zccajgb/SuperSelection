@@ -17,18 +17,17 @@ namespace UnitTests.ServiceTests.LoginServiceTests
     [TestClass]
     public class When_Calling_Login : BaseTest
     {
-        private Mock<IUsersRepository> usersRepo;
-        private string hashedPassword;
-        private User user;
-        private Mock<ITokenManager> tokenManager;
-        private LoginService sut;
-        private Guid userId;
+        private readonly Mock<IUsersRepository> usersRepo;
+        private readonly string hashedPassword;
+        private readonly User user;
+        private readonly Mock<ITokenManager> tokenManager;
+        private readonly LoginService sut;
 
         public When_Calling_Login()
         {
             this.usersRepo = this.Fixture.Freeze<Mock<IUsersRepository>>();
             this.hashedPassword = PasswordHasher.HashPassword("password", "salt");
-            this.user = new User("user", "email", this.hashedPassword, "first", "last", this.userId, 1, DateTime.Now, DateTime.Now, "salt");
+            this.user = new User("user", "email", this.hashedPassword, "first", "last", default, 1, DateTime.Now, DateTime.Now, "salt");
             this.usersRepo.Setup(x => x.GetUser(It.IsAny<Guid>())).Returns(user);
             this.usersRepo.Setup(x => x.GetUser(It.IsAny<string>())).Returns(user);
 

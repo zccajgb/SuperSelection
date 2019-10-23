@@ -35,6 +35,5 @@
             Log.Logger.Information("Token generated for user: {@username}", username);
             return this.mapper.Map<UserView>(user, opts => opts.Items["Token"] = token);
         }
-
     }
 }
