@@ -18,9 +18,9 @@
         {
             switch (cmd)
             {
-                case CreateSelectivityAndActivityCalculationCommand c:
-                    Log.Logger.Information("Calculation of type CreateSelectivityAndActivityCommand");
-                    this.calculationsRepository.CreateSelectivityAndActivityCalculation(c);
+                case CreateSelectivityCalculationCommand c:
+                    Log.Logger.Information("Calculation of type CreateSelectivityCommand");
+                    this.calculationsRepository.CreateSelectivityCalculation(c);
                     break;
                 default:
                     Log.Logger.Error("Command is not recognised: {@cmd}", cmd);

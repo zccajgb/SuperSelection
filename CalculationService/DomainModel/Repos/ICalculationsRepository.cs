@@ -4,6 +4,6 @@
 
     public interface ICalculationsRepository
     {
-        void CreateSelectivityAndActivityCalculation(CreateSelectivityAndActivityCalculationCommand cmd);
+        void CreateSelectivityCalculation(CreateSelectivityCalculationCommand cmd);
     }
 }

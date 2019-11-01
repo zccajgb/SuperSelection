@@ -27,18 +27,18 @@
         }
 
         [TestMethod]
-        public void Then_Calls_CreateSelectivityAndActivityCalculation_On_Repository_And_Logs_Info()
+        public void Then_Calls_CreateSelectivityCalculation_On_Repository_And_Logs_Info()
         {
             using (TestCorrelator.CreateContext())
             {
-                var cmd = this.Fixture.Freeze<CreateSelectivityAndActivityCalculationCommand>();
+                var cmd = this.Fixture.Freeze<CreateSelectivityCalculationCommand>();
                 this.sut.ProcessCalculation(cmd);
                 var logMsg = TestCorrelator.GetLogEventsFromCurrentContext().Single();
 
                 logMsg.RenderMessage().Should().Contain("Calculation of type CreateSelectivityAndActivityCommand");
                 logMsg.Level.Should().Be(LogEventLevel.Information);
 
-                this.calculationsRepo.Verify(x => x.CreateSelectivityAndActivityCalculation(cmd), Times.Once);
+                this.calculationsRepo.Verify(x => x.CreateSelectivityCalculation(cmd), Times.Once);
             }
         }
 

@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class BaseCommand
+    public abstract class BaseCommand
     {
         public BaseCommand(Guid actionUserId, DateTime actionDateTime)
         {

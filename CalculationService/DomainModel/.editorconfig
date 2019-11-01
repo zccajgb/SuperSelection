@@ -11,3 +11,6 @@ dotnet_diagnostic.SA1005.severity = none
 
 # SA1512: Single-line comments should not be followed by blank line
 dotnet_diagnostic.SA1512.severity = none
+
+# IDE0065: Misplaced using directive
+csharp_using_directive_placement = inside_namespace:silent

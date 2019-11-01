@@ -1,4 +1,3 @@
-from app import app
 from calculator_controller import controls, setup_rabbitMQ
 import pika
 

@@ -1,0 +1,398 @@
+2019-11-01 10:50:51.004 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 10:50:54.874 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 10:50:55.079 +00:00 [INF] Request finished in 207.5972ms 404 
+2019-11-01 10:52:28.694 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 123
+2019-11-01 10:52:28.696 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:52:28.744 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:52:29.328 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:52:29.372 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityAndActivityCalculationCommand"}
+2019-11-01 10:52:29.376 +00:00 [ERR] Command is not recognised: {"Name":"HelloWorld","ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityAndActivityCalculationCommand"}
+2019-11-01 10:52:42.750 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 13997.423400000001ms
+2019-11-01 10:52:42.752 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:52:42.754 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Command is not recognised
+   at DomainModel.CalculationsOrchestrator.ProcessCalculation(Object cmd) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\CalculationService\DomainModel\CalculationsOrchestrator.cs:line 29
+   at CalculationService.Controllers.CalculationsController.Command(CommandObject jsonCommand) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\CalculationService\CalculationService\Controllers\CalculationsController.cs:line 21
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-01 10:52:43.121 +00:00 [INF] Request finished in 14433.5247ms 500 text/html; charset=utf-8
+2019-11-01 10:52:47.848 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:52:47.848 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:52:47.849 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:52:47.858 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:52:47.882 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:52:47.888 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:52:48.213 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:52:48.348 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":[{"TetherLength":1,"NumberOfLigands":1,"InitialProbability":0.5,"SingleBondStrength":[1,2,3],"$type":"Ligand"},{"TetherLength":1,"NumberOfLigands":1,"InitialProbability":0.5,"SingleBondStrength":[4,5,6],"$type":"Ligand"},{"TetherLength":1,"NumberOfLigands":1,"InitialProbability":0.5,"SingleBondStrength":[7,8,9],"$type":"Ligand"}],"Receptors":[{"NumberOfReceptors":1,"InitialProbability":0.5,"$type":"Receptor"},{"NumberOfReceptors":1,"InitialProbability":0.5,"$type":"Receptor"},{"NumberOfReceptors":1,"InitialProbability":0.5,"$type":"Receptor"}],"Tolerance":1,"NanoparticleRadius":1,"NanoparticleConc":1,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:52:48.406 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 543.0837ms.
+2019-11-01 10:52:48.418 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:52:48.419 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 569.6248ms
+2019-11-01 10:52:48.419 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:52:48.419 +00:00 [INF] Request finished in 571.2265ms 200 
+2019-11-01 10:54:49.342 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 10:54:52.723 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 10:54:53.018 +00:00 [INF] Request finished in 300.2475ms 404 
+2019-11-01 10:55:00.424 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:55:00.426 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:55:00.475 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:55:01.059 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:55:01.109 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:55:01.113 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:55:01.733 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:55:01.979 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:55:02.043 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 966.51600000000008ms.
+2019-11-01 10:55:02.060 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:55:02.077 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 1586.7101ms
+2019-11-01 10:55:02.077 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:55:02.092 +00:00 [INF] Request finished in 1667.822ms 200 
+2019-11-01 10:56:26.098 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:56:26.103 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:56:26.104 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:56:26.106 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:56:26.106 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:56:26.106 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:56:26.139 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:56:26.151 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:56:26.154 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 47.453500000000005ms.
+2019-11-01 10:56:26.159 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:56:26.159 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 55.552ms
+2019-11-01 10:56:26.159 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:56:26.160 +00:00 [INF] Request finished in 63.1458ms 200 
+2019-11-01 10:56:56.762 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:56:56.762 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:56:56.762 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:56:56.763 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:56:56.763 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:56:56.763 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:56:57.114 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:56:57.125 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:56:57.130 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 364.74710000000005ms.
+2019-11-01 10:56:57.130 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:56:57.130 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 367.6381ms
+2019-11-01 10:56:57.134 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:56:57.135 +00:00 [INF] Request finished in 373.4325ms 200 
+2019-11-01 10:57:37.102 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:57:37.102 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:57:37.116 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:57:37.117 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:57:37.117 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:57:37.117 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:57:37.151 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:57:37.154 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:57:37.156 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 38.5706ms.
+2019-11-01 10:57:37.160 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:57:37.161 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 44.0867ms
+2019-11-01 10:57:37.161 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:57:37.162 +00:00 [INF] Request finished in 61.9177ms 200 
+2019-11-01 10:58:35.268 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:58:35.269 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:58:35.274 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:58:35.275 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:58:35.275 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:58:35.275 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:58:35.292 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:58:35.313 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:58:35.316 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 40.081900000000005ms.
+2019-11-01 10:58:35.321 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:58:35.322 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 47.3397ms
+2019-11-01 10:58:35.322 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:58:35.323 +00:00 [INF] Request finished in 54.1768ms 200 
+2019-11-01 10:59:26.679 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 10:59:26.679 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:59:26.679 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 10:59:26.680 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 10:59:26.694 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 10:59:26.694 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 10:59:26.724 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 10:59:26.727 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbablity":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 10:59:26.730 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 48.7965ms.
+2019-11-01 10:59:26.738 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 10:59:26.738 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 58.325700000000005ms
+2019-11-01 10:59:26.738 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 10:59:26.739 +00:00 [INF] Request finished in 60.2602ms 200 
+2019-11-01 11:00:36.087 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 11:00:37.416 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 11:00:37.542 +00:00 [INF] Request finished in 132.2552ms 404 
+2019-11-01 11:03:22.363 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:03:22.372 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:03:22.416 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:03:22.756 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:03:22.798 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:03:22.802 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:03:23.144 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:03:23.250 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:03:23.289 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 516.6357ms.
+2019-11-01 11:03:23.300 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:03:23.304 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 884.1675ms
+2019-11-01 11:03:23.304 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:03:23.310 +00:00 [INF] Request finished in 947.0032ms 200 
+2019-11-01 11:03:48.076 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:03:48.076 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:03:48.083 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:03:48.091 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:03:48.092 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:03:48.092 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:03:48.168 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:03:48.172 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:03:48.176 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 82.6182ms.
+2019-11-01 11:03:48.187 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:03:48.187 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 104.0575ms
+2019-11-01 11:03:48.187 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:03:48.188 +00:00 [INF] Request finished in 111.8807ms 200 
+2019-11-01 11:22:33.442 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:22:33.443 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:22:33.443 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:22:33.443 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:22:33.443 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:22:33.443 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:22:33.473 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:22:33.481 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:22:33.484 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 39.2277ms.
+2019-11-01 11:22:33.489 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:22:33.490 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 46.5931ms
+2019-11-01 11:22:33.490 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:22:33.492 +00:00 [INF] Request finished in 49.9058ms 200 
+2019-11-01 11:24:26.671 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:24:26.672 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:24:26.672 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:24:26.673 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:24:26.681 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:24:26.681 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:24:26.726 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:24:26.729 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:24:26.731 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 57.3168ms.
+2019-11-01 11:24:26.736 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:24:26.737 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 64.1429ms
+2019-11-01 11:24:26.737 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:24:26.740 +00:00 [INF] Request finished in 69.11ms 200 
+2019-11-01 11:26:39.854 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:26:39.854 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:26:39.854 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:26:39.855 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:26:39.855 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:26:39.855 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:26:39.881 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:26:39.887 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:26:39.891 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 34.1747ms.
+2019-11-01 11:26:39.896 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:26:39.896 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 41.579ms
+2019-11-01 11:26:39.896 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:26:39.897 +00:00 [INF] Request finished in 52.4558ms 200 
+2019-11-01 11:28:36.128 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:28:36.128 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:28:36.139 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:28:36.139 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:28:36.140 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:28:36.140 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:28:36.158 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:28:36.160 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:28:36.163 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 21.9738ms.
+2019-11-01 11:28:36.168 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:28:36.168 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 29.0191ms
+2019-11-01 11:28:36.168 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:28:36.169 +00:00 [INF] Request finished in 40.9744ms 200 
+2019-11-01 11:39:56.493 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:39:56.498 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:39:56.498 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:39:56.498 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:39:56.498 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:39:56.498 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:39:56.539 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:39:56.541 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:39:56.544 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 44.3164ms.
+2019-11-01 11:39:56.548 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:39:56.549 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 50.780100000000004ms
+2019-11-01 11:39:56.549 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:39:56.549 +00:00 [INF] Request finished in 57.2243ms 200 
+2019-11-01 11:40:30.399 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:40:30.399 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:40:30.399 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:40:30.399 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:40:30.399 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:40:30.400 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:40:30.681 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:40:30.697 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:40:30.710 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 300.3287ms.
+2019-11-01 11:40:30.780 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:40:30.782 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 380.97860000000003ms
+2019-11-01 11:40:30.782 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:40:30.800 +00:00 [INF] Request finished in 400.8282ms 200 
+2019-11-01 11:41:50.598 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:41:50.598 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:41:50.599 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:41:50.599 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:41:50.599 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:41:50.600 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:41:50.699 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:41:50.705 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:41:50.716 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 109.72250000000001ms.
+2019-11-01 11:41:50.733 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:41:50.744 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 145.08530000000002ms
+2019-11-01 11:41:50.745 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:41:50.749 +00:00 [INF] Request finished in 151.0251ms 200 
+2019-11-01 11:46:22.482 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:46:22.482 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:46:22.483 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:46:22.489 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:46:22.489 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:46:22.489 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:46:22.515 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:46:22.517 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:46:22.529 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 36.5175ms.
+2019-11-01 11:46:22.551 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:46:22.551 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 68.5562ms
+2019-11-01 11:46:22.551 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:46:22.552 +00:00 [INF] Request finished in 69.9685ms 200 
+2019-11-01 11:50:11.664 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:50:11.665 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:50:11.666 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:50:11.670 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:50:11.671 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:50:11.671 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:50:11.692 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:50:11.695 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:50:11.696 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 25.7045ms.
+2019-11-01 11:50:11.703 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:50:11.703 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 36.603ms
+2019-11-01 11:50:11.703 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:50:11.705 +00:00 [INF] Request finished in 40.7061ms 200 
+2019-11-01 11:51:28.267 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:51:28.267 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:51:28.273 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:51:28.273 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:51:28.273 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:51:28.274 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:51:28.311 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:51:28.315 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:51:28.318 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 43.0199ms.
+2019-11-01 11:51:28.325 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:51:28.325 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 52.2423ms
+2019-11-01 11:51:28.329 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:51:28.332 +00:00 [INF] Request finished in 65.3668ms 200 
+2019-11-01 11:52:58.133 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 11:52:59.753 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 11:52:59.982 +00:00 [INF] Request finished in 230.4898ms 404 
+2019-11-01 11:53:13.854 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:53:13.858 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:53:13.918 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:53:14.586 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:53:14.722 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:53:14.728 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:53:15.291 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:53:15.431 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[1,1,1],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:53:15.472 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 872.1425ms.
+2019-11-01 11:53:15.486 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:53:15.491 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 1569.9669000000001ms
+2019-11-01 11:53:15.491 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:53:15.509 +00:00 [INF] Request finished in 1656.2156ms 200 
+2019-11-01 11:55:00.304 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 11:55:03.098 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 11:55:03.098 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:55:03.098 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:55:03.201 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:55:03.201 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:55:03.261 +00:00 [INF] Request finished in 168.3803ms 404 
+2019-11-01 11:55:03.290 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:55:03.289 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:55:04.024 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:55:04.024 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:55:04.099 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:55:04.099 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:55:04.105 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:55:04.105 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:55:04.692 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:55:04.692 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:55:04.882 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:55:04.882 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":1,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":1,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:55:05.097 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 923.37830000000008ms.
+2019-11-01 11:55:05.097 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 922.7553ms.
+2019-11-01 11:55:05.118 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:55:05.118 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:55:05.128 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 1822.5309ms
+2019-11-01 11:55:05.128 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 1828.2216ms
+2019-11-01 11:55:05.128 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:55:05.128 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:55:05.140 +00:00 [INF] Request finished in 2047.8554ms 0 
+2019-11-01 11:55:05.156 +00:00 [INF] Request finished in 2063.6473ms 200 
+2019-11-01 11:56:42.974 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-01 11:56:44.643 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44318/api/values  
+2019-11-01 11:56:44.800 +00:00 [INF] Request finished in 161.0061ms 404 
+2019-11-01 11:56:48.781 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 11:56:48.785 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:56:48.869 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 11:56:49.401 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 11:56:49.450 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 11:56:49.453 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 11:56:49.848 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 11:56:50.155 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":0.001,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":0.000000050,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 11:56:50.284 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 867.0202ms.
+2019-11-01 11:56:50.313 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 11:56:50.328 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 1446.5513ms
+2019-11-01 11:56:50.329 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 11:56:50.353 +00:00 [INF] Request finished in 1571.5857ms 200 
+2019-11-01 12:00:49.949 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 12:00:49.949 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:00:49.955 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 12:00:49.962 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 12:00:49.962 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 12:00:49.963 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 12:00:49.991 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 12:00:49.994 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":0.001,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":0.000000050,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 12:00:49.996 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 32.974000000000004ms.
+2019-11-01 12:00:50.002 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 12:00:50.002 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 47.4391ms
+2019-11-01 12:00:50.002 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:00:50.003 +00:00 [INF] Request finished in 54.6501ms 200 
+2019-11-01 12:00:56.999 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 12:00:56.999 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:00:56.999 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 12:00:57.000 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 12:00:57.001 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 12:00:57.001 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 12:00:57.038 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 12:00:57.043 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":0.001,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":0.000000050,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 12:00:57.047 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 43.518ms.
+2019-11-01 12:00:57.051 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 12:00:57.052 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 52.2055ms
+2019-11-01 12:00:57.052 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:00:57.052 +00:00 [INF] Request finished in 53.4907ms 200 
+2019-11-01 12:01:23.835 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 12:01:23.835 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:01:23.835 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 12:01:23.854 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 12:01:23.854 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 12:01:23.854 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 12:01:23.901 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 12:01:23.905 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":0.001,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":0.000000050,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 12:01:23.916 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 54.481100000000005ms.
+2019-11-01 12:01:23.924 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 12:01:23.924 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 88.7642ms
+2019-11-01 12:01:23.924 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:01:23.951 +00:00 [INF] Request finished in 115.9809ms 200 
+2019-11-01 12:02:45.405 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/Command application/json 112
+2019-11-01 12:02:45.405 +00:00 [INF] Executing endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:02:45.406 +00:00 [INF] Route matched with {action = "Command", controller = "Calculations"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Command(DomainModel.Infrastructure.CommandObject) on controller CalculationService.Controllers.CalculationsController (CalculationService).
+2019-11-01 12:02:45.407 +00:00 [INF] Executing action method CalculationService.Controllers.CalculationsController.Command (CalculationService) - Validation state: "Valid"
+2019-11-01 12:02:45.407 +00:00 [INF] Command Deserialised: {"Name":"HelloWorld","CalculationId":"00000000-0000-0000-0000-000000000000","Ligands":null,"Receptors":null,"Tolerance":0,"NanoparticleRadius":0,"NanoparticleConc":0,"ActionUserId":"00000000-0000-0000-0000-000000000000","ActionDateTime":"0001-01-01T00:00:00.0000000","$type":"CreateSelectivityCalculationCommand"}
+2019-11-01 12:02:45.407 +00:00 [INF] Calculation of type CreateSelectivityCommand
+2019-11-01 12:02:45.469 +00:00 [INF] Connectiong to RabbitMQ established
+2019-11-01 12:02:45.473 +00:00 [INF] Command published to RabbitMQ: {"Name":"test","CalculationId":"00000000-0000-0000-0000-000000000000","Chi":[[0,0,0,1,2,3],[0,0,0,4,5,6],[0,0,0,7,8,9],[1,4,7,0,0,0],[2,5,8,0,0,0],[3,6,9,0,0,0]],"N":[1,1,1,1,1,1],"InitialProbability":[0.5,0.5,0.5,0.5,0.5,0.5],"Tolerance":0.001,"TetherLength":[0.000000001,0.000000001,0.000000001],"NanoparticleRadius":0.000000050,"NanoparticleConc":1,"$type":"SelectivityCalculation"}
+2019-11-01 12:02:45.479 +00:00 [INF] Executed action method CalculationService.Controllers.CalculationsController.Command (CalculationService), returned result Microsoft.AspNetCore.Mvc.OkResult in 67.325ms.
+2019-11-01 12:02:45.487 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-01 12:02:45.488 +00:00 [INF] Executed action CalculationService.Controllers.CalculationsController.Command (CalculationService) in 81.28ms
+2019-11-01 12:02:45.488 +00:00 [INF] Executed endpoint 'CalculationService.Controllers.CalculationsController.Command (CalculationService)'
+2019-11-01 12:02:45.489 +00:00 [INF] Request finished in 83.7456ms 200 
