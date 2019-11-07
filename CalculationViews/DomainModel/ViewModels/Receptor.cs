@@ -1,19 +1,18 @@
-﻿namespace ApiGateway.Models.DomainModels
+﻿namespace DomainModel.ViewModels
 {
-    using System.Collections.Generic;
-
     public class Receptor
     {
-        public Receptor(int numberOfReceptors, decimal initialProbability)
+        public Receptor(int numberOfReceptors, decimal bindingProbability, decimal initialProbability)
         {
             this.NumberOfReceptors = numberOfReceptors;
+            this.BindingProbability = bindingProbability;
             this.InitialProbability = initialProbability;
         }
 
         public int NumberOfReceptors { get; set; }
 
-        public decimal InitialProbability { get; set; }
-
         public decimal BindingProbability { get; set; }
+
+        public decimal InitialProbability { get; set; }
     }
 }

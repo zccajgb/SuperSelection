@@ -12,7 +12,7 @@ namespace DomainModel.Documents.Commands
             : base(actionUserId, actionDateTime)
         {
             this.Name = name;
-            this.CalculationId = calculationId;
+            this.CalculationID = calculationId;
             this.Ligands = ligands;
             this.Receptors = receptors;
             this.Tolerance = tolerance;
@@ -25,7 +25,7 @@ namespace DomainModel.Documents.Commands
         public string Name { get; private set; }
 
         [BsonId]
-        public Guid CalculationId { get; private set; }
+        public Guid CalculationID { get; private set; }
 
         public IEnumerable<Ligand> Ligands { get; private set; }
 

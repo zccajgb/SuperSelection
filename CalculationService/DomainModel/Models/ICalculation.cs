@@ -4,7 +4,7 @@ namespace DomainModel.Models
 {
     public interface ICalculation
     {
-        Guid CalculationId { get; }
+        Guid CalculationID { get; }
 
         string Name { get; }
 

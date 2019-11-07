@@ -1,45 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CalculationViews.Controllers
+﻿namespace CalculationViews.Controllers
 {
-    [Route("api/[controller]")]
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using DomainModel.Repositories;
+    using DomainModel.ViewModels;
+    using Microsoft.AspNetCore.Mvc;
+
+    [Route("/")]
     [ApiController]
     public class CalculationsController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly ISelectivityCalculationsRepository selectivityCalculationsRepository;
+
+        public CalculationsController(ISelectivityCalculationsRepository selectivityCalculationsRepository)
         {
-            return new string[] { "value1", "value2" };
+            this.selectivityCalculationsRepository = selectivityCalculationsRepository;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
+        [Route("GetAllForUser")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<IEnumerable<SelectivityCalculationViewModel>> GetAllForUser([FromBody] string userID)
         {
+            return this.Ok(this.selectivityCalculationsRepository.GetAllByUserID(new Guid(userID)));
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Route("GetByID")]
+        [HttpPost]
+        public ActionResult<IEnumerable<SelectivityCalculationViewModel>> GetByID([FromBody] string calcID)
         {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return this.Ok(this.selectivityCalculationsRepository.GetByID(new Guid(calcID)));
         }
     }
 }

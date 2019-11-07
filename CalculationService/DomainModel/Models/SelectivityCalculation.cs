@@ -12,7 +12,7 @@
             this.ActionUserID = cmd.ActionUserId;
             this.ActionDateTime = cmd.ActionDateTime;
 
-            this.CalculationId = cmd.CalculationId;
+            this.CalculationID = cmd.CalculationID;
             this.Tolerance = cmd.Tolerance;
             this.NanoparticleRadius = cmd.NanoparticleRadius;
             this.NanoparticleConc = cmd.NanoparticleConc;
@@ -36,7 +36,7 @@
 
         public DateTime ActionDateTime { get; private set; }
 
-        public Guid CalculationId { get; private set; }
+        public Guid CalculationID { get; private set; }
 
         public decimal[][] Chi { get; private set; }
 

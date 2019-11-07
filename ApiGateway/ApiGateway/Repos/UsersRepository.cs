@@ -28,7 +28,7 @@
 
         public async Task<IEnumerable<UserView>> GetAllUsers()
         {
-            var userViews = (IEnumerable<UserView>)await this.httpHelper.GetAsync(this.uri);
+            var userViews = (IEnumerable<UserView>)await this.httpHelper.GetAsync<IEnumerable<UserView>>(this.uri);
             return userViews;
         }
 

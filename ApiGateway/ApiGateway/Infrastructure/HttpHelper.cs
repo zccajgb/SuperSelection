@@ -2,6 +2,7 @@
 {
     using System;
     using System.Net.Http;
+    using System.Net.Mime;
     using System.Text;
     using System.Threading.Tasks;
     using Newtonsoft.Json;
@@ -37,7 +38,7 @@
             return result;
         }
 
-        public async Task<object> GetAsync(string uri)
+        public async Task<T> GetAsync<T>(string uri)
         {
             var jsonContent = string.Empty;
             using (var response = await this.httpClient.GetAsync(uri))
@@ -51,7 +52,7 @@
                 jsonContent = await response.Content.ReadAsStringAsync();
             }
 
-            var result = JsonConvert.DeserializeObject(jsonContent);
+            var result = JsonConvert.DeserializeObject<T>(jsonContent);
             return result;
         }
     }

@@ -11,29 +11,32 @@
     public class ResultsController : ControllerBase
     {
         private readonly IResultsRepository resultsRepository;
+        private readonly IUsersRepository usersRepository;
 
-        public ResultsController(IResultsRepository resultsRepository)
+        public ResultsController(IResultsRepository resultsRepository, IUsersRepository usersRepository)
         {
             this.resultsRepository = resultsRepository;
+            this.usersRepository = usersRepository;
         }
 
         [HttpGet]
         [Route("Results/GetResultsByUserID")]
-        public async Task<ActionResult<string>> GetResultsByUserID([FromBody] string userID)
+        public async Task<ActionResult<string>> GetResultsByUserID([FromHeader(Name = "Authorization")] string token)
         {
             if (!this.ModelState.IsValid)
             {
-                Log.Logger.Error("userID model is invalid: {@userID}", userID);
+                Log.Logger.Error("token model is invalid: {@token}", token);
                 return this.BadRequest(this.ModelState);
             }
 
-            var query = new GetResultsByUserIDQuery(userID, new Guid(userID), DateTime.UtcNow);
-            var results = await this.resultsRepository.PostResultsQuery(query);
+            var userID = await this.usersRepository.GetUserID(token);
+
+            var results = await this.resultsRepository.GetByUserID(userID.ToString());
             return this.Ok(results);
         }
 
         [HttpGet]
-        [Route("Results/GetResultsByID")]
+        [Route("Results/GetResultByID")]
         public async Task<ActionResult<string>> GetResultByID([FromBody] string resultID)
         {
             if (!this.ModelState.IsValid)
@@ -42,8 +45,7 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var query = new GetResultByIDQuery(resultID, default, DateTime.UtcNow);
-            var result = await this.resultsRepository.PostResultsQuery(query);
+            var result = await this.resultsRepository.GetByID(resultID);
             return this.Ok(result);
         }
     }

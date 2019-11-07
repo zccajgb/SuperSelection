@@ -1,15 +1,16 @@
-﻿namespace ApiGateway.Models.DomainModels
+﻿namespace DomainModel.ViewModels
 {
     using System.Collections.Generic;
 
     public class Ligand
     {
-        public Ligand(decimal tetherLength, int numberOfLigands, decimal initialProbability, IEnumerable<decimal> singleBondStrength)
+        public Ligand(decimal tetherLength, int numberOfLigands, decimal initialProbability, IEnumerable<decimal> singleBondStrength, decimal bindingProbability)
         {
             this.TetherLength = tetherLength;
             this.NumberOfLigands = numberOfLigands;
             this.InitialProbability = initialProbability;
             this.SingleBondStrength = singleBondStrength;
+            this.BindingProbability = bindingProbability;
         }
 
         public decimal TetherLength { get; set; }

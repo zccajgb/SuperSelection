@@ -1074,3 +1074,24 @@ System.NullReferenceException: Principal Not Found
 2019-11-07 13:02:22.875 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 12.6317ms
 2019-11-07 13:02:22.875 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
 2019-11-07 13:02:22.875 +00:00 [INF] Request finished in 13.7825ms 200 application/json; charset=utf-8
+2019-11-07 14:43:40.031 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger  
+2019-11-07 14:43:40.120 +00:00 [INF] Request finished in 94.2444ms 301 
+2019-11-07 14:43:40.203 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/index.html  
+2019-11-07 14:43:40.352 +00:00 [INF] Request finished in 148.8617ms 200 text/html
+2019-11-07 14:43:40.539 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/swagger-ui-standalone-preset.js  
+2019-11-07 14:43:40.539 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/swagger-ui.css  
+2019-11-07 14:43:40.560 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/swagger-ui-bundle.js  
+2019-11-07 14:43:40.683 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2019-11-07 14:43:40.683 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2019-11-07 14:43:40.683 +00:00 [INF] Request finished in 143.5724ms 200 application/javascript
+2019-11-07 14:43:40.683 +00:00 [INF] Request finished in 143.5763ms 200 text/css
+2019-11-07 14:43:40.711 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2019-11-07 14:43:40.711 +00:00 [INF] Request finished in 151.6709ms 200 application/javascript
+2019-11-07 14:43:41.723 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/v1/swagger.json  
+2019-11-07 14:43:41.899 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/favicon-32x32.png  
+2019-11-07 14:43:41.900 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2019-11-07 14:43:41.900 +00:00 [INF] Request finished in 1.3244ms 200 image/png
+2019-11-07 14:43:42.261 +00:00 [INF] Request finished in 536.6301ms 200 application/json;charset=utf-8
+2019-11-07 16:38:51.340 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-07 16:38:52.746 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/api/values  
+2019-11-07 16:38:53.043 +00:00 [INF] Request finished in 301.4942ms 404 
