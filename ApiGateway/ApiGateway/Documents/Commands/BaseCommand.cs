@@ -4,13 +4,14 @@
 
     public class BaseCommand
     {
-        private DateTime actionDateTime;
-        private Guid actionUserId;
-
         public BaseCommand(Guid actionUserID, DateTime actionDateTime)
         {
-            this.actionDateTime = actionDateTime;
-            this.actionUserId = actionUserID;
+            this.ActionDateTime = actionDateTime;
+            this.ActionUserID = actionUserID;
         }
+
+        public DateTime ActionDateTime { get; private set; }
+
+        public Guid ActionUserID { get; private set; }
     }
 }

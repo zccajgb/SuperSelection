@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using ApiGateway.Repos;
 using Moq;
 using ApiGateway.Documents.Commands;
+using Newtonsoft.Json;
 
 namespace UnitTests.ControllerTests.CaclulationsControllerTests
 {
@@ -34,9 +35,9 @@ namespace UnitTests.ControllerTests.CaclulationsControllerTests
         {
             using (TestCorrelator.CreateContext())
             {
-                var calc = new Calculation("", Guid.NewGuid());
+                var calc = this.Fixture.Create<SelectivityCalculation>();
                 sut.ModelState.AddModelError("test", "test");
-                var res = await this.sut.CreateCalculation(calc);
+                var res = await this.sut.CreateSelectivityCalculation("string", calc);
                 TestCorrelator.GetLogEventsFromCurrentContext().FirstOrDefault().RenderMessage()
                     .Should().Contain("Calculation model is invalid: Calculation");
                 res.Result.Should().BeOfType<BadRequestObjectResult>();
@@ -46,18 +47,26 @@ namespace UnitTests.ControllerTests.CaclulationsControllerTests
         [TestMethod]
         public async Task Then_Returns_Ok()
         {
-            var calc = new Calculation("Name", Guid.NewGuid());
-            var res = await this.sut.CreateCalculation(calc);
+            var calc = this.Fixture.Create<SelectivityCalculation>();
+            var res = await this.sut.CreateSelectivityCalculation("string", calc);
             res.Result.Should().BeOfType<OkObjectResult>();
         }
 
         [TestMethod]
         public async Task Then_Calls_PostCommand_With_Correct_Command()
         {
-            var calc = new Calculation("Name", Guid.NewGuid());
-            var res = await this.sut.CreateCalculation(calc);
+            var calc = this.Fixture.Create<SelectivityCalculation>();
+            var json = JsonConvert.SerializeObject(calc);
+            try
+            {
+                var res = await this.sut.CreateSelectivityCalculation("string", calc);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
             this.mockCalculationsRepository.Verify(x =>
-            x.PostCommand(It.Is<CreateSelectivityAndActivityCalculationCommand>(cmd =>
+            x.PostCommand(It.Is<CreateSelectivityCalculationCommand>(cmd =>
                 cmd.Name == "Name"
                 )), Times.Once());
         }

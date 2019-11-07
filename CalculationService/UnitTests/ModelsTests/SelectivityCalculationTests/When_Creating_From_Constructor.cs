@@ -31,7 +31,7 @@ namespace UnitTests.ModelsTests.SelectivityCalculationTests
                 new Receptor(1, 0.5m),
             };
 
-            this.cmd = new CreateSelectivityCalculationCommand("test", default, this.ligands, this.receptors, 1m, 1m, 1m, default, default);
+            this.cmd = new CreateSelectivityCalculationCommand("test", default, this.ligands, this.receptors, 1m, 1m, 1m, default, default, default, default);
         }
 
         [TestMethod]

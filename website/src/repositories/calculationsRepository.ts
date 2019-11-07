@@ -10,14 +10,14 @@ import { NGXLogger } from 'ngx-logger';
 @Injectable({ providedIn: 'root' })
 export class CalculationsRepository extends BaseRepository {
 
-    url = 'https://localhost:44369/calculations';
+    url = 'https://localhost:44369/Calculations';
 
     constructor(private http: HttpClient, logger: NGXLogger) {
         super(logger);
     }
 
-    submitCalculation(calculation: Calculation): Observable<Calculation> {
-        return this.http.post<Calculation>(this.url, calculation).pipe(
+    submitSelectivityCalculation(calculation: Calculation): Observable<Calculation> {
+        return this.http.post<Calculation>('https://localhost:44369/Calculations/CreateSelectivityCalculation', calculation).pipe(
             catchError(this.handleError<Calculation>('submitCalculation'))
         );
     }

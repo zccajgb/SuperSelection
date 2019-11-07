@@ -7,7 +7,7 @@ sys.path.append('C:\\Users\\josep\\Dropbox\\PhD\\Source\\SuperSelection\\Calcula
 from data import Data
 from selectivity_calculation_model import SelectivityCalculationModel
 from selectivity import calculate
-from calculations_repository import add
+from calculations_repository import update_db
 
 
 def selectivity_callback(ch, method, properities, body):
@@ -15,8 +15,7 @@ def selectivity_callback(ch, method, properities, body):
     data = Data(json)
     selectivity_model = SelectivityCalculationModel(data)
     selectivity_model = calculate(selectivity_model)
-    
-    add(selectivity_model.tolist())
+    update_db(selectivity_model)
 
 controls = [
     ("Selectivity", selectivity_callback)

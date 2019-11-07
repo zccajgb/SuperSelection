@@ -13,7 +13,7 @@ def free_energy_of_bond_formation_calculator(free_energy_per_bond_calculator, pr
 
 def single_state_partition_function_calculator(free_energy_calculator, free_energy_inputs):
     free_energy_in_kT = free_energy_calculator(free_energy_inputs)
-    exponentiated_free_energy = np.exp(free_energy_in_kT)
+    exponentiated_free_energy = np.exp(-free_energy_in_kT)
     single_state_partition_function = exponentiated_free_energy - 1
     return single_state_partition_function
 

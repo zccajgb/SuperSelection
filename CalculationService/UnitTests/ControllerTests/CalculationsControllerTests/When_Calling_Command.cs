@@ -39,7 +39,7 @@
 
             foreach (var cmd in this.commands)
             {
-                var cmdObj = CommandBuilder.BuildCommandObject(cmd);
+                var cmdObj = CommandBuilder.BuildJson(cmd);
                 this.sut.Command(cmdObj);
                 this.calculationsOrchestrator.Verify(x => x.ProcessCalculation(It.IsAny<object>()), Times.Once);
                 command.Should().BeOfType(cmd.GetType());
@@ -52,7 +52,7 @@
         {
             foreach (var cmd in this.commands)
             {
-                var cmdObj = CommandBuilder.BuildCommandObject(cmd);
+                var cmdObj = CommandBuilder.BuildJson(cmd);
                 var res = this.sut.Command(cmdObj);
                 res.Should().BeOfType(typeof(OkResult));
             }

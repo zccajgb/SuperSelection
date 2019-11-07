@@ -13,8 +13,10 @@
 
         public void Register()
         {
-            this.CreateMap<Calculation, CreateSelectivityAndActivityCalculationCommand>()
-                .ForCtorParam("actionDateTime", opts => opts.MapFrom((_, ctx) => ctx.Items["Datetime"]));
+            this.CreateMap<SelectivityCalculation, CreateSelectivityCalculationCommand>()
+                .ForCtorParam("calculationID", opts => opts.MapFrom((_, ctx) => ctx.Items["calculationID"]))
+                .ForCtorParam("actionDateTime", opts => opts.MapFrom((_, ctx) => ctx.Items["actionDateTime"]))
+                .ForCtorParam("actionUserID", opts => opts.MapFrom((_, ctx) => ctx.Items["actionUserID"]));
         }
     }
 }

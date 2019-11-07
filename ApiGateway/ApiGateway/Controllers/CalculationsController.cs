@@ -14,17 +14,19 @@
     public class CalculationsController : ControllerBase
     {
         private readonly ICalculationsRepository calculationsRepository;
+        private readonly IUsersRepository usersRepository;
         private readonly IMapper mapper;
 
-        public CalculationsController(ICalculationsRepository calculationsRepository, IMapper mapper)
+        public CalculationsController(ICalculationsRepository calculationsRepository, IUsersRepository usersRepository, IMapper mapper)
         {
             this.calculationsRepository = calculationsRepository;
+            this.usersRepository = usersRepository;
             this.mapper = mapper;
         }
 
         [HttpPost]
-        [Route("CreateCalcuation")]
-        public async Task<ActionResult<string>> CreateCalculation([FromBody] Calculation calculation)
+        [Route("CreateSelectivityCalculation")]
+        public async Task<ActionResult<string>> CreateSelectivityCalculation([FromHeader(Name ="Authorization")] string token, [FromBody] SelectivityCalculation calculation)
         {
             if (!this.ModelState.IsValid)
             {
@@ -32,9 +34,13 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var command = this.mapper.Map<CreateSelectivityAndActivityCalculationCommand>(calculation, opts =>
+            var userId = await this.usersRepository.GetUserID(token);
+
+            var command = this.mapper.Map<CreateSelectivityCalculationCommand>(calculation, opts =>
             {
-                opts.Items["Datetime"] = DateTime.UtcNow;
+                opts.Items["calculationID"] = Guid.NewGuid();
+                opts.Items["actionDateTime"] = DateTime.UtcNow;
+                opts.Items["actionUserID"] = userId;
             });
 
             var response = await this.calculationsRepository.PostCommand(command);

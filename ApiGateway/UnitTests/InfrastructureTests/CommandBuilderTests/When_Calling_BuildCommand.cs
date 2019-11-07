@@ -15,8 +15,8 @@ namespace UnitTests.InfrastructureTests.CommandBuilderTests
         {
             var json = "{\"Type\":\"Calculation\",\"Payload\":\"{\\\"Name\\\":\\\"Name\\\"}\"}";
             var obj = CommandBuilder.BuildCommand(json);
-            Assert.IsInstanceOfType(obj, typeof(Calculation));
-            var calc = (Calculation)obj;
+            Assert.IsInstanceOfType(obj, typeof(SelectivityCalculation));
+            var calc = (SelectivityCalculation)obj;
             Assert.AreEqual("Name", calc.Name);
         }
     }

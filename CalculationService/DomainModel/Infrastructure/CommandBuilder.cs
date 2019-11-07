@@ -36,6 +36,12 @@
             Log.Logger.Information("Command Deserialised: {@command}", payload);
             return payload;
         }
+
+        public static object BuildCommand(string json)
+        {
+            var cmdObj = JsonConvert.DeserializeObject<CommandObject>(json);
+            return BuildCommand(cmdObj);
+        }
     }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1402:File may only contain a single type", Justification = "Makes sense")]

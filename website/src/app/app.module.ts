@@ -23,10 +23,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpHeaders } from '@angular/common/http';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { LigandComponent } from './create-calculation/ligand/ligand.component';
 import { ReceptorComponent } from './create-calculation/receptor/receptor.component';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
 
@@ -38,6 +40,7 @@ import { CreateNewAccountComponent } from './create-new-account/create-new-accou
     ViewCalculationsComponent,
     ResultsComponent,
     NavComponent,
+    LigandComponent,
     ReceptorComponent,
     CreateNewAccountComponent,
   ],
@@ -59,6 +62,7 @@ import { CreateNewAccountComponent } from './create-new-account/create-new-accou
     MatFormFieldModule,
     MatExpansionModule,
     MatSlideToggleModule,
+    MatCheckboxModule,
     LoggerModule.forRoot({
       serverLoggingUrl: environment.apiUrl + '/api/log',
       level: NgxLoggerLevel.TRACE,

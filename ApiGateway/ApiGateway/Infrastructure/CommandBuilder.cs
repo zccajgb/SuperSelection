@@ -14,6 +14,14 @@
             return json;
         }
 
+        public static CommandObject BuildCommandObject(object obj)
+        {
+            var type = obj.GetType().Name;
+            var payload = JsonConvert.SerializeObject(obj);
+            var cmdObj = new CommandObject(type, payload);
+            return cmdObj;
+        }
+
         public static object BuildCommand(string json)
         {
             var cmdObj = JsonConvert.DeserializeObject<CommandObject>(json);
@@ -27,7 +35,7 @@
     }
 
 #pragma warning disable SA1402 // File may only contain a single type
-    internal class CommandObject
+    public class CommandObject
 #pragma warning restore SA1402 // File may only contain a single type
     {
         public CommandObject(string type, string payload)

@@ -1,0 +1,47 @@
+<div [formGroup]="ligandForm">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">N<sub>L</sub></label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" formControlName="NumberOfLigands">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+                Number of Ligands of given type.
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">P<sub>0</sub></label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" formControlName="InitialProbability">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+                    The initial binding probability for the Newton-Rapheson method. A more accurate guess speeds up convergence. If this is not known, use 0.5
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">h / nm</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" formControlName="TetherLength">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+                Ligand tether length
+            </small>
+        </div>
+    </div>
+    
+    <div formArrayName="SingleBondStrength">
+        <div *ngFor="let receptor of ligandForm.controls.SingleBondStrength.controls; let j = index">
+            <div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">&chi;<sub>{{j+1}}</sub></label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" formControlName="{{j}}">
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Single bond strength to receptor {{j+1}} in kT
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

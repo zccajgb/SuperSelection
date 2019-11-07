@@ -9,6 +9,7 @@
     using ApiGateway.Documents.Commands;
     using ApiGateway.Documents.Queries;
     using ApiGateway.Infrastructure;
+    using Microsoft.Extensions.Configuration;
     using Newtonsoft.Json;
 
     public class CalculationsRepository : ICalculationsRepository
@@ -16,14 +17,16 @@
         private readonly HttpHelper httpHelper;
         private string uri;
 
-        public CalculationsRepository(HttpHelper httpHelper)
+        public CalculationsRepository(HttpHelper httpHelper, IConfiguration configuration)
         {
             this.httpHelper = httpHelper;
+            this.uri = configuration.GetConnectionString("CalculationService");
         }
 
         public async Task<string> PostCommand(BaseCommand cmd)
         {
-            var str = await this.httpHelper.PostAsync<string>(this.uri, cmd);
+            var cmdObj = CommandBuilder.BuildJson(cmd);
+            var str = await this.httpHelper.PostAsync<string>(this.uri + "/Command", cmdObj);
             return str;
         }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Calculation } from 'src/models/calculation';
-import { FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormControl, FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 import { stringify } from 'querystring';
 import { Title } from '@angular/platform-browser';
 import { ValidatorsService } from '../_services/validators.service';
@@ -14,8 +14,9 @@ import { NGXLogger } from 'ngx-logger';
   styleUrls: ['./create-calculation.component.scss']
 })
 export class CreateCalculationComponent implements OnInit {
-  dropdownList = ['one', 'two', 'three'];
-  form: any;
+  public form: any;
+  public page2 = false;
+  public steric = false;
 
   constructor(
     private fb: FormBuilder,
@@ -32,29 +33,32 @@ export class CreateCalculationComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
-      numberOfLigandTypes: ['', [Validators.required, this.validatorService.isInteger]],
-      insertionParameter: ['', [Validators.required, Validators.max(1), Validators.min(0)]],
-      numberOfReceptors: ['', [Validators.required, this.validatorService.isInteger]],
-      temperature: ['', [Validators.required]],
-      nanoparticleRadius: ['', [Validators.required]],
-      nanopaticleBulkConc: ['', [Validators.required]],
-      // somethingDetails: ['', [Validators.minLength(5)]],
-      // dropdown: '',
-      // receptors: this.fb.array([this.initReceptors()])
+      Name: ['', [Validators.required, Validators.minLength(5)]],
+      Receptors: this.fb.array([this.initReceptors()]),
+      Ligands: this.fb.array([]),
+      NanoparticleRadius: ['', [Validators.required]],
+      NanoparticleConc: ['', [Validators.required]],
+      Tolerance: ['', [Validators.required]],
+      GlycolInterferenceParameter: [''],
+      InterchainDistance: [''],
+      useStericBrush: ['']
     });
   }
 
   onSubmit() {
       const calc: Calculation = Object.assign({}, this.form.value);
+      if (this.form.controls.useStericBrush.value !== true) {
+        calc.GlycolInterferenceParameter = 0;
+        calc.InterchainDistance = 0;
+      }
       // tslint:disable-next-line: no-string-literal
-      calc.userID = localStorage.getItem['currentUser'].userID;
+      // calc.userID = lo calStorage.getItem['currentUser'].userID;
 
-      this.calculationsRepo.submitCalculation(calc)
+      this.calculationsRepo.submitSelectivityCalculation(calc)
         .subscribe(
           data => {
             this.logger.info('Calculation successfully submitted');
-            this.router.navigate(['view-calculations']);
+            // this.router.navigate(['view-calculations']);
           },
           error => {
             this.logger.error(error);
@@ -62,22 +66,67 @@ export class CreateCalculationComponent implements OnInit {
         );
   }
 
-  // initReceptors(): any {
-  //   return this.fb.group({
-  //     text: ['', Validators.required]
-  //   });
-  // }
+  initReceptors(): any {
+    return this.fb.group({
+      NumberOfReceptors: ['', [Validators.required]],
+      InitialProbability: ['', [Validators.required, Validators.max(1), Validators.min(0)]]
+    });
+  }
 
-  // addReceptor() {
-  //   // tslint:disable-next-line: no-string-literal
-  //   const control = this.form.controls['receptors'] as FormArray;
-  //   control.push(this.initReceptors());
-  // }
+  initLigands(receptorTypes: any): any {
+    const ligands = this.fb.group({
+      TetherLength: ['', Validators.required],
+      NumberOfLigands: ['', Validators.required],
+      InitialProbability: ['', [Validators.required, Validators.max(1), Validators.min(0)]],
+      SingleBondStrength: this.initSBS(receptorTypes)
+    });
+    return ligands;
+  }
 
-  // removeReceptor(i: number) {
-  //   // tslint:disable-next-line: no-string-literal
-  //   const control = this.form.controls['receptors'] as FormArray;
-  //   control.removeAt(i);
-  // }
+  initSBS(receptorTypes: any): any {
+    const sbs: FormArray = this.fb.array([]);
+    // tslint:disable-next-line: forin
+    for (const item in receptorTypes) {
+        sbs.push(
+          new FormControl()
+        );
+    }
+    return sbs;
+  }
+
+  addReceptor() {
+    // tslint:disable-next-line: no-string-literal
+    const control = this.form.controls['Receptors'] as FormArray;
+    control.push(this.initReceptors());
+  }
+
+  addLigand(receptors: any) {
+    // tslint:disable-next-line: no-string-literal
+    const control = this.form.controls['Ligands'] as FormArray;
+    control.push(this.initLigands(receptors));
+  }
+
+  removeReceptor(i: number) {
+    // tslint:disable-next-line: no-string-literal
+    const control = this.form.controls['Receptors'] as FormArray;
+    control.removeAt(i);
+  }
+
+  removeLigand(i: number) {
+    // tslint:disable-next-line: no-string-literal
+    const control = this.form.controls['Ligands'] as FormArray;
+    control.removeAt(i);
+  }
+
+  next(receptors: any) {
+    this.addLigand(receptors);
+    this.page2 = true;
+  }
+
+  previous() {
+    // tslint:disable-next-line: no-string-literal
+    this.form.controls['Ligands'] = this.fb.array([]);
+    this.page2 = false;
+  }
 
 }

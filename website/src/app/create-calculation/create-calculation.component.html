@@ -1,12 +1,11 @@
-<div class='container pt-5'>
-  <form [formGroup]="form" (ngSubmit)="sumbit(form)">
+<div class="container pt-5">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="row">
-     <div class='col mr-5'>
-        <h1>{{form.controls.name.value}}</h1>
+     <div class="col mr-5" *ngIf="!page2">
         <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Name</label>
+          <label class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" formControlName="name">
+            <input type="text" class="form-control" formControlName="Name">
             <small id="passwordHelpBlock" class="form-text text-muted">
               Please give your calculation a distinct name to aid with searching.
             </small>
@@ -14,80 +13,114 @@
         </div>
 
         <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Number of Ligand Types</label>
+          <label class="col-sm-2 col-form-label">R / nm</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Insertion Parameter</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="insertionParameter">
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Number of Receptors</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Temperature / K</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="310.15" formControlName="numberOfLigandTypes">
-          </div>
-        </div>
-
-        
-        <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Nanoparticle Radius / nm</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="50" formControlName="numberOfLigandTypes">
+            <input type="number" class="form-control" placeholder="50" formControlName="NanoparticleRadius">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Nanoparticle radius
+            </small>
           </div>
         </div>
         
                 
         <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Nanoparticle Bulk Concentration / M</label>
+          <label class="col-sm-2 col-form-label">[P] / M</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="50" formControlName="numberOfLigandTypes">
+            <input type="number" class="form-control" placeholder="0.1" formControlName="NanoparticleConc">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Nanoparticle Bulk Concentration
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Steric?</label>
+          <div class="col-sm-10">
+            <mat-checkbox formControlName="useStericBrush">
+              <small id="passwordHelpBlock" class="form-text text-muted">
+                Does the system use a steric brush?
+              </small>
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <div class="form-group row" *ngIf="form.controls.useStericBrush.value">
+          <label class="col-sm-2 col-form-label">&delta;<sub>G</sub></label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" placeholder="0.1" formControlName="GlycolInterferenceParameter">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Glycol Interference Parameter
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group row" *ngIf="form.controls.useStericBrush.value">
+          <label class="col-sm-2 col-form-label">d<sub>s</sub></label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" placeholder="0.1" formControlName="InterchainDistance">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Interchain Distance between two syndecan
+            </small>
           </div>
         </div>
         
-        <!-- <div class="form-group row">
-          <label class='col-sm-2 col-form-label'>Dropdown</label>
-          <div class="col-sm-10">
-            <select class="form-control" formControlName="dropdown">
-              <option *ngFor="let option of dropdownList">{{option}}</option>
-            </select>
-          </div>
-        </div> -->
-
-        
         <div class="form-group row">
-          <label class='col-sm-2'>Use Something?</label>
+          <label class="col-sm-2 col-form-label">Tolerance</label>
           <div class="col-sm-10">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" formControlName="useSomething">
-              <!-- <label class="form-check-label">Use Something?</label> -->
+            <input type="number" class="form-control" placeholder="0.001" formControlName="Tolerance">
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              The tolerance is the error value at which the Newton-Rapheson approximation will be considered converged.
+            </small>
+          </div>
+        </div>
+     </div>
+
+     <div class="col mr-5">
+        <div formArrayName="Receptors">
+          <div *ngFor="let receptor of form.controls.Receptors.controls; let i = index">
+            <div class="row">
+              <h5>Receptor {{i + 1}}</h5>
+              <div class = "ml-auto pr-3" *ngIf="form.controls.Receptors.controls.length > 1 && !page2" (click)="removeReceptor(i)">
+                <i class="fa fa-trash text-danger"></i>
+              </div>
+            </div>
+            <div [formGroupName]="i">
+              <app-receptor [receptorForm]="receptor" [(displayOnly)]="page2"></app-receptor>
             </div>
           </div>
         </div>
+        <div class="row" *ngIf="!page2">
+          <label class="col-sm-2 col-form-label"></label>
+          <button type="button" class="btn btn-secondary ml-3 mt-3"  (click)="addReceptor()">Add Receptor</button>
+        </div>
 
-        <div class="form-group row" *ngIf="form.controls.useSomething.value">
-          <label class='col-sm-2 col-form-label'>Something Details</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" formControlName="soemthingDetails">
+      </div>
+
+      <div class='col mr-5' *ngIf="page2">
+          <div formArrayName="Ligands">
+            <div *ngFor="let ligand of form.controls.Ligands.controls; let i=index"> 
+                <div class="row">
+                  <h5>Ligand {{i + 1}}</h5>
+                  <div class = "ml-auto pr-3" *ngIf="form.controls.Ligands.controls.length > 1" (click)="removeLigand(i)">
+                    <i class="fa fa-trash text-danger"></i>
+                  </div>
+                </div>
+                <div [formGroupName]="i">
+                  <app-ligand [ligandForm]="ligand"></app-ligand>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-sm-2 col-form-label"></label>
+            <button type="button" class="btn btn-secondary ml-3 mt-3"  (click)="addLigand(form.controls.Receptors.value)">Add Ligand</button>
           </div>
         </div>
-      </div>
+
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary ml-3 mr-5 pull-right" (click)="next(form.controls.Receptors.value)" *ngIf="!page2" [disabled]="form.invalid">Next</button>
+    <button type="button" class="btn btn-primary ml-3" (click)="previous()" *ngIf="page2">Previous</button>
+    <button type="submit" class="btn btn-primary ml-3 mr-5 pull-right" *ngIf="page2" [disabled]="form.invalid">Submit</button>
   </form>
 </div>
 
-
+ 

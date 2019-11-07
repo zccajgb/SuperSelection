@@ -21,7 +21,7 @@
         {
             Contract.Requires(configuration != null);
 
-            services.AddTransient<ITokenManager, TokenManager>(_ => new TokenManager(configuration["tokenSecret"], int.Parse(configuration["tokenExpiry"])));
+            services.AddTransient<ITokenManager, TokenManager>(_ => new TokenManager(configuration["tokenSecret"], int.Parse(configuration["TokenExpiry"])));
             RegisterAutomapper(services);
             RegisterMongoDb(services, configuration);
             RegisterRepos(services);
@@ -37,6 +37,7 @@
 
         private static void RegisterMongoDb(IServiceCollection services, IConfiguration configuration)
         {
+            // requires Microsoft.Extensions.Options.ConfigurationExtensions nuget package
             services.Configure<UsersDatabaseSettings>(configuration.GetSection(nameof(UsersDatabaseSettings)));
 
             services.AddSingleton<UsersDatabaseSettings>(sp =>

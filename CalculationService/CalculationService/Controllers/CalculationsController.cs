@@ -15,7 +15,7 @@
         }
 
         [Route("Command")]
-        public ActionResult Command([FromBody] CommandObject jsonCommand)
+        public ActionResult Command([FromBody] string jsonCommand)
         {
             var cmd = CommandBuilder.BuildCommand(jsonCommand);
             this.calculationsOrchestrator.ProcessCalculation(cmd);

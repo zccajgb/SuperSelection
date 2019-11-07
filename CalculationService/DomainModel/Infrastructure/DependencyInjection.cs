@@ -6,6 +6,10 @@
     using System.Reflection;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Options;
+    using MongoDB.Bson;
+    using MongoDB.Bson.Serialization;
+    using MongoDB.Bson.Serialization.Serializers;
     using RabbitMQ.Client;
     using Serilog;
     using Serilog.Core;
@@ -15,6 +19,7 @@
         public static void RegisterDependencies(this IServiceCollection services, IConfiguration config)
         {
             RegisterRabbitMQ(services, config);
+            RegisterMongoDb(services, config);
             RegisterRepos(services);
             services.AddScoped<ICalculationsOrchestrator, CalculationsOrchestrator>();
         }
@@ -24,6 +29,17 @@
             return new LoggerConfiguration()
                 .WriteTo.File("-log.txt", rollingInterval: RollingInterval.Month)
                 .CreateLogger();
+        }
+
+        private static void RegisterMongoDb(IServiceCollection services, IConfiguration configuration)
+        {
+            // requires Microsoft.Extensions.Options.ConfigurationExtensions nuget packeage
+            BsonSerializer.RegisterSerializer(typeof(Guid), new GuidSerializer(BsonType.String));
+
+            services.Configure<CalculationsDatabaseSettings>(configuration.GetSection(nameof(CalculationsDatabaseSettings)));
+
+            services.AddSingleton<CalculationsDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<CalculationsDatabaseSettings>>().Value);
         }
 
         private static void RegisterRabbitMQ(IServiceCollection services, IConfiguration config)
