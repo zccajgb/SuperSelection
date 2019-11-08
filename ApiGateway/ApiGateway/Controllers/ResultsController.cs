@@ -36,8 +36,8 @@
         }
 
         [HttpGet]
-        [Route("Results/GetResultByID")]
-        public async Task<ActionResult<string>> GetResultByID([FromBody] string resultID)
+        [Route("Results/GetResultByID/{resultID}")]
+        public async Task<ActionResult<string>> GetResultByID(string resultID)
         {
             if (!this.ModelState.IsValid)
             {

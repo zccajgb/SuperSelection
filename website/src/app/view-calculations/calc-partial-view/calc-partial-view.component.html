@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col mr-5">
+            <app-nanoparticle-details [calculation]="calculation"></app-nanoparticle-details>
+        </div>
+
+        <div class="col mr-5">
+
+            <div>
+                <div class="row">
+                    <label class="col-sm-6 col-form-label">Date Added</label>
+                    <div class="col-sm-6">
+                        {{calculation.actionDateTime}}
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <label class="col-sm-6 col-form-label">Number of Ligand Types</label>
+                    <div class="col-sm-6">
+                        {{calculation.ligands.length}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="col-sm-6 col-form-label">Number of Receptor Types</label>
+                    <div class="col-sm-6">
+                        {{calculation.receptors.length}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <button class="btn btn-primary pull-right"> Full Details </button>
+</div>

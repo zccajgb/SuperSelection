@@ -31,6 +31,8 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { LigandComponent } from './create-calculation/ligand/ligand.component';
 import { ReceptorComponent } from './create-calculation/receptor/receptor.component';
 import { CreateNewAccountComponent } from './create-new-account/create-new-account.component';
+import { CalcPartialViewComponent } from './view-calculations/calc-partial-view/calc-partial-view.component';
+import { NanoparticleDetailsComponent } from './shared/nanoparticle-details/nanoparticle-details.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { CreateNewAccountComponent } from './create-new-account/create-new-accou
     LigandComponent,
     ReceptorComponent,
     CreateNewAccountComponent,
+    CalcPartialViewComponent,
+    NanoparticleDetailsComponent
   ],
   imports: [
     HttpClientModule,

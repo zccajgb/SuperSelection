@@ -1,2 +1,60 @@
-<p>results works!</p>
-<h2> {{result.name}} </h2>
+<div class="container">
+    <div class="row">
+        <div class="col mr-5">
+            <div class="card">
+                <app-nanoparticle-details [calculation]="calculation"></app-nanoparticle-details>
+                <div class="row">
+                    <label class="col-sm-6 col-form-label">Date Added</label>
+                    <div class="col-sm-6">
+                        {{calculation.actionDateTime}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <label class="col-sm-6 col-form-label">Number of Ligand Types</label>
+                <div class="col-sm-6">
+                    {{calculation.ligands.length}}
+                </div>
+            </div>
+
+            <div class="card">
+                <label class="col-sm-6 col-form-label">Number of Receptor Types</label>
+                <div class="col-sm-6">
+                    {{calculation.receptors.length}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col mr-5">
+            <div class="card">
+                <label class="col-sm-6 col-form-label">Binding Partition Function</label>
+                <div class="col-sm-6">
+                    {{calculation.bindingPartitionFunction}}
+                </div>
+
+                <label class="col-sm-6 col-form-label">Binding Volume</label>
+                <div class="col-sm-6">
+                    {{calculation.volume}}
+                </div>
+
+                <label class="col-sm-6 col-form-label">Steric Potential</label>
+                <div class="col-sm-6">
+                    {{calculation.stericPotential}}
+                </div>
+
+                <label class="col-sm-6 col-form-label">Steric Partition Function</label>
+                <div class="col-sm-6">
+                    {{calculation.stericPartitionFunction}}
+                </div>
+
+                <label class="col-sm-6 col-form-label">Selectivity</label>
+                <div class="col-sm-6">
+                    {{calculation.selectivity}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary pull-right"> Full Details </button>
+</div>

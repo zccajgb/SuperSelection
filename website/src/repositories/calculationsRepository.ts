@@ -6,6 +6,7 @@ import { BaseRepository } from './baseRepository';
 import { Injectable } from '@angular/core';
 import { Calculation } from 'src/models/calculation';
 import { NGXLogger } from 'ngx-logger';
+import { CalculationViewModel } from 'src/models/view-models/calculation-view-model';
 
 @Injectable({ providedIn: 'root' })
 export class CalculationsRepository extends BaseRepository {

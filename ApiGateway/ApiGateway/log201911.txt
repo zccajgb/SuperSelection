@@ -4328,3 +4328,1360 @@ System.Net.Http.HttpRequestException: No connection could be made because the ta
 2019-11-07 16:38:47.636 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultByID (ApiGateway) in 37023.052800000005ms
 2019-11-07 16:38:47.643 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultByID (ApiGateway)'
 2019-11-07 16:38:47.661 +00:00 [INF] Request finished in 37776.9487ms 200 application/json; charset=utf-8
+2019-11-08 11:17:15.750 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:17:32.924 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:20:10.287 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:20:13.784 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 11:20:14.483 +00:00 [INF] Request finished in 703.7902ms 404 
+2019-11-08 11:21:08.028 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:21:09.890 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 11:21:10.223 +00:00 [INF] Request finished in 340.2485ms 404 
+2019-11-08 11:21:12.937 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:56449/  
+2019-11-08 11:21:12.981 +00:00 [INF] Request finished in 43.5601ms 307 
+2019-11-08 11:21:13.013 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/  
+2019-11-08 11:21:13.016 +00:00 [INF] Request finished in 4.1842ms 404 
+2019-11-08 11:21:13.037 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:56449/  
+2019-11-08 11:21:13.038 +00:00 [INF] Request finished in 0.8216ms 307 
+2019-11-08 11:21:13.040 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/  
+2019-11-08 11:21:13.040 +00:00 [INF] Request finished in 0.5875ms 404 
+2019-11-08 11:22:38.426 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:23:08.581 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/swagger/index.html  
+2019-11-08 11:23:08.825 +00:00 [INF] Request finished in 246.3486ms 200 text/html
+2019-11-08 11:23:09.674 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/swagger/v1/swagger.json  
+2019-11-08 11:23:10.069 +00:00 [INF] Request finished in 395.1487ms 200 application/json;charset=utf-8
+2019-11-08 11:34:54.483 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/swagger/index.html  
+2019-11-08 11:34:54.483 +00:00 [INF] Request finished in 0.7013ms 200 text/html
+2019-11-08 11:34:55.357 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/swagger/v1/swagger.json  
+2019-11-08 11:34:55.360 +00:00 [INF] Request finished in 2.454ms 200 application/json;charset=utf-8
+2019-11-08 11:34:55.636 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44369/swagger/favicon-32x32.png  
+2019-11-08 11:34:55.679 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2019-11-08 11:34:55.679 +00:00 [INF] Request finished in 43.0982ms 200 image/png
+2019-11-08 11:46:00.723 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:46:03.171 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 11:46:03.561 +00:00 [INF] Request finished in 401.8782ms 404 
+2019-11-08 11:57:29.663 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:58:23.817 +00:00 [INF] Connection id "0HLR48BQETPA0" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE0\xD2m\x13\x1B\x1Ca\x9C\x1B\\xDEzR;_\xA7_\x90\x0B\xCA>\xCEDOM4\xB6%$\xC7\x0F> `\x12Z\x1E\xBA@\x87\xFD\xB1\x94\x83\x12\xD42\xEB\x87'YNS\x8Fb\x97\xE2\xA6\xA1t\xF6E\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE0\xD2m\x13\x1B\x1Ca\x9C\x1B\\xDEzR;_\xA7_\x90\x0B\xCA>\xCEDOM4\xB6%$\xC7\x0F> `\x12Z\x1E\xBA@\x87\xFD\xB1\x94\x83\x12\xD42\xEB\x87'YNS\x8Fb\x97\xE2\xA6\xA1t\xF6E\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 11:58:24.703 +00:00 [INF] Connection id "0HLR48BQETPA1" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE9]\x91w\xF2\xCC\x10\x01\x8Dr\xAE\xB9\xA7R\xB4\xDCD\xD1\xE9\xFB5Q\xC6F\xBFACkt/\xDD\xCE \xA2F\xFC\xF5\x86ub\xFC\xE1\xE4&f\xEC 2\x82\xA6sA7\x98\x95\x12\xA0&$\xA5\xE2\x06\xFBJ\x96\x00"**\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE9]\x91w\xF2\xCC\x10\x01\x8Dr\xAE\xB9\xA7R\xB4\xDCD\xD1\xE9\xFB5Q\xC6F\xBFACkt/\xDD\xCE \xA2F\xFC\xF5\x86ub\xFC\xE1\xE4&f\xEC 2\x82\xA6sA7\x98\x95\x12\xA0&$\xA5\xE2\x06\xFBJ\x96\x00"**\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 11:58:34.862 +00:00 [INF] Connection id "0HLR48BQETPA2" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\x84\xAD\x0D5\x9C\x0F1\xDC\xE6\xEB\xA3\x1A7\x06\xC4`\x01?\xFC\x90e\x10\x123\xDC>\x86\x88\xE4\xDEP\xD6 )j+\xD3\xB8\xE7\x15\x8D\xCE\xF0\xA5}ay\xF7_\xDC\xD2\xE3\x89\x90V\xC3B\x11\xE5V\x9D\xCD8\x1BC\x00"\x9A\x9A\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\x84\xAD\x0D5\x9C\x0F1\xDC\xE6\xEB\xA3\x1A7\x06\xC4`\x01?\xFC\x90e\x10\x123\xDC>\x86\x88\xE4\xDEP\xD6 )j+\xD3\xB8\xE7\x15\x8D\xCE\xF0\xA5}ay\xF7_\xDC\xD2\xE3\x89\x90V\xC3B\x11\xE5V\x9D\xCD8\x1BC\x00"\x9A\x9A\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 11:58:35.385 +00:00 [INF] Connection id "0HLR48BQETPA3" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03q\x94v#1\x83q\xFF\x00\xB7)\xD5\xA6\x1D(\xF4a\xE8ZJ\x142\xB1\x87\xEE\xBB\xAC\xC7{\x19\xA8l \x1B\xC7\xB4\xCF\x9D\xC1\xF3M\x18\x8F\xD6\xBAO\x8B\x00Sm\x84^\xF6^D\x8B\x88!C\x843]\x97\xB9\xAB\x00"\x9A\x9A\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03q\x94v#1\x83q\xFF\x00\xB7)\xD5\xA6\x1D(\xF4a\xE8ZJ\x142\xB1\x87\xEE\xBB\xAC\xC7{\x19\xA8l \x1B\xC7\xB4\xCF\x9D\xC1\xF3M\x18\x8F\xD6\xBAO\x8B\x00Sm\x84^\xF6^D\x8B\x88!C\x843]\x97\xB9\xAB\x00"\x9A\x9A\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 11:58:36.829 +00:00 [INF] Connection id "0HLR48BQETPA4" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\x1D\xCD\x14=\xD6z\x8F\xDA\xD2\xB3\xAE\x835\x04\x11\xBF2\xB7,q:\xF2C\xD9\xCD(!\xDD\xA49|F \x04\xF0\xF5;_\xC8_\xB24p\x04\x0E\xB2\x1AN\xF9\xE5)\xD8\x85\x06}\xCA\xB6\x17p\xC6\x02\x8EzZ\x86\x00"ZZ\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\x1D\xCD\x14=\xD6z\x8F\xDA\xD2\xB3\xAE\x835\x04\x11\xBF2\xB7,q:\xF2C\xD9\xCD(!\xDD\xA49|F \x04\xF0\xF5;_\xC8_\xB24p\x04\x0E\xB2\x1AN\xF9\xE5)\xD8\x85\x06}\xCA\xB6\x17p\xC6\x02\x8EzZ\x86\x00"ZZ\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 11:58:37.351 +00:00 [INF] Connection id "0HLR48BQETPA5" bad request data: "Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE4\xD9\xEC\xE2\xF6G\xAD7j\xBC\xAB\xDETR\x14O\xC9\xA1\xC7\xC0\xA4JRa\x00\xD9\x99\xC6\x83\x8A\xD0\x17 \x14\xAB\xED"\x1A[`\xA8\xE3\xFA\x10t\xD5\xF4wV1\xFA\xE9\xB8\x15[U\x8CP\x99\xA2p\x88B\x07\x01\x00"\xDA\xDA\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x02\x00\x01\x00\x01\xFC\x03\x03\xE4\xD9\xEC\xE2\xF6G\xAD7j\xBC\xAB\xDETR\x14O\xC9\xA1\xC7\xC0\xA4JRa\x00\xD9\x99\xC6\x83\x8A\xD0\x17 \x14\xAB\xED"\x1A[`\xA8\xE3\xFA\x10t\xD5\xF4wV1\xFA\xE9\xB8\x15[U\x8CP\x99\xA2p\x88B\x07\x01\x00"\xDA\xDA\x13\x01\x13\x02\x13\x03\xC0+\xC0/\xC0,\xC00\xCC\xA9\xCC\xA8\xC0\x13\xC0\x14\x00\x9C\x00\x9D\x00/\x005\x00\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2019-11-08 12:01:08.877 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 12:01:10.122 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 12:01:10.122 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/users/Login  
+2019-11-08 12:01:10.134 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:10.171 +00:00 [INF] Request finished in 52.2041ms 204 
+2019-11-08 12:01:10.221 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/users/Login application/json 51
+2019-11-08 12:01:10.221 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:10.368 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:01:10.382 +00:00 [INF] Request finished in 265.4358ms 0 
+2019-11-08 12:01:10.449 +00:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ApiGateway.Models.ViewModels.UserView]] Login(ApiGateway.Models.DomainModels.User) on controller ApiGateway.Controllers.UsersController (ApiGateway).
+2019-11-08 12:01:11.882 +00:00 [INF] Executing action method ApiGateway.Controllers.UsersController.Login (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:01:11.931 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:01:11.935 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:01:34.867 +00:00 [INF] Executed action ApiGateway.Controllers.UsersController.Login (ApiGateway) in 24411.5249ms
+2019-11-08 12:01:34.871 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:01:34.876 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at ApiGateway.Infrastructure.HttpHelper.PostAsync[T](String uri, Object payload) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Infrastructure\HttpHelper.cs:line 26
+   at ApiGateway.Repos.UsersRepository.Login(User user) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Repos\UsersRepository.cs:line 45
+   at ApiGateway.Controllers.UsersController.Login(User user) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Controllers\UsersController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 12:01:35.352 +00:00 [INF] Request finished in 25132.0013ms 500 text/html; charset=utf-8
+2019-11-08 12:01:36.032 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/api/log  
+2019-11-08 12:01:36.032 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:36.033 +00:00 [INF] Request finished in 0.5014ms 204 
+2019-11-08 12:01:36.058 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/api/log application/json 143
+2019-11-08 12:01:36.058 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:36.063 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:01:36.069 +00:00 [INF] Route matched with {action = "Log", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Log(ApiGateway.Models.DomainModels.NgLog) on controller ApiGateway.Controllers.LogController (ApiGateway).
+2019-11-08 12:01:36.089 +00:00 [INF] Executing action method ApiGateway.Controllers.LogController.Log (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:01:36.130 +00:00 [INF] Executed action method ApiGateway.Controllers.LogController.Log (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkResult in 35.677800000000005ms.
+2019-11-08 12:01:36.152 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-08 12:01:36.153 +00:00 [INF] Executed action ApiGateway.Controllers.LogController.Log (ApiGateway) in 84.381700000000009ms
+2019-11-08 12:01:36.154 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:01:36.181 +00:00 [INF] Request finished in 123.2893ms 200 
+2019-11-08 12:01:42.232 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/users/Login  
+2019-11-08 12:01:42.232 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:42.232 +00:00 [INF] Request finished in 0.4268ms 204 
+2019-11-08 12:01:42.256 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/users/Login application/json 51
+2019-11-08 12:01:42.257 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:01:42.259 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:01:42.260 +00:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ApiGateway.Models.ViewModels.UserView]] Login(ApiGateway.Models.DomainModels.User) on controller ApiGateway.Controllers.UsersController (ApiGateway).
+2019-11-08 12:01:42.265 +00:00 [INF] Executing action method ApiGateway.Controllers.UsersController.Login (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:01:42.267 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:01:42.268 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:02:34.025 +00:00 [INF] Executed action ApiGateway.Controllers.UsersController.Login (ApiGateway) in 51765.3429ms
+2019-11-08 12:02:34.026 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:02:34.027 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at ApiGateway.Infrastructure.HttpHelper.PostAsync[T](String uri, Object payload) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Infrastructure\HttpHelper.cs:line 26
+   at ApiGateway.Repos.UsersRepository.Login(User user) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Repos\UsersRepository.cs:line 45
+   at ApiGateway.Controllers.UsersController.Login(User user) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Controllers\UsersController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 12:02:34.061 +00:00 [INF] Request finished in 51804.7124ms 500 text/html; charset=utf-8
+2019-11-08 12:02:34.612 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/api/log  
+2019-11-08 12:02:34.613 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:34.613 +00:00 [INF] Request finished in 0.5925ms 204 
+2019-11-08 12:02:34.646 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/api/log application/json 143
+2019-11-08 12:02:34.646 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:34.646 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:02:34.647 +00:00 [INF] Route matched with {action = "Log", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Log(ApiGateway.Models.DomainModels.NgLog) on controller ApiGateway.Controllers.LogController (ApiGateway).
+2019-11-08 12:02:34.647 +00:00 [INF] Executing action method ApiGateway.Controllers.LogController.Log (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:02:34.648 +00:00 [INF] Executed action method ApiGateway.Controllers.LogController.Log (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.0897ms.
+2019-11-08 12:02:34.648 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-08 12:02:34.648 +00:00 [INF] Executed action ApiGateway.Controllers.LogController.Log (ApiGateway) in 1.2438ms
+2019-11-08 12:02:34.648 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:02:34.649 +00:00 [INF] Request finished in 2.764ms 200 
+2019-11-08 12:02:38.959 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/users/Login  
+2019-11-08 12:02:38.959 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:38.959 +00:00 [INF] Request finished in 0.6042ms 204 
+2019-11-08 12:02:38.973 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/users/Login application/json 51
+2019-11-08 12:02:38.973 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:38.973 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:02:38.974 +00:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ApiGateway.Models.ViewModels.UserView]] Login(ApiGateway.Models.DomainModels.User) on controller ApiGateway.Controllers.UsersController (ApiGateway).
+2019-11-08 12:02:38.977 +00:00 [INF] Executing action method ApiGateway.Controllers.UsersController.Login (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:02:38.978 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:02:38.978 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/Login"
+2019-11-08 12:02:41.798 +00:00 [INF] Received HTTP response after 2816.2109ms - "OK"
+2019-11-08 12:02:41.798 +00:00 [INF] End processing HTTP request after 2820.2491ms - "OK"
+2019-11-08 12:02:41.826 +00:00 [INF] Executed action method ApiGateway.Controllers.UsersController.Login (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2848.6468ms.
+2019-11-08 12:02:41.832 +00:00 [INF] Executing ObjectResult, writing value of type 'ApiGateway.Models.ViewModels.UserView'.
+2019-11-08 12:02:41.856 +00:00 [INF] Executed action ApiGateway.Controllers.UsersController.Login (ApiGateway) in 2881.5805ms
+2019-11-08 12:02:41.856 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.UsersController.Login (ApiGateway)'
+2019-11-08 12:02:41.857 +00:00 [INF] Request finished in 2883.9607ms 200 application/json; charset=utf-8
+2019-11-08 12:02:42.627 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:02:42.627 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:42.628 +00:00 [INF] Request finished in 0.4965ms 204 
+2019-11-08 12:02:42.731 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:02:42.732 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:02:42.752 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:02:42.763 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:02:42.774 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:02:42.788 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:02:42.788 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:02:43.191 +00:00 [INF] Received HTTP response after 402.685ms - "OK"
+2019-11-08 12:02:43.191 +00:00 [INF] End processing HTTP request after 403.4037ms - "OK"
+2019-11-08 12:02:43.237 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:02:43.237 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:03:38.457 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 55693.692800000004ms
+2019-11-08 12:03:38.457 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:03:38.459 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at ApiGateway.Infrastructure.HttpHelper.PostAsync[T](String uri, Object payload) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Infrastructure\HttpHelper.cs:line 26
+   at ApiGateway.Repos.ResultsRepository.GetByUserID(String userID) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Repos\ResultsRepository.cs:line 27
+   at ApiGateway.Controllers.ResultsController.GetResultsByUserID(String token) in C:\Users\josep\Dropbox\PhD\Source\SuperSelection\ApiGateway\ApiGateway\Controllers\ResultsController.cs:line 34
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 12:03:38.544 +00:00 [INF] Request finished in 55813.7326ms 500 text/html; charset=utf-8
+2019-11-08 12:03:39.064 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/api/log  
+2019-11-08 12:03:39.064 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:03:39.064 +00:00 [INF] Request finished in 0.4814ms 204 
+2019-11-08 12:03:39.081 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/api/log application/json 160
+2019-11-08 12:03:39.081 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:03:39.081 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:03:39.081 +00:00 [INF] Route matched with {action = "Log", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Log(ApiGateway.Models.DomainModels.NgLog) on controller ApiGateway.Controllers.LogController (ApiGateway).
+2019-11-08 12:03:39.082 +00:00 [INF] Executing action method ApiGateway.Controllers.LogController.Log (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:03:39.082 +00:00 [INF] Executed action method ApiGateway.Controllers.LogController.Log (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.046ms.
+2019-11-08 12:03:39.082 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-08 12:03:39.082 +00:00 [INF] Executed action ApiGateway.Controllers.LogController.Log (ApiGateway) in 0.8276ms
+2019-11-08 12:03:39.082 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 12:03:39.083 +00:00 [INF] Request finished in 2.3114ms 200 
+2019-11-08 12:04:04.254 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:04:04.254 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:04:04.255 +00:00 [INF] Request finished in 1.0176ms 204 
+2019-11-08 12:04:04.413 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:04:04.413 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:04:04.424 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:04:04.424 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:04:04.425 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:04:04.425 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:04:04.426 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:04:04.858 +00:00 [INF] Received HTTP response after 432.0878ms - "OK"
+2019-11-08 12:04:04.859 +00:00 [INF] End processing HTTP request after 433.1023ms - "OK"
+2019-11-08 12:04:04.869 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:04:04.869 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:04:07.774 +00:00 [INF] Received HTTP response after 2904.6798000000003ms - "OK"
+2019-11-08 12:04:07.774 +00:00 [INF] End processing HTTP request after 2905.1381ms - "OK"
+2019-11-08 12:06:26.155 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 12:06:27.409 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 12:06:27.640 +00:00 [INF] Request finished in 235.0347ms 404 
+2019-11-08 12:06:48.413 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:06:48.424 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:06:48.432 +00:00 [INF] Request finished in 18.73ms 204 
+2019-11-08 12:06:48.622 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:06:48.623 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:06:48.637 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:06:48.955 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:06:49.488 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:06:49.660 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:06:49.663 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:06:50.019 +00:00 [INF] Received HTTP response after 350.2643ms - "OK"
+2019-11-08 12:06:50.022 +00:00 [INF] End processing HTTP request after 364.1331ms - "OK"
+2019-11-08 12:06:50.052 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:06:50.052 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:06:50.211 +00:00 [INF] Received HTTP response after 158.5512ms - "OK"
+2019-11-08 12:06:50.211 +00:00 [INF] End processing HTTP request after 158.9575ms - "OK"
+2019-11-08 12:06:50.341 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 830.5593ms.
+2019-11-08 12:06:50.375 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:06:50.445 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1485.4159ms
+2019-11-08 12:06:50.447 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:06:50.461 +00:00 [INF] Request finished in 1838.5586ms 200 application/json; charset=utf-8
+2019-11-08 12:08:10.818 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:08:10.818 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:08:10.818 +00:00 [INF] Request finished in 0.5916ms 204 
+2019-11-08 12:08:10.903 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:08:10.904 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:08:10.939 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:08:10.941 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:08:10.944 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:08:10.944 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:08:10.945 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:08:11.132 +00:00 [INF] Received HTTP response after 186.8548ms - "OK"
+2019-11-08 12:08:11.132 +00:00 [INF] End processing HTTP request after 187.69160000000002ms - "OK"
+2019-11-08 12:08:11.133 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:08:11.133 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:08:12.377 +00:00 [INF] Received HTTP response after 1244.0917ms - "OK"
+2019-11-08 12:08:12.377 +00:00 [INF] End processing HTTP request after 1244.6831ms - "OK"
+2019-11-08 12:08:12.644 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1699.1486ms.
+2019-11-08 12:08:12.645 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:08:12.648 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1706.6746ms
+2019-11-08 12:08:12.648 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:08:12.648 +00:00 [INF] Request finished in 1744.7568ms 200 application/json; charset=utf-8
+2019-11-08 12:08:27.325 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/values  
+2019-11-08 12:08:27.335 +00:00 [INF] Request finished in 10.3135ms 404 
+2019-11-08 12:08:32.440 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:08:32.440 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:08:32.440 +00:00 [INF] Request finished in 0.8594ms 204 
+2019-11-08 12:08:32.568 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:08:32.568 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:08:32.568 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:08:32.569 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:08:32.570 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:08:32.571 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:08:32.571 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:08:33.043 +00:00 [INF] Received HTTP response after 470.53470000000004ms - "OK"
+2019-11-08 12:08:33.043 +00:00 [INF] End processing HTTP request after 472.33480000000003ms - "OK"
+2019-11-08 12:08:33.044 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:08:33.044 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:08:34.433 +00:00 [INF] Received HTTP response after 1388.4945ms - "OK"
+2019-11-08 12:08:34.433 +00:00 [INF] End processing HTTP request after 1388.8813ms - "OK"
+2019-11-08 12:08:34.769 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2198.1759ms.
+2019-11-08 12:08:34.769 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:08:34.772 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 2202.7827ms
+2019-11-08 12:08:34.772 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:08:34.772 +00:00 [INF] Request finished in 2203.8607ms 200 application/json; charset=utf-8
+2019-11-08 12:09:04.829 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:09:04.836 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:09:04.836 +00:00 [INF] Request finished in 6.6834ms 204 
+2019-11-08 12:09:05.226 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:09:05.226 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:09:05.229 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:09:05.229 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:09:05.232 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:09:05.232 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:09:05.233 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:09:06.142 +00:00 [INF] Received HTTP response after 909.81670000000008ms - "OK"
+2019-11-08 12:09:06.143 +00:00 [INF] End processing HTTP request after 910.4122000000001ms - "OK"
+2019-11-08 12:09:06.143 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:09:06.143 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:09:06.406 +00:00 [INF] Received HTTP response after 263.309ms - "OK"
+2019-11-08 12:09:06.406 +00:00 [INF] End processing HTTP request after 263.57120000000003ms - "OK"
+2019-11-08 12:09:06.420 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1187.8619ms.
+2019-11-08 12:09:06.420 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:09:06.421 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1191.1426000000001ms
+2019-11-08 12:09:06.421 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:09:06.421 +00:00 [INF] Request finished in 1195.3714ms 200 application/json; charset=utf-8
+2019-11-08 12:09:23.260 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:09:23.261 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:09:23.261 +00:00 [INF] Request finished in 0.8965ms 204 
+2019-11-08 12:09:23.423 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:09:23.423 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:09:23.424 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:09:23.424 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:09:23.424 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:09:23.424 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:09:23.426 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:09:23.797 +00:00 [INF] Received HTTP response after 371.5196ms - "OK"
+2019-11-08 12:09:23.798 +00:00 [INF] End processing HTTP request after 374.0074ms - "OK"
+2019-11-08 12:09:23.826 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:09:23.827 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:09:24.856 +00:00 [INF] Received HTTP response after 1029.486ms - "OK"
+2019-11-08 12:09:24.856 +00:00 [INF] End processing HTTP request after 1029.8555000000001ms - "OK"
+2019-11-08 12:09:24.931 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1506.6192ms.
+2019-11-08 12:09:24.931 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:09:24.935 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1511.4061000000002ms
+2019-11-08 12:09:24.936 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:09:24.936 +00:00 [INF] Request finished in 1513.286ms 200 application/json; charset=utf-8
+2019-11-08 12:11:08.242 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:11:08.243 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:11:08.243 +00:00 [INF] Request finished in 0.3991ms 204 
+2019-11-08 12:11:08.625 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:11:08.625 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:11:08.625 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:11:08.626 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:11:08.626 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:11:08.626 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:11:08.626 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:11:09.023 +00:00 [INF] Received HTTP response after 397.03090000000003ms - "OK"
+2019-11-08 12:11:09.024 +00:00 [INF] End processing HTTP request after 397.4827ms - "OK"
+2019-11-08 12:11:09.024 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:11:09.025 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:11:10.398 +00:00 [INF] Received HTTP response after 1373.5116ms - "OK"
+2019-11-08 12:11:10.398 +00:00 [INF] End processing HTTP request after 1374.2721000000001ms - "OK"
+2019-11-08 12:11:10.413 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1787.3075000000001ms.
+2019-11-08 12:11:10.414 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:11:10.414 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1788.8093000000001ms
+2019-11-08 12:11:10.415 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:11:10.415 +00:00 [INF] Request finished in 1790.1666ms 200 application/json; charset=utf-8
+2019-11-08 12:11:27.555 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:11:27.555 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:11:27.555 +00:00 [INF] Request finished in 0.6067ms 204 
+2019-11-08 12:11:27.768 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:11:27.768 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:11:27.768 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:11:27.769 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:11:27.769 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:11:27.770 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:11:27.770 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:11:27.938 +00:00 [INF] Received HTTP response after 167.6816ms - "OK"
+2019-11-08 12:11:27.938 +00:00 [INF] End processing HTTP request after 168.6463ms - "OK"
+2019-11-08 12:11:27.940 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:11:27.941 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:11:29.060 +00:00 [INF] Received HTTP response after 1119.2975000000001ms - "OK"
+2019-11-08 12:11:29.060 +00:00 [INF] End processing HTTP request after 1120.2682ms - "OK"
+2019-11-08 12:11:29.132 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1362.8978ms.
+2019-11-08 12:11:29.132 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:11:29.135 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1366.3286ms
+2019-11-08 12:11:29.135 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:11:29.135 +00:00 [INF] Request finished in 1367.4984ms 200 application/json; charset=utf-8
+2019-11-08 12:12:03.601 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:12:03.602 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:12:03.603 +00:00 [INF] Request finished in 3.0539ms 204 
+2019-11-08 12:12:03.935 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:12:03.935 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:12:03.936 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:12:03.936 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:12:03.937 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:12:03.938 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:12:03.938 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:12:04.015 +00:00 [INF] Received HTTP response after 77.2041ms - "OK"
+2019-11-08 12:12:04.016 +00:00 [INF] End processing HTTP request after 78.3464ms - "OK"
+2019-11-08 12:12:04.020 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:12:04.021 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:12:05.146 +00:00 [INF] Received HTTP response after 1125.4906ms - "OK"
+2019-11-08 12:12:05.146 +00:00 [INF] End processing HTTP request after 1125.832ms - "OK"
+2019-11-08 12:12:05.272 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1334.6953ms.
+2019-11-08 12:12:05.272 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:12:05.292 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1355.0771ms
+2019-11-08 12:12:05.292 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:12:05.292 +00:00 [INF] Request finished in 1357.5896ms 200 application/json; charset=utf-8
+2019-11-08 12:17:01.009 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:17:01.009 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:17:01.010 +00:00 [INF] Request finished in 1.0974ms 204 
+2019-11-08 12:17:01.171 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:17:01.171 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:17:01.171 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:17:01.171 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:17:01.171 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:17:01.172 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:17:01.172 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:17:01.610 +00:00 [INF] Received HTTP response after 438.21630000000005ms - "OK"
+2019-11-08 12:17:01.610 +00:00 [INF] End processing HTTP request after 438.5799ms - "OK"
+2019-11-08 12:17:01.611 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:17:01.611 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:17:01.749 +00:00 [INF] Received HTTP response after 138.524ms - "OK"
+2019-11-08 12:17:01.750 +00:00 [INF] End processing HTTP request after 138.9464ms - "OK"
+2019-11-08 12:17:01.770 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 598.0943ms.
+2019-11-08 12:17:01.770 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:17:01.773 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 601.8626ms
+2019-11-08 12:17:01.773 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:17:01.773 +00:00 [INF] Request finished in 602.8384ms 200 application/json; charset=utf-8
+2019-11-08 12:22:38.682 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:22:38.683 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:22:38.683 +00:00 [INF] Request finished in 0.5647ms 204 
+2019-11-08 12:22:38.790 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:22:38.790 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:22:38.791 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:22:38.791 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:22:38.791 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:22:38.792 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:22:38.792 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:22:39.228 +00:00 [INF] Received HTTP response after 436.28360000000004ms - "OK"
+2019-11-08 12:22:39.229 +00:00 [INF] End processing HTTP request after 437.19840000000005ms - "OK"
+2019-11-08 12:22:39.230 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:22:39.230 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:22:39.417 +00:00 [INF] Received HTTP response after 186.9678ms - "OK"
+2019-11-08 12:22:39.417 +00:00 [INF] End processing HTTP request after 187.3505ms - "OK"
+2019-11-08 12:22:39.531 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 739.0177ms.
+2019-11-08 12:22:39.532 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:22:39.536 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 744.63110000000006ms
+2019-11-08 12:22:39.536 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:22:39.536 +00:00 [INF] Request finished in 745.6718ms 200 application/json; charset=utf-8
+2019-11-08 12:23:15.089 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:23:15.089 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:23:15.089 +00:00 [INF] Request finished in 2.8438ms 204 
+2019-11-08 12:23:15.193 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:23:15.193 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:23:15.193 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:23:15.193 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:23:15.194 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:23:15.194 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:23:15.194 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:23:15.273 +00:00 [INF] Received HTTP response after 78.5982ms - "OK"
+2019-11-08 12:23:15.273 +00:00 [INF] End processing HTTP request after 78.9201ms - "OK"
+2019-11-08 12:23:15.273 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:23:15.273 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:23:15.490 +00:00 [INF] Received HTTP response after 217.18540000000002ms - "OK"
+2019-11-08 12:23:15.491 +00:00 [INF] End processing HTTP request after 217.5363ms - "OK"
+2019-11-08 12:23:16.117 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 923.3037ms.
+2019-11-08 12:23:16.117 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:23:16.135 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 941.3707ms
+2019-11-08 12:23:16.135 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:23:16.135 +00:00 [INF] Request finished in 942.8946ms 200 application/json; charset=utf-8
+2019-11-08 12:24:39.006 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:24:39.006 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:24:39.007 +00:00 [INF] Request finished in 1.1836ms 204 
+2019-11-08 12:24:39.138 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:24:39.139 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:24:39.139 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:24:39.139 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:24:39.855 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:24:39.855 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:24:39.855 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:24:40.933 +00:00 [INF] Received HTTP response after 1078.1935ms - "OK"
+2019-11-08 12:24:40.933 +00:00 [INF] End processing HTTP request after 1078.5417ms - "OK"
+2019-11-08 12:24:40.934 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:24:40.934 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:24:43.609 +00:00 [INF] Received HTTP response after 2675.0581ms - "OK"
+2019-11-08 12:24:43.609 +00:00 [INF] End processing HTTP request after 2675.3509ms - "OK"
+2019-11-08 12:24:43.695 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3839.7785000000003ms.
+2019-11-08 12:24:43.695 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:24:43.698 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 3843.7711000000004ms
+2019-11-08 12:24:43.699 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:24:43.699 +00:00 [INF] Request finished in 4560.6842ms 200 application/json; charset=utf-8
+2019-11-08 12:25:03.429 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:03.429 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:03.429 +00:00 [INF] Request finished in 0.4495ms 204 
+2019-11-08 12:25:04.215 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:04.216 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:04.216 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:04.216 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:25:04.217 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:25:04.217 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:04.217 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:04.612 +00:00 [INF] Received HTTP response after 394.84200000000004ms - "OK"
+2019-11-08 12:25:04.615 +00:00 [INF] End processing HTTP request after 398.32820000000004ms - "OK"
+2019-11-08 12:25:04.616 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:04.616 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:04.900 +00:00 [INF] Received HTTP response after 284.2164ms - "OK"
+2019-11-08 12:25:04.900 +00:00 [INF] End processing HTTP request after 284.55080000000004ms - "OK"
+2019-11-08 12:25:04.924 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 706.6989ms.
+2019-11-08 12:25:04.924 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:25:04.925 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 708.09480000000008ms
+2019-11-08 12:25:04.925 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:04.925 +00:00 [INF] Request finished in 709.6599ms 200 application/json; charset=utf-8
+2019-11-08 12:25:37.102 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:37.102 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:37.103 +00:00 [INF] Request finished in 0.6545ms 204 
+2019-11-08 12:25:37.192 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:37.192 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:37.285 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:37.285 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:25:37.286 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:25:37.286 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:37.286 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:37.312 +00:00 [INF] Received HTTP response after 26.306900000000002ms - "OK"
+2019-11-08 12:25:37.313 +00:00 [INF] End processing HTTP request after 27.425ms - "OK"
+2019-11-08 12:25:37.314 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:37.314 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:37.796 +00:00 [INF] Received HTTP response after 481.73310000000004ms - "OK"
+2019-11-08 12:25:37.796 +00:00 [INF] End processing HTTP request after 482.1087ms - "OK"
+2019-11-08 12:25:37.966 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 680.08670000000006ms.
+2019-11-08 12:25:37.966 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:25:37.968 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 682.89870000000008ms
+2019-11-08 12:25:37.969 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:37.969 +00:00 [INF] Request finished in 776.5621ms 200 application/json; charset=utf-8
+2019-11-08 12:25:50.413 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:50.534 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:50.535 +00:00 [INF] Request finished in 121.3333ms 204 
+2019-11-08 12:25:50.671 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:25:50.671 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:25:50.672 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:50.674 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:25:50.675 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:25:50.675 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:50.675 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:25:50.703 +00:00 [INF] Received HTTP response after 27.242900000000002ms - "OK"
+2019-11-08 12:25:50.703 +00:00 [INF] End processing HTTP request after 27.8017ms - "OK"
+2019-11-08 12:25:50.703 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:50.703 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:25:50.932 +00:00 [INF] Received HTTP response after 228.45610000000002ms - "OK"
+2019-11-08 12:25:50.932 +00:00 [INF] End processing HTTP request after 228.794ms - "OK"
+2019-11-08 12:25:51.266 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 591.2503ms.
+2019-11-08 12:25:51.267 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:25:51.283 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 608.7842ms
+2019-11-08 12:25:51.283 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:25:51.283 +00:00 [INF] Request finished in 612.5819ms 200 application/json; charset=utf-8
+2019-11-08 12:28:10.899 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:28:10.899 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:28:10.908 +00:00 [INF] Request finished in 0.5678ms 204 
+2019-11-08 12:28:11.039 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:28:11.039 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:28:11.039 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:28:11.040 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:28:11.040 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:28:11.040 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:28:11.040 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:28:11.150 +00:00 [INF] Received HTTP response after 109.3553ms - "OK"
+2019-11-08 12:28:11.151 +00:00 [INF] End processing HTTP request after 110.4748ms - "OK"
+2019-11-08 12:28:11.153 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:28:11.153 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:28:11.246 +00:00 [INF] Received HTTP response after 92.6003ms - "OK"
+2019-11-08 12:28:11.246 +00:00 [INF] End processing HTTP request after 92.9732ms - "OK"
+2019-11-08 12:28:11.284 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 244.0398ms.
+2019-11-08 12:28:11.284 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:28:11.285 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 245.82430000000002ms
+2019-11-08 12:28:11.286 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:28:11.286 +00:00 [INF] Request finished in 247.1172ms 200 application/json; charset=utf-8
+2019-11-08 12:31:32.049 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:31:32.049 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:31:32.050 +00:00 [INF] Request finished in 0.5851ms 204 
+2019-11-08 12:31:32.581 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:31:32.581 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:31:32.581 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:31:32.581 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:31:32.582 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:31:32.582 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:31:32.582 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:31:32.703 +00:00 [INF] Received HTTP response after 121.0254ms - "OK"
+2019-11-08 12:31:32.703 +00:00 [INF] End processing HTTP request after 121.3493ms - "OK"
+2019-11-08 12:31:32.705 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:31:32.705 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:31:32.817 +00:00 [INF] Received HTTP response after 111.3614ms - "OK"
+2019-11-08 12:31:32.817 +00:00 [INF] End processing HTTP request after 111.78970000000001ms - "OK"
+2019-11-08 12:31:32.839 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 256.805ms.
+2019-11-08 12:31:32.839 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:31:32.841 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 259.4515ms
+2019-11-08 12:31:32.841 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:31:32.841 +00:00 [INF] Request finished in 260.6633ms 200 application/json; charset=utf-8
+2019-11-08 12:32:31.830 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:32:31.830 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:32:31.831 +00:00 [INF] Request finished in 0.4644ms 204 
+2019-11-08 12:32:31.973 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:32:31.973 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:32:31.973 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:32:31.974 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:32:31.976 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:32:31.977 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:32:31.977 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:32:32.102 +00:00 [INF] Received HTTP response after 124.2617ms - "OK"
+2019-11-08 12:32:32.102 +00:00 [INF] End processing HTTP request after 125.3255ms - "OK"
+2019-11-08 12:32:32.103 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:32:32.103 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:32:32.341 +00:00 [INF] Received HTTP response after 237.76700000000002ms - "OK"
+2019-11-08 12:32:32.341 +00:00 [INF] End processing HTTP request after 238.3854ms - "OK"
+2019-11-08 12:32:32.427 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 450.1571ms.
+2019-11-08 12:32:32.427 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:32:32.429 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 455.10080000000005ms
+2019-11-08 12:32:32.429 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:32:32.430 +00:00 [INF] Request finished in 457.0425ms 200 application/json; charset=utf-8
+2019-11-08 12:32:47.815 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:32:47.815 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:32:47.815 +00:00 [INF] Request finished in 0.5228ms 204 
+2019-11-08 12:32:47.951 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:32:47.952 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:32:47.953 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:32:47.953 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:32:47.954 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:32:47.954 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:32:47.954 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:32:48.645 +00:00 [INF] Received HTTP response after 691.4172ms - "OK"
+2019-11-08 12:32:48.646 +00:00 [INF] End processing HTTP request after 691.7477ms - "OK"
+2019-11-08 12:32:48.646 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:32:48.646 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:32:48.789 +00:00 [INF] Received HTTP response after 143.1063ms - "OK"
+2019-11-08 12:32:48.789 +00:00 [INF] End processing HTTP request after 143.4576ms - "OK"
+2019-11-08 12:32:48.887 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 933.4534000000001ms.
+2019-11-08 12:32:48.888 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:32:48.892 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 938.2395ms
+2019-11-08 12:32:48.892 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:32:48.892 +00:00 [INF] Request finished in 940.723ms 200 application/json; charset=utf-8
+2019-11-08 12:34:55.248 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:34:55.249 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:34:55.249 +00:00 [INF] Request finished in 0.6084ms 204 
+2019-11-08 12:34:55.368 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:34:55.368 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:34:55.371 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:34:55.371 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:34:55.372 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:34:55.372 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:34:55.372 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:34:55.620 +00:00 [INF] Received HTTP response after 247.8992ms - "OK"
+2019-11-08 12:34:55.620 +00:00 [INF] End processing HTTP request after 248.5172ms - "OK"
+2019-11-08 12:34:55.628 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:34:55.628 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:34:56.451 +00:00 [INF] Received HTTP response after 823.4679ms - "OK"
+2019-11-08 12:34:56.451 +00:00 [INF] End processing HTTP request after 823.9483ms - "OK"
+2019-11-08 12:34:56.464 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1092.054ms.
+2019-11-08 12:34:56.464 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:34:56.466 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1094.8538ms
+2019-11-08 12:34:56.466 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:34:56.466 +00:00 [INF] Request finished in 1098.0645ms 200 application/json; charset=utf-8
+2019-11-08 12:35:43.892 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:35:43.900 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:35:43.901 +00:00 [INF] Request finished in 8.5825ms 204 
+2019-11-08 12:35:44.679 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:35:44.679 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:35:44.680 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:35:44.682 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:35:44.682 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:35:44.683 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:35:44.683 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:35:44.713 +00:00 [INF] Received HTTP response after 30.3719ms - "OK"
+2019-11-08 12:35:44.713 +00:00 [INF] End processing HTTP request after 30.738000000000003ms - "OK"
+2019-11-08 12:35:44.714 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:35:44.714 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:35:44.794 +00:00 [INF] Received HTTP response after 79.8942ms - "OK"
+2019-11-08 12:35:44.794 +00:00 [INF] End processing HTTP request after 80.2776ms - "OK"
+2019-11-08 12:35:44.824 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 141.4153ms.
+2019-11-08 12:35:44.824 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:35:44.825 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 143.00310000000002ms
+2019-11-08 12:35:44.825 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:35:44.826 +00:00 [INF] Request finished in 146.3847ms 200 application/json; charset=utf-8
+2019-11-08 12:36:21.580 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:36:21.581 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:36:21.740 +00:00 [INF] Request finished in 160.9898ms 204 
+2019-11-08 12:36:22.488 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:36:22.489 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:36:22.490 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:36:22.490 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:36:22.491 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:36:22.491 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:36:22.491 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:36:22.803 +00:00 [INF] Received HTTP response after 311.5991ms - "OK"
+2019-11-08 12:36:22.803 +00:00 [INF] End processing HTTP request after 312.4289ms - "OK"
+2019-11-08 12:36:22.804 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:36:22.805 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:36:22.968 +00:00 [INF] Received HTTP response after 163.2622ms - "OK"
+2019-11-08 12:36:22.968 +00:00 [INF] End processing HTTP request after 164.3865ms - "OK"
+2019-11-08 12:36:22.987 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 495.9508ms.
+2019-11-08 12:36:22.987 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:36:22.988 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 497.6155ms
+2019-11-08 12:36:22.988 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:36:22.988 +00:00 [INF] Request finished in 500.18ms 200 application/json; charset=utf-8
+2019-11-08 12:37:01.871 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:37:01.871 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:37:01.872 +00:00 [INF] Request finished in 0.8634ms 204 
+2019-11-08 12:37:02.089 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:37:02.090 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:37:02.090 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:37:02.090 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:37:02.091 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:37:02.091 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:37:02.091 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:37:02.353 +00:00 [INF] Received HTTP response after 261.4947ms - "OK"
+2019-11-08 12:37:02.353 +00:00 [INF] End processing HTTP request after 261.8544ms - "OK"
+2019-11-08 12:37:02.353 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:37:02.353 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:37:02.527 +00:00 [INF] Received HTTP response after 173.7662ms - "OK"
+2019-11-08 12:37:02.527 +00:00 [INF] End processing HTTP request after 174.0808ms - "OK"
+2019-11-08 12:37:02.550 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 458.8999ms.
+2019-11-08 12:37:02.550 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:37:02.552 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 461.83860000000004ms
+2019-11-08 12:37:02.552 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:37:02.553 +00:00 [INF] Request finished in 463.2491ms 200 application/json; charset=utf-8
+2019-11-08 12:38:48.336 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:38:48.336 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:38:48.337 +00:00 [INF] Request finished in 0.4102ms 204 
+2019-11-08 12:38:48.482 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:38:48.483 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:38:48.483 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:38:48.483 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:38:48.484 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:38:48.484 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:38:48.484 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:38:49.492 +00:00 [INF] Received HTTP response after 1007.4305ms - "OK"
+2019-11-08 12:38:49.493 +00:00 [INF] End processing HTTP request after 1008.6518000000001ms - "OK"
+2019-11-08 12:38:49.493 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:38:49.493 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:38:49.792 +00:00 [INF] Received HTTP response after 298.75210000000004ms - "OK"
+2019-11-08 12:38:49.792 +00:00 [INF] End processing HTTP request after 299.1605ms - "OK"
+2019-11-08 12:38:49.805 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1320.9958000000001ms.
+2019-11-08 12:38:49.805 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:38:49.807 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1323.2545ms
+2019-11-08 12:38:49.807 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:38:49.808 +00:00 [INF] Request finished in 1326.1265ms 200 application/json; charset=utf-8
+2019-11-08 12:39:59.346 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:39:59.346 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:39:59.347 +00:00 [INF] Request finished in 0.4999ms 204 
+2019-11-08 12:39:59.567 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:39:59.567 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:39:59.568 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:39:59.568 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:39:59.569 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:39:59.569 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:39:59.569 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:39:59.712 +00:00 [INF] Received HTTP response after 142.708ms - "OK"
+2019-11-08 12:39:59.712 +00:00 [INF] End processing HTTP request after 143.2173ms - "OK"
+2019-11-08 12:39:59.713 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:39:59.713 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:39:59.834 +00:00 [INF] Received HTTP response after 120.7244ms - "OK"
+2019-11-08 12:39:59.834 +00:00 [INF] End processing HTTP request after 121.11370000000001ms - "OK"
+2019-11-08 12:39:59.853 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 284.1504ms.
+2019-11-08 12:39:59.853 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:39:59.854 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 285.72270000000003ms
+2019-11-08 12:39:59.854 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:39:59.854 +00:00 [INF] Request finished in 286.9831ms 200 application/json; charset=utf-8
+2019-11-08 12:41:06.626 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:41:06.626 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:41:06.627 +00:00 [INF] Request finished in 0.5515ms 204 
+2019-11-08 12:41:06.877 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:41:06.878 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:41:06.878 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:41:06.878 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:41:06.880 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:41:06.880 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:41:06.880 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:41:06.996 +00:00 [INF] Received HTTP response after 116.1194ms - "OK"
+2019-11-08 12:41:06.997 +00:00 [INF] End processing HTTP request after 116.6333ms - "OK"
+2019-11-08 12:41:06.997 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:41:06.997 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:41:07.407 +00:00 [INF] Received HTTP response after 409.6891ms - "OK"
+2019-11-08 12:41:07.407 +00:00 [INF] End processing HTTP request after 410.08910000000003ms - "OK"
+2019-11-08 12:41:07.506 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 626.40330000000006ms.
+2019-11-08 12:41:07.506 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:41:07.508 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 629.1516ms
+2019-11-08 12:41:07.508 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:41:07.513 +00:00 [INF] Request finished in 632.0795ms 200 application/json; charset=utf-8
+2019-11-08 12:41:46.689 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:41:46.689 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:41:46.690 +00:00 [INF] Request finished in 0.4224ms 204 
+2019-11-08 12:41:46.841 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:41:46.842 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:41:46.842 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:41:46.842 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:41:46.843 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:41:46.843 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:41:46.843 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:41:47.289 +00:00 [INF] Received HTTP response after 445.6883ms - "OK"
+2019-11-08 12:41:47.289 +00:00 [INF] End processing HTTP request after 446.36440000000005ms - "OK"
+2019-11-08 12:41:47.290 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:41:47.291 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:41:47.676 +00:00 [INF] Received HTTP response after 385.0839ms - "OK"
+2019-11-08 12:41:47.677 +00:00 [INF] End processing HTTP request after 386.8994ms - "OK"
+2019-11-08 12:41:47.704 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 860.89690000000007ms.
+2019-11-08 12:41:47.704 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:41:47.706 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 863.3414ms
+2019-11-08 12:41:47.706 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:41:47.706 +00:00 [INF] Request finished in 864.6269ms 200 application/json; charset=utf-8
+2019-11-08 12:42:20.887 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:42:20.887 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:42:20.888 +00:00 [INF] Request finished in 0.4134ms 204 
+2019-11-08 12:42:21.056 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:42:21.057 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:42:21.057 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:42:21.058 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:42:21.059 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:42:21.059 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:42:21.060 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:42:21.276 +00:00 [INF] Received HTTP response after 216.0376ms - "OK"
+2019-11-08 12:42:21.276 +00:00 [INF] End processing HTTP request after 216.90980000000002ms - "OK"
+2019-11-08 12:42:21.277 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:42:21.278 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:42:22.076 +00:00 [INF] Received HTTP response after 798.37420000000009ms - "OK"
+2019-11-08 12:42:22.076 +00:00 [INF] End processing HTTP request after 799.4782ms - "OK"
+2019-11-08 12:42:22.081 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1021.8663ms.
+2019-11-08 12:42:22.081 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:42:22.082 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1024.2954ms
+2019-11-08 12:42:22.082 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:42:22.082 +00:00 [INF] Request finished in 1025.9804ms 200 application/json; charset=utf-8
+2019-11-08 12:45:34.824 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:45:34.824 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:45:34.824 +00:00 [INF] Request finished in 0.4634ms 204 
+2019-11-08 12:45:35.157 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:45:35.157 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:45:35.157 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:45:35.158 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:45:35.158 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:45:35.159 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:45:35.159 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:45:35.651 +00:00 [INF] Received HTTP response after 492.37910000000005ms - "OK"
+2019-11-08 12:45:35.651 +00:00 [INF] End processing HTTP request after 492.7819ms - "OK"
+2019-11-08 12:45:35.652 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:45:35.652 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:45:36.530 +00:00 [INF] Received HTTP response after 877.76470000000006ms - "OK"
+2019-11-08 12:45:36.530 +00:00 [INF] End processing HTTP request after 878.1421ms - "OK"
+2019-11-08 12:45:36.567 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1408.5501000000002ms.
+2019-11-08 12:45:36.567 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:45:36.569 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1410.8997000000002ms
+2019-11-08 12:45:36.570 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:45:36.570 +00:00 [INF] Request finished in 1413.6304ms 200 application/json; charset=utf-8
+2019-11-08 12:47:02.002 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:47:02.002 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:47:02.003 +00:00 [INF] Request finished in 1.1111ms 204 
+2019-11-08 12:47:03.080 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:47:03.080 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:47:03.080 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:47:03.080 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:47:03.080 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:47:03.081 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:47:03.081 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:47:03.094 +00:00 [INF] Received HTTP response after 13.360000000000001ms - "OK"
+2019-11-08 12:47:03.094 +00:00 [INF] End processing HTTP request after 13.723500000000001ms - "OK"
+2019-11-08 12:47:03.108 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:47:03.109 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:47:03.177 +00:00 [INF] Received HTTP response after 68.03240000000001ms - "OK"
+2019-11-08 12:47:03.177 +00:00 [INF] End processing HTTP request after 68.4507ms - "OK"
+2019-11-08 12:47:03.216 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 135.5868ms.
+2019-11-08 12:47:03.216 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:47:03.218 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 137.6064ms
+2019-11-08 12:47:03.218 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:47:03.218 +00:00 [INF] Request finished in 138.6109ms 200 application/json; charset=utf-8
+2019-11-08 12:48:26.053 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:48:26.053 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:48:26.066 +00:00 [INF] Request finished in 2.0038ms 204 
+2019-11-08 12:48:26.828 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:48:26.828 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:48:26.828 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:48:26.828 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:48:26.828 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:48:26.829 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:48:26.829 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:48:26.887 +00:00 [INF] Received HTTP response after 58.400000000000006ms - "OK"
+2019-11-08 12:48:26.887 +00:00 [INF] End processing HTTP request after 58.6942ms - "OK"
+2019-11-08 12:48:26.888 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:48:26.888 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:48:26.975 +00:00 [INF] Received HTTP response after 87.1537ms - "OK"
+2019-11-08 12:48:26.975 +00:00 [INF] End processing HTTP request after 87.56ms - "OK"
+2019-11-08 12:48:27.020 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 191.1571ms.
+2019-11-08 12:48:27.020 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:48:27.021 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 193.1294ms
+2019-11-08 12:48:27.021 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:48:27.022 +00:00 [INF] Request finished in 194.2712ms 200 application/json; charset=utf-8
+2019-11-08 12:48:27.436 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/swagger/index.html  
+2019-11-08 12:48:27.595 +00:00 [INF] Request finished in 159.3043ms 200 text/html
+2019-11-08 12:48:32.825 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/swagger/v1/swagger.json  
+2019-11-08 12:48:33.282 +00:00 [INF] Request finished in 456.7825ms 200 application/json;charset=utf-8
+2019-11-08 12:48:54.399 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:48:54.399 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:48:54.400 +00:00 [INF] Request finished in 1.2573ms 204 
+2019-11-08 12:48:54.557 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:48:54.557 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:48:54.557 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:48:54.558 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:48:54.558 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:48:54.558 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:48:54.559 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:48:54.700 +00:00 [INF] Received HTTP response after 140.70850000000002ms - "OK"
+2019-11-08 12:48:54.701 +00:00 [INF] End processing HTTP request after 142.6142ms - "OK"
+2019-11-08 12:48:54.715 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:48:54.716 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:48:55.414 +00:00 [INF] Received HTTP response after 698.45440000000008ms - "OK"
+2019-11-08 12:48:55.414 +00:00 [INF] End processing HTTP request after 698.97160000000008ms - "OK"
+2019-11-08 12:48:55.426 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 867.5743ms.
+2019-11-08 12:48:55.426 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:48:55.427 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 869.09710000000007ms
+2019-11-08 12:48:55.427 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:48:55.427 +00:00 [INF] Request finished in 870.1399ms 200 application/json; charset=utf-8
+2019-11-08 12:49:17.312 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:49:17.312 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:49:17.313 +00:00 [INF] Request finished in 0.4204ms 204 
+2019-11-08 12:49:17.698 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:49:17.698 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:49:17.698 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:49:17.698 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:49:17.699 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:49:17.699 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:49:17.699 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:49:18.012 +00:00 [INF] Received HTTP response after 313.1995ms - "OK"
+2019-11-08 12:49:18.013 +00:00 [INF] End processing HTTP request after 313.7955ms - "OK"
+2019-11-08 12:49:18.015 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:49:18.015 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:49:18.707 +00:00 [INF] Received HTTP response after 691.9482ms - "OK"
+2019-11-08 12:49:18.707 +00:00 [INF] End processing HTTP request after 692.332ms - "OK"
+2019-11-08 12:49:18.713 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1014.034ms.
+2019-11-08 12:49:18.713 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:49:18.714 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1015.7043000000001ms
+2019-11-08 12:49:18.714 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:49:18.715 +00:00 [INF] Request finished in 1016.8856ms 200 application/json; charset=utf-8
+2019-11-08 12:49:50.797 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:49:50.797 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:49:50.798 +00:00 [INF] Request finished in 0.559ms 204 
+2019-11-08 12:49:51.018 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:49:51.019 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:49:51.019 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:49:51.020 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:49:51.020 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:49:51.020 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:49:51.020 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:49:51.268 +00:00 [INF] Received HTTP response after 247.8129ms - "OK"
+2019-11-08 12:49:51.268 +00:00 [INF] End processing HTTP request after 248.2075ms - "OK"
+2019-11-08 12:49:51.269 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:49:51.269 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:49:51.948 +00:00 [INF] Received HTTP response after 679.01740000000007ms - "OK"
+2019-11-08 12:49:51.948 +00:00 [INF] End processing HTTP request after 679.58850000000007ms - "OK"
+2019-11-08 12:49:51.952 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 931.8146ms.
+2019-11-08 12:49:51.952 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:49:51.953 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 933.5161ms
+2019-11-08 12:49:51.953 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:49:51.954 +00:00 [INF] Request finished in 935.1753ms 200 application/json; charset=utf-8
+2019-11-08 12:51:33.055 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:51:33.056 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:51:33.057 +00:00 [INF] Request finished in 2.35ms 204 
+2019-11-08 12:51:33.386 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:51:33.387 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:51:33.387 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:51:33.387 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:51:33.388 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:51:33.388 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:51:33.388 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:51:34.403 +00:00 [INF] Received HTTP response after 1014.9606ms - "OK"
+2019-11-08 12:51:34.403 +00:00 [INF] End processing HTTP request after 1015.3121000000001ms - "OK"
+2019-11-08 12:51:34.406 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:51:34.406 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:51:34.464 +00:00 [INF] Received HTTP response after 57.543800000000005ms - "OK"
+2019-11-08 12:51:34.464 +00:00 [INF] End processing HTTP request after 57.883300000000006ms - "OK"
+2019-11-08 12:51:34.475 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1087.3702ms.
+2019-11-08 12:51:34.475 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:51:34.476 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1088.7043ms
+2019-11-08 12:51:34.476 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:51:34.476 +00:00 [INF] Request finished in 1090.2657ms 200 application/json; charset=utf-8
+2019-11-08 12:52:10.274 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:52:10.274 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:52:10.275 +00:00 [INF] Request finished in 8.9638ms 204 
+2019-11-08 12:52:10.322 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:52:10.323 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:52:10.323 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:52:10.323 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:52:10.335 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:52:10.335 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:52:10.335 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:52:10.342 +00:00 [INF] Received HTTP response after 6.9825ms - "OK"
+2019-11-08 12:52:10.342 +00:00 [INF] End processing HTTP request after 7.2743ms - "OK"
+2019-11-08 12:52:10.342 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:52:10.342 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:52:10.985 +00:00 [INF] Received HTTP response after 642.2894ms - "OK"
+2019-11-08 12:52:10.985 +00:00 [INF] End processing HTTP request after 642.7418ms - "OK"
+2019-11-08 12:52:11.132 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 797.6376ms.
+2019-11-08 12:52:11.133 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:52:11.134 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 809.27550000000008ms
+2019-11-08 12:52:11.134 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:52:11.134 +00:00 [INF] Request finished in 812.0694ms 200 application/json; charset=utf-8
+2019-11-08 12:52:55.156 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:52:55.156 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:52:55.156 +00:00 [INF] Request finished in 0.4511ms 204 
+2019-11-08 12:52:55.291 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:52:55.294 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:52:55.294 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:52:55.294 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:52:55.294 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:52:55.295 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:52:55.295 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:52:55.469 +00:00 [INF] Received HTTP response after 174.4119ms - "OK"
+2019-11-08 12:52:55.469 +00:00 [INF] End processing HTTP request after 174.6952ms - "OK"
+2019-11-08 12:52:55.470 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:52:55.470 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:52:55.736 +00:00 [INF] Received HTTP response after 266.38050000000004ms - "OK"
+2019-11-08 12:52:55.737 +00:00 [INF] End processing HTTP request after 267.3985ms - "OK"
+2019-11-08 12:52:55.839 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 544.3961ms.
+2019-11-08 12:52:55.839 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:52:55.840 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 546.2503ms
+2019-11-08 12:52:55.842 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:52:55.842 +00:00 [INF] Request finished in 550.6447ms 200 application/json; charset=utf-8
+2019-11-08 12:53:25.579 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:53:25.580 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:53:25.580 +00:00 [INF] Request finished in 0.9116ms 204 
+2019-11-08 12:53:25.728 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:53:25.729 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:53:25.729 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:53:25.729 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:53:25.729 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:53:25.729 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:53:25.729 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:53:25.780 +00:00 [INF] Received HTTP response after 50.446600000000004ms - "OK"
+2019-11-08 12:53:25.780 +00:00 [INF] End processing HTTP request after 51.000600000000006ms - "OK"
+2019-11-08 12:53:25.781 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:53:25.781 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:53:26.206 +00:00 [INF] Received HTTP response after 425.12120000000004ms - "OK"
+2019-11-08 12:53:26.207 +00:00 [INF] End processing HTTP request after 425.5007ms - "OK"
+2019-11-08 12:53:26.281 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 551.602ms.
+2019-11-08 12:53:26.281 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:53:26.283 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 553.8773ms
+2019-11-08 12:53:26.283 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:53:26.283 +00:00 [INF] Request finished in 555.0271ms 200 application/json; charset=utf-8
+2019-11-08 12:55:32.907 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:55:32.916 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:55:32.917 +00:00 [INF] Request finished in 10.3124ms 204 
+2019-11-08 12:55:33.272 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:55:33.272 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:55:33.272 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:55:33.273 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:55:33.273 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:55:33.274 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:55:33.274 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:55:33.338 +00:00 [INF] Received HTTP response after 64.0832ms - "OK"
+2019-11-08 12:55:33.338 +00:00 [INF] End processing HTTP request after 64.5395ms - "OK"
+2019-11-08 12:55:33.340 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:55:33.341 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:55:33.392 +00:00 [INF] Received HTTP response after 51.5259ms - "OK"
+2019-11-08 12:55:33.392 +00:00 [INF] End processing HTTP request after 51.9436ms - "OK"
+2019-11-08 12:55:33.406 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 132.08ms.
+2019-11-08 12:55:33.406 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:55:33.407 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 133.73930000000001ms
+2019-11-08 12:55:33.407 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:55:33.407 +00:00 [INF] Request finished in 135.2306ms 200 application/json; charset=utf-8
+2019-11-08 12:56:40.244 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:56:40.244 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:56:40.244 +00:00 [INF] Request finished in 0.3934ms 204 
+2019-11-08 12:56:41.669 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:56:41.669 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:56:41.669 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:56:41.669 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:56:41.671 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:56:41.672 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:56:41.674 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:56:42.070 +00:00 [INF] Received HTTP response after 395.9553ms - "OK"
+2019-11-08 12:56:42.070 +00:00 [INF] End processing HTTP request after 397.63300000000004ms - "OK"
+2019-11-08 12:56:42.070 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:56:42.070 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:56:43.273 +00:00 [INF] Received HTTP response after 1202.7676000000001ms - "OK"
+2019-11-08 12:56:43.273 +00:00 [INF] End processing HTTP request after 1203.1009000000001ms - "OK"
+2019-11-08 12:56:43.298 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1626.2095000000002ms.
+2019-11-08 12:56:43.299 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:56:43.300 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1630.1592ms
+2019-11-08 12:56:43.300 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:56:43.300 +00:00 [INF] Request finished in 1632.1933ms 200 application/json; charset=utf-8
+2019-11-08 12:58:45.816 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:58:45.817 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:58:45.817 +00:00 [INF] Request finished in 1.0006ms 204 
+2019-11-08 12:58:46.010 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:58:46.010 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:58:46.010 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:58:46.011 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:58:46.012 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:58:46.012 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:58:46.012 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:58:46.276 +00:00 [INF] Received HTTP response after 263.8039ms - "OK"
+2019-11-08 12:58:46.276 +00:00 [INF] End processing HTTP request after 264.2951ms - "OK"
+2019-11-08 12:58:46.277 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:58:46.277 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:58:46.868 +00:00 [INF] Received HTTP response after 590.7457ms - "OK"
+2019-11-08 12:58:46.868 +00:00 [INF] End processing HTTP request after 591.121ms - "OK"
+2019-11-08 12:58:46.882 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 870.48160000000007ms.
+2019-11-08 12:58:46.883 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:58:46.884 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 873.4441ms
+2019-11-08 12:58:46.884 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:58:46.885 +00:00 [INF] Request finished in 874.9934ms 200 application/json; charset=utf-8
+2019-11-08 12:59:10.697 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:59:10.697 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:59:10.698 +00:00 [INF] Request finished in 0.4999ms 204 
+2019-11-08 12:59:10.823 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:59:10.823 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:59:10.823 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:59:10.823 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:59:10.824 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:59:10.824 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:59:10.824 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:59:10.851 +00:00 [INF] Received HTTP response after 27.2923ms - "OK"
+2019-11-08 12:59:10.852 +00:00 [INF] End processing HTTP request after 27.6065ms - "OK"
+2019-11-08 12:59:10.868 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:59:10.868 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:59:11.773 +00:00 [INF] Received HTTP response after 904.452ms - "OK"
+2019-11-08 12:59:11.773 +00:00 [INF] End processing HTTP request after 904.8477ms - "OK"
+2019-11-08 12:59:11.822 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 997.8762ms.
+2019-11-08 12:59:11.822 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:59:11.828 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 1004.374ms
+2019-11-08 12:59:11.828 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:59:11.828 +00:00 [INF] Request finished in 1005.6908ms 200 application/json; charset=utf-8
+2019-11-08 12:59:41.640 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:59:41.640 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:59:41.640 +00:00 [INF] Request finished in 0.4056ms 204 
+2019-11-08 12:59:41.743 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 12:59:41.743 +00:00 [INF] CORS policy execution successful.
+2019-11-08 12:59:41.754 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:59:41.755 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 12:59:41.755 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 12:59:41.755 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:59:41.755 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 12:59:41.811 +00:00 [INF] Received HTTP response after 55.3371ms - "OK"
+2019-11-08 12:59:41.811 +00:00 [INF] End processing HTTP request after 55.6713ms - "OK"
+2019-11-08 12:59:41.811 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:59:41.811 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 12:59:42.006 +00:00 [INF] Received HTTP response after 194.7165ms - "OK"
+2019-11-08 12:59:42.006 +00:00 [INF] End processing HTTP request after 195.05970000000002ms - "OK"
+2019-11-08 12:59:42.060 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 304.8369ms.
+2019-11-08 12:59:42.060 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 12:59:42.071 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 316.7826ms
+2019-11-08 12:59:42.072 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 12:59:42.072 +00:00 [INF] Request finished in 329.0578ms 200 application/json; charset=utf-8
+2019-11-08 13:00:06.602 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:00:06.602 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:00:06.602 +00:00 [INF] Request finished in 0.5054ms 204 
+2019-11-08 13:00:06.862 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:00:06.862 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:00:06.862 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:00:06.862 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 13:00:06.863 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 13:00:06.863 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:00:06.863 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:00:07.208 +00:00 [INF] Received HTTP response after 345.0776ms - "OK"
+2019-11-08 13:00:07.208 +00:00 [INF] End processing HTTP request after 345.3598ms - "OK"
+2019-11-08 13:00:07.208 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:00:07.209 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:00:07.289 +00:00 [INF] Received HTTP response after 80.5738ms - "OK"
+2019-11-08 13:00:07.289 +00:00 [INF] End processing HTTP request after 80.8735ms - "OK"
+2019-11-08 13:00:07.317 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 454.5219ms.
+2019-11-08 13:00:07.318 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 13:00:07.319 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 456.73670000000004ms
+2019-11-08 13:00:07.319 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:00:07.320 +00:00 [INF] Request finished in 457.9807ms 200 application/json; charset=utf-8
+2019-11-08 13:00:50.356 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:00:50.356 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:00:50.356 +00:00 [INF] Request finished in 0.4847ms 204 
+2019-11-08 13:00:50.475 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:00:50.475 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:00:50.475 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:00:50.476 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 13:00:50.477 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 13:00:50.477 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:00:50.508 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:00:50.577 +00:00 [INF] Received HTTP response after 69.4614ms - "OK"
+2019-11-08 13:00:50.577 +00:00 [INF] End processing HTTP request after 100.18900000000001ms - "OK"
+2019-11-08 13:00:50.578 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:00:50.578 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:00:50.655 +00:00 [INF] Received HTTP response after 76.920600000000007ms - "OK"
+2019-11-08 13:00:50.655 +00:00 [INF] End processing HTTP request after 77.25800000000001ms - "OK"
+2019-11-08 13:00:50.698 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 220.9006ms.
+2019-11-08 13:00:50.698 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 13:00:50.699 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 222.6725ms
+2019-11-08 13:00:50.699 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:00:50.700 +00:00 [INF] Request finished in 224.6486ms 200 application/json; charset=utf-8
+2019-11-08 13:15:31.593 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:15:31.615 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:15:31.616 +00:00 [INF] Request finished in 23.286ms 204 
+2019-11-08 13:15:32.397 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:15:32.397 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:15:32.398 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:15:32.398 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 13:15:32.398 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 13:15:32.399 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:15:32.399 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:15:32.473 +00:00 [INF] Received HTTP response after 74.219000000000008ms - "OK"
+2019-11-08 13:15:32.473 +00:00 [INF] End processing HTTP request after 74.59320000000001ms - "OK"
+2019-11-08 13:15:32.479 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:15:32.480 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:15:32.565 +00:00 [INF] Received HTTP response after 85.385ms - "OK"
+2019-11-08 13:15:32.565 +00:00 [INF] End processing HTTP request after 85.72420000000001ms - "OK"
+2019-11-08 13:15:32.579 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 180.679ms.
+2019-11-08 13:15:32.579 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 13:15:32.580 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 182.3377ms
+2019-11-08 13:15:32.580 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:15:32.581 +00:00 [INF] Request finished in 183.4705ms 200 application/json; charset=utf-8
+2019-11-08 13:15:53.853 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:15:53.853 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:15:53.853 +00:00 [INF] Request finished in 0.4649ms 204 
+2019-11-08 13:15:54.605 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:15:54.605 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:15:54.605 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:15:54.606 +00:00 [INF] Route matched with {action = "GetResultsByUserID", controller = "Results"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] GetResultsByUserID(System.String) on controller ApiGateway.Controllers.ResultsController (ApiGateway).
+2019-11-08 13:15:54.606 +00:00 [INF] Executing action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) - Validation state: "Valid"
+2019-11-08 13:15:54.608 +00:00 [INF] Start processing HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:15:54.609 +00:00 [INF] Sending HTTP request POST "https://localhost:44373/api/user/GetUserID"
+2019-11-08 13:15:54.631 +00:00 [INF] Received HTTP response after 22.032400000000003ms - "OK"
+2019-11-08 13:15:54.631 +00:00 [INF] End processing HTTP request after 23.2295ms - "OK"
+2019-11-08 13:15:54.631 +00:00 [INF] Start processing HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:15:54.632 +00:00 [INF] Sending HTTP request POST "https://localhost:44356/GetAllForUser"
+2019-11-08 13:15:54.666 +00:00 [INF] Received HTTP response after 34.3891ms - "OK"
+2019-11-08 13:15:54.666 +00:00 [INF] End processing HTTP request after 34.7278ms - "OK"
+2019-11-08 13:15:54.677 +00:00 [INF] Executed action method ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 70.51ms.
+2019-11-08 13:15:54.678 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ApiGateway.Models.ViewModels.SelectivityCalculationView, ApiGateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-08 13:15:54.679 +00:00 [INF] Executed action ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway) in 72.9764ms
+2019-11-08 13:15:54.679 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.ResultsController.GetResultsByUserID (ApiGateway)'
+2019-11-08 13:15:54.679 +00:00 [INF] Request finished in 74.5575ms 200 application/json; charset=utf-8
+2019-11-08 13:16:55.225 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultsByUserID  
+2019-11-08 13:16:55.225 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:16:55.226 +00:00 [INF] Request finished in 1.5042ms 204 
+2019-11-08 13:32:21.694 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/Results/GetResultByID/undefined  
+2019-11-08 13:32:21.695 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:32:21.696 +00:00 [INF] Request finished in 1.2352ms 204 
+2019-11-08 13:32:21.841 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Results/GetResultByID/undefined  
+2019-11-08 13:32:21.842 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:32:21.853 +00:00 [INF] Request finished in 12.5039ms 404 
+2019-11-08 13:32:22.731 +00:00 [INF] Request starting HTTP/2.0 OPTIONS https://localhost:44369/api/log  
+2019-11-08 13:32:22.731 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:32:22.732 +00:00 [INF] Request finished in 1.3332ms 204 
+2019-11-08 13:32:22.762 +00:00 [INF] Request starting HTTP/2.0 POST https://localhost:44369/api/log application/json 181
+2019-11-08 13:32:22.762 +00:00 [INF] CORS policy execution successful.
+2019-11-08 13:32:22.764 +00:00 [INF] Executing endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 13:32:22.836 +00:00 [INF] Route matched with {action = "Log", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Log(ApiGateway.Models.DomainModels.NgLog) on controller ApiGateway.Controllers.LogController (ApiGateway).
+2019-11-08 13:32:22.977 +00:00 [INF] Executing action method ApiGateway.Controllers.LogController.Log (ApiGateway) - Validation state: "Valid"
+2019-11-08 13:32:23.045 +00:00 [INF] Executed action method ApiGateway.Controllers.LogController.Log (ApiGateway), returned result Microsoft.AspNetCore.Mvc.OkResult in 67.8476ms.
+2019-11-08 13:32:23.060 +00:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-11-08 13:32:23.063 +00:00 [INF] Executed action ApiGateway.Controllers.LogController.Log (ApiGateway) in 227.209ms
+2019-11-08 13:32:23.063 +00:00 [INF] Executed endpoint 'ApiGateway.Controllers.LogController.Log (ApiGateway)'
+2019-11-08 13:32:23.064 +00:00 [INF] Request finished in 312.3802ms 200 

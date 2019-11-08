@@ -10,18 +10,19 @@
   </div>
 </form>
 
-<div *ngFor="let res of results">
+<div *ngFor="let calc of calculations">
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          {{res.name}}
+          {{calc.name}}
         </mat-panel-title>
         <mat-panel-description>
-          {{res.text}}
+          <div *ngIf="!calc.selectivity" class="pull-right"> Waiting </div>
+          <div *ngIf="calc.selectivity" class="pull-right"> Completed </div>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      hello
+      <app-calc-partial-view [calculation]="calc"></app-calc-partial-view>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

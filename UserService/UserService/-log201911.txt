@@ -1095,3 +1095,465 @@ System.NullReferenceException: Principal Not Found
 2019-11-07 16:38:51.340 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 2019-11-07 16:38:52.746 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/api/values  
 2019-11-07 16:38:53.043 +00:00 [INF] Request finished in 301.4942ms 404 
+2019-11-08 11:47:01.057 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 11:47:02.160 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/api/values  
+2019-11-08 11:47:02.433 +00:00 [INF] Request finished in 286.8565ms 404 
+2019-11-08 11:47:45.084 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/index.html  
+2019-11-08 11:47:45.347 +00:00 [INF] Request finished in 263.3972ms 200 text/html
+2019-11-08 11:47:46.585 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/swagger/v1/swagger.json  
+2019-11-08 11:47:47.049 +00:00 [INF] Request finished in 464.9505ms 200 application/json;charset=utf-8
+2019-11-08 11:57:38.674 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 12:02:15.894 +00:00 [INF] User profile is available. Using 'C:\Users\josep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-08 12:02:17.142 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44373/api/values  
+2019-11-08 12:02:17.367 +00:00 [INF] Request finished in 226.4836ms 404 
+2019-11-08 12:02:39.274 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/Login application/json; charset=utf-8 84
+2019-11-08 12:02:39.283 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.Login (UserService)'
+2019-11-08 12:02:39.360 +00:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[DomainModel.Models.UserView] Login(DomainModel.Models.User) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:02:40.983 +00:00 [INF] Executing action method UserService.Controllers.UserController.Login (UserService) - Validation state: "Valid"
+2019-11-08 12:02:41.693 +00:00 [INF] Token generated for user: test@testuser.com
+2019-11-08 12:02:41.730 +00:00 [INF] Executed action method UserService.Controllers.UserController.Login (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 738.03000000000009ms.
+2019-11-08 12:02:41.741 +00:00 [INF] Executing ObjectResult, writing value of type 'DomainModel.Models.UserView'.
+2019-11-08 12:02:41.770 +00:00 [INF] Executed action UserService.Controllers.UserController.Login (UserService) in 2401.8724ms
+2019-11-08 12:02:41.770 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.Login (UserService)'
+2019-11-08 12:02:41.771 +00:00 [INF] Request finished in 2497.3733ms 200 application/json; charset=utf-8
+2019-11-08 12:02:42.894 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:02:42.913 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:02:42.947 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:02:42.953 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:02:43.178 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 223.53390000000002ms.
+2019-11-08 12:02:43.180 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:02:43.191 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 243.17020000000002ms
+2019-11-08 12:02:43.191 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:02:43.191 +00:00 [INF] Request finished in 296.776ms 200 application/json; charset=utf-8
+2019-11-08 12:04:04.805 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:04:04.805 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:04:04.806 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:04:04.808 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:04:04.811 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.9648000000000003ms.
+2019-11-08 12:04:04.811 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:04:04.834 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 27.3671ms
+2019-11-08 12:04:04.834 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:04:04.834 +00:00 [INF] Request finished in 58.6797ms 200 application/json; charset=utf-8
+2019-11-08 12:06:49.992 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:06:49.993 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:06:49.993 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:06:49.994 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:06:49.996 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.8236ms.
+2019-11-08 12:06:49.996 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:06:49.997 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 3.8584ms
+2019-11-08 12:06:49.997 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:06:49.997 +00:00 [INF] Request finished in 5.091ms 200 application/json; charset=utf-8
+2019-11-08 12:08:11.021 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:08:11.023 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:08:11.024 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:08:11.025 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:08:11.028 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3567ms.
+2019-11-08 12:08:11.028 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:08:11.035 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 11.3475ms
+2019-11-08 12:08:11.035 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:08:11.035 +00:00 [INF] Request finished in 15.0486ms 200 application/json; charset=utf-8
+2019-11-08 12:08:32.592 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:08:32.593 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:08:32.593 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:08:32.594 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:08:32.596 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.057ms.
+2019-11-08 12:08:32.597 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:08:32.601 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 7.8089ms
+2019-11-08 12:08:32.601 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:08:32.601 +00:00 [INF] Request finished in 8.7754ms 200 application/json; charset=utf-8
+2019-11-08 12:09:05.862 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:09:05.862 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:09:05.862 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:09:05.871 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:09:05.876 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.1523ms.
+2019-11-08 12:09:05.876 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:09:05.912 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 44.5433ms
+2019-11-08 12:09:05.912 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:09:05.912 +00:00 [INF] Request finished in 50.6369ms 200 application/json; charset=utf-8
+2019-11-08 12:09:23.435 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:09:23.435 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:09:23.436 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:09:23.437 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:09:23.438 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5134ms.
+2019-11-08 12:09:23.439 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:09:23.440 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 3.9638ms
+2019-11-08 12:09:23.440 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:09:23.440 +00:00 [INF] Request finished in 8.9892ms 200 application/json; charset=utf-8
+2019-11-08 12:11:08.885 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:11:08.886 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:11:08.886 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:11:08.890 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:11:08.892 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5649000000000002ms.
+2019-11-08 12:11:08.892 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:11:08.935 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 49.408500000000004ms
+2019-11-08 12:11:08.936 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:11:08.936 +00:00 [INF] Request finished in 50.4821ms 200 application/json; charset=utf-8
+2019-11-08 12:11:27.785 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:11:27.785 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:11:27.785 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:11:27.786 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:11:27.788 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5236ms.
+2019-11-08 12:11:27.788 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:11:27.790 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 4.8601ms
+2019-11-08 12:11:27.790 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:11:27.790 +00:00 [INF] Request finished in 5.6839ms 200 application/json; charset=utf-8
+2019-11-08 12:12:03.963 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:12:03.964 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:12:03.964 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:12:03.968 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:12:03.969 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4785000000000001ms.
+2019-11-08 12:12:03.970 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:12:03.971 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 6.8096000000000005ms
+2019-11-08 12:12:03.971 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:12:03.971 +00:00 [INF] Request finished in 7.8657ms 200 application/json; charset=utf-8
+2019-11-08 12:17:01.557 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:17:01.558 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:17:01.559 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:17:01.563 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:17:01.565 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.8088000000000002ms.
+2019-11-08 12:17:01.565 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:17:01.576 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 16.395400000000002ms
+2019-11-08 12:17:01.576 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:17:01.576 +00:00 [INF] Request finished in 18.9952ms 200 application/json; charset=utf-8
+2019-11-08 12:22:39.196 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:22:39.196 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:22:39.197 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:22:39.201 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:22:39.207 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.328ms.
+2019-11-08 12:22:39.207 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:22:39.209 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 11.579600000000001ms
+2019-11-08 12:22:39.209 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:22:39.209 +00:00 [INF] Request finished in 12.8342ms 200 application/json; charset=utf-8
+2019-11-08 12:23:15.224 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:23:15.225 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:23:15.225 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:23:15.227 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:23:15.230 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3173ms.
+2019-11-08 12:23:15.230 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:23:15.241 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 16.2854ms
+2019-11-08 12:23:15.241 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:23:15.241 +00:00 [INF] Request finished in 18.1267ms 200 application/json; charset=utf-8
+2019-11-08 12:24:40.724 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:24:40.725 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:24:40.725 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:24:40.728 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:24:40.732 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.5458000000000003ms.
+2019-11-08 12:24:40.732 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:24:40.735 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 10.3587ms
+2019-11-08 12:24:40.736 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:24:40.736 +00:00 [INF] Request finished in 11.437ms 200 application/json; charset=utf-8
+2019-11-08 12:25:04.252 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:25:04.252 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:04.255 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:25:04.258 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:25:04.261 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.524ms.
+2019-11-08 12:25:04.287 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:25:04.325 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 69.0634ms
+2019-11-08 12:25:04.325 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:04.325 +00:00 [INF] Request finished in 73.3126ms 200 application/json; charset=utf-8
+2019-11-08 12:25:37.299 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:25:37.299 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:37.299 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:25:37.306 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:25:37.308 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.0854ms.
+2019-11-08 12:25:37.308 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:25:37.309 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 9.655800000000001ms
+2019-11-08 12:25:37.309 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:37.309 +00:00 [INF] Request finished in 10.58ms 200 application/json; charset=utf-8
+2019-11-08 12:25:50.694 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:25:50.694 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:50.694 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:25:50.696 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:25:50.699 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9273ms.
+2019-11-08 12:25:50.699 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:25:50.700 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.453ms
+2019-11-08 12:25:50.700 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:25:50.700 +00:00 [INF] Request finished in 6.5911ms 200 application/json; charset=utf-8
+2019-11-08 12:28:11.115 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:28:11.115 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:28:11.115 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:28:11.116 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:28:11.118 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4775ms.
+2019-11-08 12:28:11.118 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:28:11.119 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 3.8742ms
+2019-11-08 12:28:11.119 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:28:11.120 +00:00 [INF] Request finished in 4.6524ms 200 application/json; charset=utf-8
+2019-11-08 12:31:32.697 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:31:32.697 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:31:32.697 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:31:32.700 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:31:32.702 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.1319ms.
+2019-11-08 12:31:32.702 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:31:32.703 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.1507000000000005ms
+2019-11-08 12:31:32.703 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:31:32.703 +00:00 [INF] Request finished in 6.1804ms 200 application/json; charset=utf-8
+2019-11-08 12:32:31.988 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:32:31.988 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:32:31.988 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:32:31.990 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:32:31.994 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.7041000000000004ms.
+2019-11-08 12:32:31.994 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:32:31.995 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 6.3530000000000006ms
+2019-11-08 12:32:31.995 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:32:31.995 +00:00 [INF] Request finished in 7.2054ms 200 application/json; charset=utf-8
+2019-11-08 12:32:48.032 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:32:48.033 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:32:48.083 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:32:48.084 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:32:48.433 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 348.70210000000003ms.
+2019-11-08 12:32:48.433 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:32:48.437 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 354.23240000000004ms
+2019-11-08 12:32:48.437 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:32:48.437 +00:00 [INF] Request finished in 405.4995ms 200 application/json; charset=utf-8
+2019-11-08 12:34:55.610 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:34:55.611 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:34:55.611 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:34:55.615 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:34:55.618 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.4459ms.
+2019-11-08 12:34:55.618 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:34:55.620 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 8.7429ms
+2019-11-08 12:34:55.621 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:34:55.621 +00:00 [INF] Request finished in 10.4781ms 200 application/json; charset=utf-8
+2019-11-08 12:35:44.692 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:35:44.692 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:35:44.692 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:35:44.693 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:35:44.696 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3469ms.
+2019-11-08 12:35:44.696 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:35:44.697 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.0515ms
+2019-11-08 12:35:44.697 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:35:44.698 +00:00 [INF] Request finished in 5.7335ms 200 application/json; charset=utf-8
+2019-11-08 12:36:22.543 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:36:22.544 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:36:22.550 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:36:22.551 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:36:22.555 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.5088000000000004ms.
+2019-11-08 12:36:22.555 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:36:22.560 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 10.6ms
+2019-11-08 12:36:22.561 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:36:22.561 +00:00 [INF] Request finished in 17.3356ms 200 application/json; charset=utf-8
+2019-11-08 12:37:02.337 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:37:02.338 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:37:02.338 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:37:02.341 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:37:02.345 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.6332ms.
+2019-11-08 12:37:02.346 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:37:02.346 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 7.6695ms
+2019-11-08 12:37:02.347 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:37:02.347 +00:00 [INF] Request finished in 9.5715ms 200 application/json; charset=utf-8
+2019-11-08 12:38:48.711 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:38:48.712 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:38:48.712 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:38:48.713 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:38:48.714 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3233000000000001ms.
+2019-11-08 12:38:48.714 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:38:48.761 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 49.1216ms
+2019-11-08 12:38:48.761 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:38:48.761 +00:00 [INF] Request finished in 49.9434ms 200 application/json; charset=utf-8
+2019-11-08 12:39:59.651 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:39:59.652 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:39:59.652 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:39:59.655 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:39:59.658 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.0323ms.
+2019-11-08 12:39:59.658 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:39:59.683 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 30.9752ms
+2019-11-08 12:39:59.683 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:39:59.683 +00:00 [INF] Request finished in 32.2722ms 200 application/json; charset=utf-8
+2019-11-08 12:41:06.897 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:41:06.901 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:41:06.901 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:41:06.903 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:41:06.906 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.107ms.
+2019-11-08 12:41:06.906 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:41:06.913 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 11.2902ms
+2019-11-08 12:41:06.913 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:41:06.914 +00:00 [INF] Request finished in 17.4477ms 200 application/json; charset=utf-8
+2019-11-08 12:41:46.875 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:41:46.875 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:41:46.878 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:41:46.880 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:41:46.882 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7658ms.
+2019-11-08 12:41:46.882 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:41:46.894 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 15.618ms
+2019-11-08 12:41:46.894 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:41:46.894 +00:00 [INF] Request finished in 19.4075ms 200 application/json; charset=utf-8
+2019-11-08 12:42:21.256 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:42:21.257 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:42:21.258 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:42:21.259 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:42:21.261 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7468000000000001ms.
+2019-11-08 12:42:21.261 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:42:21.270 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 12.244800000000001ms
+2019-11-08 12:42:21.270 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:42:21.271 +00:00 [INF] Request finished in 14.4129ms 200 application/json; charset=utf-8
+2019-11-08 12:45:35.429 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:45:35.445 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:45:35.445 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:45:35.448 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:45:35.451 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.7384ms.
+2019-11-08 12:45:35.451 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:45:35.491 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 45.9257ms
+2019-11-08 12:45:35.492 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:45:35.492 +00:00 [INF] Request finished in 62.6926ms 200 application/json; charset=utf-8
+2019-11-08 12:47:03.090 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:47:03.090 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:47:03.090 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:47:03.091 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:47:03.093 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2504ms.
+2019-11-08 12:47:03.093 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:47:03.093 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 2.7252ms
+2019-11-08 12:47:03.093 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:47:03.095 +00:00 [INF] Request finished in 3.6414ms 200 application/json; charset=utf-8
+2019-11-08 12:48:26.877 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:48:26.877 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:48:26.878 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:48:26.879 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:48:26.883 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.8837ms.
+2019-11-08 12:48:26.883 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:48:26.884 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 6.4013ms
+2019-11-08 12:48:26.885 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:48:26.885 +00:00 [INF] Request finished in 7.6616ms 200 application/json; charset=utf-8
+2019-11-08 12:48:54.608 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:48:54.609 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:48:54.609 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:48:54.611 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:48:54.614 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.1175ms.
+2019-11-08 12:48:54.614 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:48:54.646 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 37.0039ms
+2019-11-08 12:48:54.646 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:48:54.646 +00:00 [INF] Request finished in 38.2472ms 200 application/json; charset=utf-8
+2019-11-08 12:49:17.812 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:49:17.812 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:49:17.812 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:49:17.814 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:49:17.816 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4901ms.
+2019-11-08 12:49:17.816 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:49:17.820 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 7.6355ms
+2019-11-08 12:49:17.820 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:49:17.820 +00:00 [INF] Request finished in 8.6826ms 200 application/json; charset=utf-8
+2019-11-08 12:49:51.037 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:49:51.037 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:49:51.037 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:49:51.038 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:49:51.040 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3732ms.
+2019-11-08 12:49:51.040 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:49:51.049 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 11.6044ms
+2019-11-08 12:49:51.049 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:49:51.049 +00:00 [INF] Request finished in 12.647ms 200 application/json; charset=utf-8
+2019-11-08 12:51:34.397 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:51:34.399 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:51:34.399 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:51:34.400 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:51:34.402 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2549000000000001ms.
+2019-11-08 12:51:34.402 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:51:34.402 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 3.0250000000000004ms
+2019-11-08 12:51:34.403 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:51:34.403 +00:00 [INF] Request finished in 5.5562ms 200 application/json; charset=utf-8
+2019-11-08 12:52:10.338 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:52:10.338 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:52:10.338 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:52:10.339 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:52:10.341 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2584ms.
+2019-11-08 12:52:10.341 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:52:10.341 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 2.7622ms
+2019-11-08 12:52:10.341 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:52:10.341 +00:00 [INF] Request finished in 3.7556ms 200 application/json; charset=utf-8
+2019-11-08 12:52:55.334 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:52:55.337 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:52:55.338 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:52:55.340 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:52:55.343 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.2667ms.
+2019-11-08 12:52:55.344 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:52:55.345 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 6.8245000000000005ms
+2019-11-08 12:52:55.345 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:52:55.345 +00:00 [INF] Request finished in 11.5326ms 200 application/json; charset=utf-8
+2019-11-08 12:53:25.732 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:53:25.735 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:53:25.736 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:53:25.740 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:53:25.742 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6465ms.
+2019-11-08 12:53:25.742 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:53:25.743 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 7.2315000000000005ms
+2019-11-08 12:53:25.743 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:53:25.743 +00:00 [INF] Request finished in 11.2859ms 200 application/json; charset=utf-8
+2019-11-08 12:55:33.328 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:55:33.329 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:55:33.329 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:55:33.330 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:55:33.333 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.8866ms.
+2019-11-08 12:55:33.334 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:55:33.338 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 8.685ms
+2019-11-08 12:55:33.338 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:55:33.338 +00:00 [INF] Request finished in 9.5352ms 200 application/json; charset=utf-8
+2019-11-08 12:56:41.812 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:56:41.813 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:56:41.813 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:56:41.816 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:56:41.818 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3476ms.
+2019-11-08 12:56:41.818 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:56:41.859 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 45.985600000000005ms
+2019-11-08 12:56:41.860 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:56:41.860 +00:00 [INF] Request finished in 47.4684ms 200 application/json; charset=utf-8
+2019-11-08 12:58:46.230 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:58:46.230 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:58:46.233 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:58:46.235 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:58:46.241 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.726ms.
+2019-11-08 12:58:46.241 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:58:46.245 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 11.4435ms
+2019-11-08 12:58:46.245 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:58:46.246 +00:00 [INF] Request finished in 15.8999ms 200 application/json; charset=utf-8
+2019-11-08 12:59:10.831 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:59:10.845 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:59:10.845 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:59:10.847 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:59:10.849 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6986ms.
+2019-11-08 12:59:10.849 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:59:10.851 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.0345ms
+2019-11-08 12:59:10.851 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:59:10.851 +00:00 [INF] Request finished in 20.4954ms 200 application/json; charset=utf-8
+2019-11-08 12:59:41.794 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 12:59:41.794 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:59:41.794 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 12:59:41.797 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 12:59:41.800 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.0903ms.
+2019-11-08 12:59:41.800 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 12:59:41.802 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 7.588ms
+2019-11-08 12:59:41.803 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 12:59:41.803 +00:00 [INF] Request finished in 8.788ms 200 application/json; charset=utf-8
+2019-11-08 13:00:07.064 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 13:00:07.064 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:00:07.064 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 13:00:07.066 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 13:00:07.067 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6132ms.
+2019-11-08 13:00:07.068 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 13:00:07.095 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 30.8945ms
+2019-11-08 13:00:07.095 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:00:07.096 +00:00 [INF] Request finished in 31.6026ms 200 application/json; charset=utf-8
+2019-11-08 13:00:50.567 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 13:00:50.568 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:00:50.568 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 13:00:50.571 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 13:00:50.573 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4192ms.
+2019-11-08 13:00:50.573 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 13:00:50.573 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.2708ms
+2019-11-08 13:00:50.573 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:00:50.574 +00:00 [INF] Request finished in 6.2603ms 200 application/json; charset=utf-8
+2019-11-08 13:15:32.457 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 13:15:32.457 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:15:32.457 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 13:15:32.458 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 13:15:32.472 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.435500000000001ms.
+2019-11-08 13:15:32.472 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 13:15:32.473 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 15.1714ms
+2019-11-08 13:15:32.473 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:15:32.473 +00:00 [INF] Request finished in 16.8293ms 200 application/json; charset=utf-8
+2019-11-08 13:15:54.621 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44373/api/user/GetUserID application/json; charset=utf-8 277
+2019-11-08 13:15:54.621 +00:00 [INF] Executing endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:15:54.621 +00:00 [INF] Route matched with {action = "GetUserID", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid] GetUserID(System.String) on controller UserService.Controllers.UserController (UserService).
+2019-11-08 13:15:54.623 +00:00 [INF] Executing action method UserService.Controllers.UserController.GetUserID (UserService) - Validation state: "Valid"
+2019-11-08 13:15:54.624 +00:00 [INF] Executed action method UserService.Controllers.UserController.GetUserID (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4712ms.
+2019-11-08 13:15:54.624 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Guid'.
+2019-11-08 13:15:54.627 +00:00 [INF] Executed action UserService.Controllers.UserController.GetUserID (UserService) in 5.0737000000000005ms
+2019-11-08 13:15:54.627 +00:00 [INF] Executed endpoint 'UserService.Controllers.UserController.GetUserID (UserService)'
+2019-11-08 13:15:54.627 +00:00 [INF] Request finished in 5.9528ms 200 application/json; charset=utf-8

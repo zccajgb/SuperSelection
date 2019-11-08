@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Result } from '../../models/result';
 import { Title } from '@angular/platform-browser';
+import { ResultsRepository } from 'src/repositories/resultsRepository';
+import { CalculationViewModel } from 'src/models/view-models/calculation-view-model';
 
 @Component({
   selector: 'app-results',
@@ -9,13 +11,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class ResultsComponent implements OnInit {
 
-  @Input() result: Result;
+  public result: CalculationViewModel;
+  public id: string;
 
-  constructor(private title: Title) {
+  constructor(private title: Title, private resultsRepo: ResultsRepository) {
     this.title.setTitle('Results');
+    this.resultsRepo = resultsRepo;
   }
 
   ngOnInit() {
+    this.resultsRepo.getCalculationByID(this.id)
+    .subscribe(res => this.result = res);
   }
 
 }

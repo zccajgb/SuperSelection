@@ -62,3 +62,7 @@
 2019-11-07 13:06:23.287 +00:00 [ERR] submitCalculation failed: undefined
 2019-11-07 13:07:09.767 +00:00 [ERR] submitCalculation failed: undefined
 2019-11-07 13:07:19.549 +00:00 [ERR] submitCalculation failed: undefined
+2019-11-08 12:01:36.107 +00:00 [ERR] login failed: undefined
+2019-11-08 12:02:34.648 +00:00 [ERR] login failed: undefined
+2019-11-08 12:03:39.082 +00:00 [ERR] getCalculationsForUser failed: undefined
+2019-11-08 13:32:22.994 +00:00 [ERR] GetResultsByID failed: Cannot read property 'message' of null

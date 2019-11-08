@@ -14,6 +14,7 @@
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseSerilog();
+                .UseSerilog()
+                .UseUrls("http://*:44373");
     }
 }

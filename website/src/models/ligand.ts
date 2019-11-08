@@ -3,4 +3,5 @@ export class Ligand {
     public NumberOfLigands: number;
     public InitialProbability: number;
     public SingleBondStrength: number[];
+    public BindingProbability: number;
 }

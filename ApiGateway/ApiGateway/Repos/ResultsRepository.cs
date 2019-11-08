@@ -1,6 +1,7 @@
 ﻿namespace ApiGateway.Repos
 {
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using ApiGateway.Documents.Queries;
     using ApiGateway.Infrastructure;
@@ -22,9 +23,9 @@
             return result;
         }
 
-        public async Task<SelectivityCalculationView> GetByUserID(string userID)
+        public async Task<IEnumerable<SelectivityCalculationView>> GetByUserID(string userID)
         {
-            var result = await this.httpHelper.PostAsync<SelectivityCalculationView>(this.uri + "/GetAllForUser", userID);
+            var result = await this.httpHelper.PostAsync<IEnumerable<SelectivityCalculationView>>(this.uri + "/GetAllForUser", userID);
             return result;
         }
     }
