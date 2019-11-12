@@ -1,0 +1,31 @@
+<div class="card my-2">
+    <div class="card-body">
+        <h5 class="card-title">Results</h5> 
+        <div class="card-text mt-4">
+            <div class="row my-2">
+                <span class="col-8"><h6>Binding Partition Function</h6></span>
+                <span class="col mr-1">45{{calculation.bindingPartitionFunction | number : '1.3-3' }}</span>
+            </div>
+                
+            <div class="row my-2">
+                <span class="col-8"><h6>Binding Volume</h6></span>
+                <span class="col mr-1">{{calculation.volume | number : '1.3-3'}}</span>
+            </div>       
+                    
+            <div class="row my-2">
+                <span class="col-8"><h6>Steric Potential</h6></span>
+                <span class="col mr-1">{{calculation.stericPotential | number : '1.3-3'}}</span>
+            </div>
+
+            <div class="row my-2">
+                <span class="col-8"><h6>Steric Partition Function</h6></span>
+                <span class="col mr-1">{{calculation.stericPartitionFunction | number : '1.3-3' }}</span>
+            </div>
+
+            <div class="row my-2">
+                <span class="col-8"><h6>Selectivity</h6></span>
+                <span class="col mr-1">{{calculation.selectivity | number : '1.3-3' }}</span>
+            </div>    
+        </div>
+    </div>
+</div> 

@@ -4,7 +4,7 @@ class SelectivityCalculationModel(object):
     def __init__(self, data):
         self.chi : np.ndarray = np.array(data.Chi)
         self.Name = data.Name
-        self.calculation_id = data.CalculationId
+        self.calculation_id = data.CalculationID
         self.N : np.ndarray = np.array(data.N)
         self.initial_probability : np.ndarray = np.array(data.InitialProbability)
         self.tolerance = data.Tolerance

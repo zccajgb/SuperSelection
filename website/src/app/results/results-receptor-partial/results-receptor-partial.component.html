@@ -1,0 +1,25 @@
+<div class="card my-2">
+    <div class="card-body">
+        <h5 class="card-title">Receptors</h5> 
+    </div>
+    <div class="card-text">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><h6> # </h6></th>
+                    <th><h6>Number of Receptors</h6></th>
+                    <th><h6>Initial Probability</h6></th>
+                    <th *ngIf="calculation.receptors[0].bindingProbability"><h6>Binding Probability</h6></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let receptor of calculation.receptors; index as i">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{receptor.numberOfReceptors}}</td>
+                    <td>{{receptor.initialProbability | number : '1.3-3' }}</td>
+                    <td *ngIf="calculation.receptors[0].bindingProbability">{{receptor.bindingProbability | number : '1.3-3' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

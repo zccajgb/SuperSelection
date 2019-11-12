@@ -6,7 +6,7 @@ class SelectivityCalculationEntity(object):
         self.CalculationId = selectivity_model.calculation_id
         self.BindingProbability = selectivity_model.binding_probability.tolist()
         self.BindingPartitionFunction = selectivity_model.binding_partition_function
-        self.Volume = selectivity_model.volume
+        self.Volume = selectivity_model.volume * 1e27
         self.StericPotential = selectivity_model.steric_potential
         self.StericPartitionFunction = selectivity_model.steric_partition_function
         self.Selectivity = selectivity_model.selectivity

@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'create-new-account', component: CreateNewAccountComponent},
   { path: 'view-calculations', component: ViewCalculationsComponent, canActivate: [AuthGuard] },
-  { path: 'results', component: ResultsComponent, canActivate: [AuthGuard] },
+  { path: 'view-calculations/:id', component: ResultsComponent, canActivate: [AuthGuard] },
   { path: 'create-calculation', component: CreateCalculationComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: ''}
 ];

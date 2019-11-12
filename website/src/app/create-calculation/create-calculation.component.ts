@@ -58,7 +58,7 @@ export class CreateCalculationComponent implements OnInit {
         .subscribe(
           data => {
             this.logger.info('Calculation successfully submitted');
-            // this.router.navigate(['view-calculations']);
+            this.router.navigate(['view-calculations']);
           },
           error => {
             this.logger.error(error);

@@ -6,33 +6,22 @@
 
         <div class="col mr-5">
 
-            <div>
-                <div class="row">
-                    <label class="col-sm-6 col-form-label">Date Added</label>
-                    <div class="col-sm-6">
-                        {{calculation.actionDateTime}}
-                    </div>
-                </div>
+            <div class="row">
+                <span class="col-8"><h6>Date Added</h6></span>
+                <span class="col mr-1">{{calculation.actionDateTime | date: 'h:mm a, dd MMM yy'}}</span>
             </div>
 
-            <div>
-                <div class="row">
-                    <label class="col-sm-6 col-form-label">Number of Ligand Types</label>
-                    <div class="col-sm-6">
-                        {{calculation.ligands.length}}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <label class="col-sm-6 col-form-label">Number of Receptor Types</label>
-                    <div class="col-sm-6">
-                        {{calculation.receptors.length}}
-                    </div>
-                </div>
+            <div class="row">
+                <span class="col-8"><h6>Number of Ligand Types</h6></span>
+                <span class="col mr-1">{{calculation.ligands.length}}</span>
             </div>
 
+            <div class="row">
+                <span class="col-8"><h6>Number of Receptor Types</h6></span>
+                <span class="col mr-1">{{calculation.receptors.length}}</span>
+            </div>
         </div>
     </div>
     
-    <button class="btn btn-primary pull-right"> Full Details </button>
+    <button class="btn btn-primary pull-right" routerLink="/view-calculations/{{calculation.calculationID}}"> Full Details </button>
 </div>

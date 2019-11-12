@@ -14,9 +14,8 @@ import { Calculation } from 'src/models/calculation';
 })
 export class ViewCalculationsComponent implements OnInit {
 
-  public results: Result[] = [ { name: 'one', userID: '123', text: 'text'}, { name: 'two', userID: '123', text: 'text'} ];
-  public result1: Result = { name: 'one', userID: '123', text: 'text'};
   public calculations: CalculationViewModel[];
+  public loading = true;
 
   constructor(private title: Title, private logger: NGXLogger, private resultsRepo: ResultsRepository) {
     this.title.setTitle('View Calculations');
@@ -29,7 +28,12 @@ export class ViewCalculationsComponent implements OnInit {
 
   getCalculations() {
     this.resultsRepo.getCalculationsForUser()
-    .subscribe(calcs => this.calculations = calcs);
+    .subscribe(calcs => this.getCalculationsCallback(calcs));
   }
 
+
+  private getCalculationsCallback(calcs: CalculationViewModel[]) {
+    this.loading = false;
+    this.calculations = calcs;
+  }
 }

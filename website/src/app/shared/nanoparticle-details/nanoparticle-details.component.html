@@ -1,35 +1,24 @@
-    <div class="row">
-      <label class="col-sm-6 col-form-label">Nanoparticle Radius / nm</label>
-      <div class="col-sm-6">
-        {{calculation.nanoparticleRadius}}
-      </div>
-    </div>
-    
-            
-    <div class="row">
-      <label class="col-sm-6 col-form-label">Nanoparticle Concentration / M</label>
-      <div class="col-sm-6">
-          {{calculation.nanoparticleConc}}
-      </div>
-    </div>
+<div class="row my-2">
+  <span class="col-8"><h6>Nanoparticle Radius / nm</h6></span>
+  <span class="col mr-1">{{calculation.nanoparticleRadius}}</span>
+</div>
 
-    <div class="row" *ngIf="calculation.glycolInterferenceParameter">
-      <label class="col-sm-6 col-form-label">Glycol Interference Parameter</label>
-      <div class="col-sm-6">
-          {{calculation.glycolInterferenceParameter}}
-      </div>
-    </div>
+<div class="row my-2">
+    <span class="col-8"><h6>Nanoparticle Concentration / M</h6></span>
+    <span class="col mr-1">{{calculation.nanoparticleConc}}</span>
+  </div>
+        
+<div class="row my-2" *ngIf="calculation.glycolInterferenceParameter">
+  <span class="col-8"><h6>Glycol Interference Parameter</h6></span>
+  <span class="col mr-1">{{calculation.glycolInterferenceParameter}}</span>
+</div>
 
-    <div class="row" *ngIf="calculation.interchainDistance">
-      <label class="col-sm-6 col-form-label">Interchain Distance / nm</label>
-      <div class="col-sm-6">
-        {{calculation.interchainDistance}}
-      </div>
-    </div>
-    
-    <div class="row">
-      <label class="col-sm-6 col-form-label">Tolerance</label>
-      <div class="col-sm-6">
-        {{calculation.tolerance}}
-      </div>
-    </div>
+<div class="row my-2" *ngIf="calculation.interchainDistance">
+  <span class="col-8"><h6>Interchain Distance / nm</h6></span>
+  <span class="col mr-1">{{calculation.interchainDistance}}</span>
+</div>
+
+<div class="row my-2">
+  <span class="col-8"><h6>Tolerance</h6></span>
+  <span class="col mr-1">{{calculation.tolerance}}</span>
+</div>

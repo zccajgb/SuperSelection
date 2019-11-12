@@ -1,6 +1,7 @@
 ﻿namespace ApiGateway.Controllers
 {
     using System;
+    using System.Net.Http;
     using System.Threading.Tasks;
     using ApiGateway.Documents.Commands;
     using ApiGateway.Models.DomainModels;
@@ -34,7 +35,15 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var userId = await this.usersRepository.GetUserID(token);
+            Guid userId = default;
+            try
+            {
+                userId = await this.usersRepository.GetUserID(token);
+            }
+            catch (HttpRequestException ex)
+            {
+                return this.Unauthorized(ex);
+            }
 
             var command = this.mapper.Map<CreateSelectivityCalculationCommand>(calculation, opts =>
             {

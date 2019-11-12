@@ -1,6 +1,7 @@
 ﻿namespace ApiGateway.Controllers
 {
     using System;
+    using System.Net.Http;
     using System.Threading.Tasks;
     using ApiGateway.Documents.Queries;
     using ApiGateway.Repos;
@@ -29,7 +30,15 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var userID = await this.usersRepository.GetUserID(token);
+            Guid userID = default;
+            try
+            {
+                userID = await this.usersRepository.GetUserID(token);
+            }
+            catch(HttpRequestException ex)
+            {
+                return this.Unauthorized(ex);
+            }
 
             var results = await this.resultsRepository.GetByUserID(userID.ToString());
             return this.Ok(results);

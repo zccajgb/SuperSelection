@@ -35,7 +35,14 @@
         [Route("GetUserID")]
         public ActionResult<Guid> GetUserID([FromBody] string token)
         {
-            return this.Ok(this.validateService.Validate(token));
+            try
+            {
+                return this.Ok(this.validateService.Validate(token));
+            }
+            catch (NullReferenceException ex)
+            {
+                return this.Unauthorized(ex);
+            }
         }
 
         [HttpPost]
